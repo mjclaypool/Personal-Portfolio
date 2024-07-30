@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import { motion } from "framer-motion";
 import { ABOUTTAB } from "../content";
 
 import AboutDetails from "./AboutDetails";
@@ -25,14 +26,16 @@ export default function AboutTab( {tab} ) {
         <menu className="tab-details">
           {ABOUTTAB[tab].buttons.map(topic => (
             <li key={topic.id} id={topic.id}>
-              <button
-                type='button'
+              <motion.button
+                // type='button'
+                whileHover={{scale: 1.1}}
+                whileFocus={{scale: 1.1}}
                 onClick={() => handleSelectedIcon(topic.id)}
                 className={selectedTopic == topic.id ? 'active' : undefined}
               >
                 <img src={topic.icon} alt={topic.altText}/>
                 {topic.caption}
-              </button>
+              </motion.button>
             </li>
           ))}
         </menu>

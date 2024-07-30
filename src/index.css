@@ -90,7 +90,8 @@ button {
   text-decoration: none;
 }
 
-.nav-elem:hover {
+.nav-elem:hover,
+.nav-elem:focus {
   color: #187fb3;
 }
 
@@ -192,6 +193,7 @@ button {
   gap: 2rem;
   align-items: center;
   justify-content: center;
+  animation: slide-up-fade-in 0.3s ease-out forwards;
 }
 
 .exercises-section {
@@ -201,6 +203,7 @@ button {
   gap: 2rem;
   align-items: center;
   justify-content: center;
+  animation: slide-up-fade-in 0.3s ease-out forwards;
 }
 
 .card {
@@ -216,6 +219,7 @@ button {
   overflow: hidden;
   color: #d9e2f1;
   text-decoration: none;
+  transition: all 0.2s ease-in-out;
 }
 
 .img-card {
@@ -243,9 +247,16 @@ button {
   padding: 0 1rem;
 }
 
-.card:hover {
-  cursor: pointer;
+.card:nth-child(odd):hover,
+.card:nth-child(odd):focus {
   box-shadow: 0px 0px 65px 20px rgba(24,127,179,0.5), 0px 20px 22px 0px rgba(24,127,179,0.16);
+  transform: rotate(2.5deg);
+}
+
+.card:nth-child(even):hover,
+.card:nth-child(even):focus {
+  box-shadow: 0px 0px 65px 20px rgba(24,127,179,0.5), 0px 20px 22px 0px rgba(24,127,179,0.16);
+  transform: rotate(-2.5deg);
 }
 
 .about-section {
@@ -283,7 +294,8 @@ button {
   transition: all 0.2s ease-in-out;
 }
 
-.about-tabs button:hover {
+.about-tabs button:hover,
+.about-tabs button:focus {
   color: #187fb3;
 }
 
@@ -291,7 +303,8 @@ button {
   background-color: #187fb3;
 }
 
-.about-tabs .active:hover{
+.about-tabs .active:hover,
+.about-tabs .active:focus{
   color: #d9e2f1;
 }
 
@@ -349,17 +362,20 @@ button {
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  /* transition: all 0.2s ease-in-out; */
 }
 
 .tab-details button.active {
   font-size: 1rem;
-  background-color:#187fb3;
+  /* background-color:#187fb3; */
+  animation: expansion 0.1s linear forwards;
 }
 
-.tab-details button:hover {
-  font-size: 1.1rem;
-  background-color:#187fb3;
+.tab-details button:hover,
+.tab-details button:focus {
+  /* font-size: 1.1rem; */
+  /* background-color:#187fb3; */
+  background-image: radial-gradient(rgba(24,127,179,0.9) 0%, rgba(24,127,179,0) 60%);
 }
 
 .tab-details img {
@@ -449,14 +465,15 @@ button {
   text-align: left;
 }
 
-#footer-nav a:hover {
+#footer-nav a:hover,
+#footer-nav a:focus {
   color: #187fb3;
 }
 
 #connect-links {
   display: flex;
   flex-direction: row;
-  gap: 0.5rem;
+  gap: 0.75rem;
 }
 
 #connect-links a {
@@ -476,10 +493,10 @@ button {
   text-decoration: none;
 }
 
-#connect-links a:hover {
+#connect-links a:hover,
+#connect-links a:focus {
   border-color: #187fb3;
   color: #187fb3;
-  font-size: 1.1rem;
 }
 
 .case-study-section {
@@ -522,16 +539,19 @@ button {
   h1 {
     font-size: 3rem;
   }
-  .hero-content, .case-study-content {
+  .hero-content,
+  .case-study-content {
     padding: 0 6rem;
   }
-  .hero-content h1, .hero-content p{
+  .hero-content h1,
+  .hero-content p{
     max-width: 60%;
   }
   .hero-image-attribution {
     padding: 0 6rem;
   }
-  .projects-section, .exercises-section {
+  .projects-section,
+  .exercises-section {
     flex-direction: row;
   }
   .card {
@@ -600,10 +620,44 @@ button {
 }
 
 @media (min-width: 1400px) {
-  #main-header, .hero-content, .case-study-content {
+  #main-header,
+  .hero-content,
+  .case-study-content {
     max-width: 80%;
   }
   .hero-image-attribution {
     right: 10%;
+  }
+}
+
+@keyframes slide-up-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expansion {
+  0% {
+    background-image: radial-gradient(rgba(24,127,179,0.9) 0%, rgba(24,127,179,0) 60%);
+  }
+  20% {
+    background-image: radial-gradient(rgba(24,127,179,1) 0%, rgba(24,127,179,1) 20%, rgba(24,127,179,0) 60%);
+  }
+  40% {
+    background-image: radial-gradient(rgba(24,127,179,1) 0%, rgba(24,127,179,1) 40%, rgba(24,127,179,0) 60%);
+  }
+  60% {
+    background-image: radial-gradient(rgba(24,127,179,1) 0%, rgba(24,127,179,1) 60%, rgba(24,127,179,0) 80%);
+  }
+  80% {
+    background-image: radial-gradient(rgba(24,127,179,1) 0%, rgba(24,127,179,1) 80%, rgba(24,127,179,0) 100%);
+  }
+  100% {
+    background-image: radial-gradient(rgba(24,127,179,1) 0%, rgba(24,127,179,1) 100%);
   }
 }

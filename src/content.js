@@ -17,6 +17,15 @@ import aboutUTUXCert from './assets/about--utux-certificate.png';
 import aboutFrontendMentor from './assets/about--frontend-mentor.png';
 import aboutUdemyReact from './assets/about--udemy-react.png';
 
+import portfolioMockUp from './assets/case-study--portfolio.png';
+import portfolioHomepage from './assets/case-study--portfolio-homepage.png';
+import portfolioAbout from './assets/case-study--portfolio-about.png';
+import portfolioCaseStudyPage from './assets/case-study--portfolio-case-study.png';
+import lemonMockUp from './assets/case-study--little-lemon.png';
+import lemonHomepage from './assets/case-study--little-lemon-homepage.png';
+import lemonBookingPage from './assets/case-study--little-lemon-booking-page.png';
+import lemonConfirmationPage from './assets/case-study--little-lemon-confirmation-page.png';
+
 // About Content
 export const ABOUTTAB = {
   edu: {
@@ -174,29 +183,36 @@ export const portfolio = {
       'Interact with education, work experience, and continuous learning content in the "About" section.',
       'Connect via the LinkedIn and GitHub links in the footer section.'
     ],
-    process: "Key considerations for developing a maintainable website and a good user experience include:",
     learnings: [
       {
-        title: 'Ensuring the site is enjoyable and functional across browsers and devices.',
+        title: 'Ensure the site is enjoyable and functional across browsers and devices.',
         insight: 'With a wide variety of screen and browser options for visiting a webpage, responsive web design is critical for delivering an uncompromised user experience across all viewports.',
       },
       {
-        title: 'Outsourcing content details to a separate file (content.js).',
+        title: 'Outsource content details to a separate file (content.js).',
         insight: 'Moving the content data out of the individual page and component files leads to leaner components, improves ease of making formatting changes and adding new content, and reduces time spent on debugging across multiple layers of a file structure.',
       },
       {
-        title: 'Following accessibility guidelines as outlined by the WCAG.',
+        title: 'Follow accessibility guidelines as outlined by the WCAG.',
         insight: 'To be inclusive of all abilities and assistive devices used by site visitors, this website follows accessibility principles of being perceivable, operable, understandable, and robust. Specific examples applied to this portfolio include ensuring all functionality is accessible via keyboard navigation and all non-text content includes text alternatives.',
       },
       {
-        title: "Incorporating animations and effects",
+        title: "Incorporate animations and effects",
         insight: "To make this portfolio website fun and engaging, I added animations to highlight hovered elements and applied smooth transitions to scrolling and user-selected components. I also incorporated Framer Motion to enhance the feel of animated elements.",
       },
       {
-        title: "Improved Browser-Routing with React Router DOM",
+        title: "Improve browser-routing with React-Router-DOM",
         insight: "With this project, I learned how to structure my SPA with children paths, create a custom error page for 404 errors, and scroll to elements on the same page as the link.",
       }
     ],
+    image: portfolioMockUp,
+    altText: "Laptop mock-up of final portfolio design.",
+    screenshots: [
+      portfolioHomepage,
+      portfolioAbout,
+      portfolioCaseStudyPage,
+    ],
+    repoLink: "https://github.com/mjclaypool/Personal-Portfolio",
   }
 
   export const countryPicker = {
@@ -211,33 +227,32 @@ export const portfolio = {
       "View the optimal layout for the interface depending on their device's screen size.",
       'See hover and focus states for all interactive elements on the page.',
     ],
-    process: "Key techniques and takeaways that determined this project's success include:",
     learnings: [
       {
         title: 'Optimize user experience with responsive web design',
         insight: 'This section is a work-in-progress.'
       },
       {
-        title: 'Successful execution of REST API calls',
+        title: 'Successfully execute of REST API calls',
         insight: 'This section is a work-in-progress.'
       },
       {
-        title: 'Incorporating Tailwind CSS styling',
+        title: 'Incorporate Tailwind CSS styling',
         insight: 'This section is a work-in-progress.'
       },
       {
-        title: "Creating the search bar element",
+        title: "Create the search bar element",
         insight: "This section is a work-in-progress.",
       },
       {
-        title: "Developing the filter element",
+        title: "Develop the filter element",
         insight: "This section is a work-in-progress.",
       }
     ],
   }
 
   export const littleLemon = {
-    tagLine: "Adding table-booking functionality to a fictional Mediterranean restaurant's website.",
+    tagLine: "Addition of table-booking functionality to a fictional Mediterranean restaurant's website.",
     objective: 'Provided with a UI kit, build a Little Lemon restaurant website that empowers users to:',
     requirements: [
       'Navigate to the "Reserve a Table" page via the navigation bar, footer, and respective CTA on the homepage.',
@@ -247,25 +262,32 @@ export const portfolio = {
       'Obtain a reservation summary upon successful form submission.',
       'See hover and focus states for all interactive elements on the page.',
     ],
-    process: "Key techniques and takeaways that determined this project's success include:",
     learnings: [
       {
-        title: "Browser-routing with React-Router-DOM",
+        title: "Integrate browser-routing with React-Router-DOM",
         insight: "I relied on a combination of BrowserRouter, Routes, Route, useNavigate, and useLocation to build this single-page application. This was my first attempt at routing pages, and I have since adopted a more streamlined and readable approach to browser-routing with createBrowserRouter, RouterProvider, Link, and NavLink.",
       },
       {
-        title: "Developing useful client-side form validation",
+        title: "Develop useful client-side form validation",
         insight: "Setting users up for success with informative error messages prevents frustration and improves the overall user experience. With any form's development, I make sure users are guided towards valid inputs with straightforward and specific error messages and not bombarded with errors on individual keystrokes.",
       },
       {
-        title: "Using the useReducer Hook",
+        title: "Use the useReducer Hook",
         insight: "I used the useReducer hook to update the available times state for booking on any chosen date. I learned that useReducer is a powerful hook for handling more complicated state management than would otherwise be handled by useState.",
       },
       {
-        title: "Testing with React-Testing-Library",
+        title: "Build tests with React-Testing-Library",
         insight: "This project introduced me to writing unit tests for React components, mirroring the declarative nature of programming in React by focusing on testing the UI. Although there is still a lot of room for me to grow is this area, I appreciate the importance of unit testing throughout the software development process. I look forward to exploring other testing frameworks like Playwright for future projects.",
       },
     ],
+    image: lemonMockUp,
+    altText: "Laptop mock-up of the Little Lemon restaurant website.",
+    screenshots: [
+      lemonHomepage,
+      lemonBookingPage,
+      lemonConfirmationPage,
+    ],
+    repoLink: "https://github.com/mjclaypool/Restaurant-Booking-Project",
   }
 
 

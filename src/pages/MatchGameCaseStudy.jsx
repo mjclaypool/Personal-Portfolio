@@ -12,7 +12,6 @@ export default function MatchGameCaseStudy() {
         requirements={countryPicker.requirements}
       />
       <Process
-        process={countryPicker.process}
         learnings={countryPicker.learnings}
       />
     </section>

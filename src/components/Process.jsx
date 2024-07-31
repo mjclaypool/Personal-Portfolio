@@ -1,15 +1,13 @@
-export default function Process( {process, learnings, children} ) {
+export default function Process( {learnings, children} ) {
   return (
-    <div>
-      <h3>Process:</h3>
-      <p>{process}</p>
-      <ul>
+    <div id="process-section">
+      <h2>Process:</h2>
+      <ul className="process-list">
         {learnings.map(idea => (
-          <li key={idea.title}>{idea.title}
-            <ul>
-              <li>{idea.insight}</li>
-            </ul>
-          </li>
+          <div className="process-list-item" key={idea.title}>
+            <h4>{idea.title}</h4>
+            <p>{idea.insight}</p>
+          </div>
         ))}
       </ul>
       {children}

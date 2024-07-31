@@ -1,29 +1,23 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
-import hamburgerIcon from "../assets/header--hamburger-menu.png";
+import Modal from "./Modal";
 
-export default function Drawer() {
-  const [open, setOpen] = useState(false);
+export default function Drawer( {onDone}) {
 
-  function handleToggle(newSetting) {
-    setOpen(newSetting);
+  function handleCloseDrawer() {
+    onDone();
   }
+
   return (
-    <div id='header-hamburger'>
-      <button type="button" onClick={() => handleToggle(true)}>
-        <img src={hamburgerIcon} alt="Menu icon created by Febrian Hidayat - Flaticon" />
-      </button>
-      {open && (
-        <div id="drawer">
-          <Link to='/' id='header-title' className="drawer-elem" onClick={() => handleToggle(false)}>Home</Link>
-          <hr/>
-          <HashLink to="/#projects" className="drawer-elem" onClick={() => handleToggle(false)}>Projects</HashLink>
-          <HashLink to="/#exercises" className="drawer-elem" onClick={() => handleToggle(false)}>Exercises</HashLink>
-          <HashLink to="/#about" className="drawer-elem" onClick={() => handleToggle(false)}>About</HashLink>
-        </div>
-      )}
-    </div>
+    <Modal onClose={onDone}>
+      <div id="drawer">
+        <Link to='/' id='header-title' className="drawer-elem" onClick={handleCloseDrawer}>Home</Link>
+        <hr/>
+        <HashLink to="/#projects" className="drawer-elem" onClick={handleCloseDrawer}>Projects</HashLink>
+        <HashLink to="/#exercises" className="drawer-elem" onClick={handleCloseDrawer}>Exercises</HashLink>
+        <HashLink to="/#about" className="drawer-elem" onClick={handleCloseDrawer}>About</HashLink>
+      </div>
+    </Modal>
   )
 }

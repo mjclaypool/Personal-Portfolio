@@ -211,7 +211,7 @@ button {
   flex-direction: column;
   width: 80vw;
   max-width: 400px;
-  height: auto;
+  height: 300px;
   border-style: solid;
   border-radius: 1rem;
   border-color: #36444b;
@@ -224,18 +224,20 @@ button {
 
 .img-card {
   width: 100%;
-  height: auto;
+  height: 165px;
+  object-fit: cover;
+  object-position: top;
   border-style: solid;
   border-radius: 1rem;
   border-color: #36444b;
   overflow: hidden;
 }
 
-.img-card img {
+/* .img-card img {
   width: 100%;
   height: auto;
   display: block;
-}
+} */
 
 .card h4 {
   margin: 0;
@@ -582,6 +584,53 @@ button {
   color: #51baee;
 }
 
+.error-section {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100vh;
+}
+
+.error-section::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(0deg, rgba(1,13,19,1) 0%, rgba(1,13,19,0.4) 20%, rgba(1,13,19,0) 100%),
+    url(assets/everett-bartels-FJMK4VKW-Xw-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 75% 50%;
+}
+
+.error-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  color: #092533;
+  margin-top: 12vh;
+  padding: 0 4rem;
+  text-align: center;
+}
+
+.error-content h4 {
+  margin: 0.5rem 0;
+}
+
+.error-image-attribution {
+  color: #d9e2f1;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  padding: 4rem 2rem;
+  margin: auto;
+}
 
 @media (max-width: 360px) {
   .body-section {
@@ -630,7 +679,10 @@ button {
     flex-direction: row;
   }
   .card {
-    min-height: 340px;
+    height: 340px;
+  }
+  .img-card {
+    height: 200px;
   }
   .about-tabs {
     margin: 0 3rem;
@@ -653,6 +705,12 @@ button {
   #main-footer {
     gap: 6rem;
   }
+  .error-content {
+    margin-top: 15vh;
+  }
+  .error-image-attribution {
+    padding: 2rem;
+  }
 }
 
 @media (min-width: 900px) {
@@ -664,6 +722,9 @@ button {
     width: 80%;
     height: 33vh;
     border-radius: 6px;
+  }
+  .error-content {
+    margin-top: 20vh;
   }
 }
 

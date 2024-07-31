@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import projectImg1 from '../assets/project--portfolio.png';
-import projectImg2 from '../assets/project--match-game.png';
+import projectImg2 from '../assets/project--countrypicker.jpg';
 import projectImg3 from '../assets/project--little-lemon.png';
 
 export default function Projects() {
@@ -10,24 +10,18 @@ export default function Projects() {
       <h2 className="section-header" id='projects'>Projects</h2>
       <div className="projects-section">
         <Link to='/case-study--portfolio/' className="card">
-          <div className="img-card">
-            <img src={projectImg1} alt="Personal portfolio website screenshot" />
-          </div>
+          <img src={projectImg1} alt="Personal portfolio website screenshot" className="img-card" />
           <h4>Portfolio</h4>
           <p>A responsive, interactive portfolio website highlighting personal growth as a designer and software developer.</p>
         </Link>
-        <Link to="/case-study--match-game/" className="card">
-          <div className="img-card">
-            <img src={projectImg2} alt="Matching game screenshot" />
-          </div>
-          <h4>Match Game</h4>
-          <p>A memory matching game that counts the number of clicks made to reveal all of the matching pairs.</p>
+        <Link to="/case-study--countrypicker/" className="card">
+          <img src={projectImg2} alt="Country-Picker web application screenshot" className="img-card" />
+          <h4>Country-Picker App</h4>
+          <p>A country-picking app that pulls and displays country data from the REST Countries API.</p>
         </Link>
         <Link to="case-study--little-lemon/" className="card">
-          <div className="img-card">
-            <img src={projectImg3} alt="Little Lemon restaurant website screenshot" />
-          </div>
-          <h4>Little Lemon Restaurant Website</h4>
+          <img src={projectImg3} alt="Little Lemon restaurant website screenshot" className="img-card" />
+          <h4>Little Lemon Website</h4>
           <p>A responsive website for a fictional medeterranean restaurant with table-booking functionality.</p>
         </Link>
       </div>

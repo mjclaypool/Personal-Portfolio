@@ -7,7 +7,7 @@ export default function Hero() {
         am a great choice for bringing engaging, user-centered products into reality.</p>
       </div>
       <div className='hero-image-attribution'>
-        <p>Image by Daniel Smyth, Pexels</p>
+        <p>Image source: Daniel Smyth, Pexels</p>
       </div>
     </div>
   )

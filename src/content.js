@@ -21,10 +21,26 @@ import portfolioMockUp from './assets/case-study--portfolio.png';
 import portfolioHomepage from './assets/case-study--portfolio-homepage.png';
 import portfolioAbout from './assets/case-study--portfolio-about.png';
 import portfolioCaseStudyPage from './assets/case-study--portfolio-case-study.png';
+import countriesMockUp from './assets/case-study--country-picker.png';
 import lemonMockUp from './assets/case-study--little-lemon.png';
 import lemonHomepage from './assets/case-study--little-lemon-homepage.png';
 import lemonBookingPage from './assets/case-study--little-lemon-booking-page.png';
 import lemonConfirmationPage from './assets/case-study--little-lemon-confirmation-page.png';
+
+import foodOrderingMockUp from './assets/case-study--food-ordering.png';
+import foodOrderingHomepage from './assets/case-study--food-ordering-homepage.png';
+import foodOrderingCart from './assets/case-study--food-ordering-cart.png';
+import foodOrderingForm from './assets/case-study--food-ordering-form.png';
+import foodOrderingConfirmation from './assets/case-study--food-ordering-confirmation.png';
+import placepickerMockUp from './assets/case-study--placepicker.png';
+import placepickerLoading from './assets/case-study--placepicker-loading.png';
+import placepickerHomepage from './assets/case-study--placepicker-homepage.png';
+import placepickerAdd from './assets/case-study--placepicker-add-places.png';
+import placepickerRemove from './assets/case-study--placepicker-remove-places.png';
+import ticTacToeMockUp from './assets/case-study--tic-tac-toe.png';
+import ticTacToeHomepage from './assets/exercise--tic-tac-toe.png';
+import ticTacToeGame from './assets/case-study--tic-tac-toe-active-game.png';
+import ticTacToeEnd from './assets/case-study--tic-tac-toe-gameover.png';
 
 // About Content
 export const ABOUTTAB = {
@@ -249,6 +265,8 @@ export const portfolio = {
         insight: "This section is a work-in-progress.",
       }
     ],
+    image: countriesMockUp,
+    altText: "Laptop mock-up of country-picker design.",
   }
 
   export const littleLemon = {
@@ -310,6 +328,15 @@ export const portfolio = {
       'Building reusable modal components',
       'Handling form submission and validation',
     ],
+    image: foodOrderingMockUp,
+    altText: "Laptop mock-up of the food ordering app.",
+    screenshots: [
+      foodOrderingHomepage,
+      foodOrderingCart,
+      foodOrderingForm,
+      foodOrderingConfirmation,
+    ],
+    repoLink: "https://github.com/mjclaypool/Udemy-React-Projects/tree/main/18_Food-Order-App",
   }
 
   export const placepicker = {
@@ -327,6 +354,15 @@ export const portfolio = {
       'Handling side-effects and HTTP errors',
       'Employing optimistic UI updating',
     ],
+    image: placepickerMockUp,
+    altText: "Laptop mock-up of place-picking app.",
+    screenshots: [
+      placepickerLoading,
+      placepickerHomepage,
+      placepickerAdd,
+      placepickerRemove,
+    ],
+    repoLink: "https://github.com/mjclaypool/Udemy-React-Projects/tree/main/15_HTTP-PlacePicker",
   }
 
   export const tictactoe = {
@@ -343,4 +379,12 @@ export const portfolio = {
       'Managing state with the useState hook',
       'Using props and lifting state up',
     ],
+    image: ticTacToeMockUp,
+    altText: "Laptop mock-up of the Tic-Tac-Toe game.",
+    screenshots: [
+      ticTacToeHomepage,
+      ticTacToeGame,
+      ticTacToeEnd,
+    ],
+    repoLink: "https://github.com/mjclaypool/Udemy-React-Projects/tree/main/4_Tic-Tac-Toe",
   }

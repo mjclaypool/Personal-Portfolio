@@ -22,6 +22,12 @@ import portfolioHomepage from './assets/case-study--portfolio-homepage.png';
 import portfolioAbout from './assets/case-study--portfolio-about.png';
 import portfolioCaseStudyPage from './assets/case-study--portfolio-case-study.png';
 import countriesMockUp from './assets/case-study--country-picker.png';
+import countriesHomepage from './assets/case-study--country-picker-homepage.png';
+import countriesHomepageL from './assets/case-study--country-picker-homepage-light.png';
+import countriesSearch from './assets/case-study--country-picker-search.png';
+import countriesSearchL from './assets/case-study--country-picker-search-light.png';
+import countriesDetails from './assets/case-study--country-picker-details.png';
+import countriesDetailsL from './assets/case-study--country-picker-details-light.png';
 import lemonMockUp from './assets/case-study--little-lemon.png';
 import lemonHomepage from './assets/case-study--little-lemon-homepage.png';
 import lemonBookingPage from './assets/case-study--little-lemon-booking-page.png';
@@ -232,7 +238,7 @@ export const portfolio = {
   }
 
   export const countryPicker = {
-    tagLine: 'An interactive country-picker application that pulls country data from REST Countries API.',
+    tagLine: 'An interactive country-picker application that pulls country data from ',
     objective: 'Per the design brief from Frontend Mentor, build a webpage that allows users to:',
     requirements: [
       'See all countries from the API on the homepage.',
@@ -249,24 +255,29 @@ export const portfolio = {
         insight: 'This section is a work-in-progress.'
       },
       {
-        title: 'Successfully execute of REST API calls',
+        title: 'Seamlessly execute REST API calls',
         insight: 'This section is a work-in-progress.'
+      },
+      {
+        title: "Build cohesive search bar and filter drop-down elements",
+        insight: "Used context and the useReducer hook from React to handle filtering countries by region and displaying countries by a user's search bar keystrokes. Both functionalities tap into the same state, so displayed countries reflect both searched and filtered results simultaneously.",
       },
       {
         title: 'Incorporate Tailwind CSS styling',
         insight: 'This section is a work-in-progress.'
       },
-      {
-        title: "Create the search bar element",
-        insight: "This section is a work-in-progress.",
-      },
-      {
-        title: "Develop the filter element",
-        insight: "This section is a work-in-progress.",
-      }
     ],
     image: countriesMockUp,
     altText: "Laptop mock-up of country-picker design.",
+    screenshots: [
+      countriesHomepage,
+      countriesSearch,
+      countriesDetails,
+      countriesHomepageL,
+      countriesSearchL,
+      countriesDetailsL,
+    ],
+    repoLink: "https://github.com/mjclaypool/Frontend-Mentor-Challenges/tree/main/rest-countries-api-with-color-theme-switcher-master",
   }
 
   export const littleLemon = {

@@ -475,6 +475,10 @@ button {
   margin-bottom: 3rem;
 }
 
+.case-study-tagline a {
+  color: #d9e2f1;
+}
+
 .case-study-mockup-region {
   display: flex;
   justify-content: center;

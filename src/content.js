@@ -1,9 +1,3 @@
-import projectImg1 from './assets/project--portfolio.png';
-import projectImg3 from './assets/project--little-lemon.png';
-import exerciseImg1 from './assets/exercise--food-ordering-app.png';
-import exerciseImg2 from './assets/exercise--placepicker.png';
-import exerciseImg3 from './assets/exercise--tic-tac-toe.png';
-
 import eduImg from './assets/ut-austin-tx.jpeg';
 import aboutEdu from './assets/about--education.png';
 import aboutResearch from './assets/about--research.png';
@@ -52,7 +46,7 @@ import placepickerHomepage from './assets/case-study--placepicker-homepage.png';
 import placepickerAdd from './assets/case-study--placepicker-add-places.png';
 import placepickerRemove from './assets/case-study--placepicker-remove-places.png';
 import ticTacToeMockUp from './assets/case-study--tic-tac-toe.png';
-import ticTacToeHomepage from './assets/exercise--tic-tac-toe.png';
+import ticTacToeHomepage from './assets/case-study--tic-tac-toe-homepage.png';
 import ticTacToeGame from './assets/case-study--tic-tac-toe-active-game.png';
 import ticTacToeEnd from './assets/case-study--tic-tac-toe-gameover.png';
 
@@ -298,7 +292,7 @@ export const countryPicker = {
 export const littleLemon = {
   type: "project",
   linkUrl: "/little-lemon/",
-  cardImg: projectImg3,
+  cardImg: lemonHomepage,
   cardAlt: "Little Lemon restaurant website screenshot.",
   cardTitle: "Little Lemon Website",
   cardDescription: "A responsive website for a fictional medeterranean restaurant with table-booking functionality.",
@@ -347,7 +341,7 @@ export const littleLemon = {
 export const foodOrderingApp = {
   type: "exercise",
   linkUrl: "/food-ordering-app/",
-  cardImg: exerciseImg1,
+  cardImg: foodOrderingHomepage,
   cardAlt: "Food ordering app screenshot.",
   cardTitle: "Food Ordering App",
   cardDescription: "A food ordering app that populates selected foods, quantities, and prices in a cart for checkout.",
@@ -383,7 +377,7 @@ export const foodOrderingApp = {
 export const placepicker = {
   type: "exercise",
   linkUrl: "/place-picker/",
-  cardImg: exerciseImg2,
+  cardImg: placepickerHomepage,
   cardAlt: "Place-picking app screenshot.",
   cardTitle: "Place-Picker App",
   cardDescription: "A place-picking app that sorts available places by geolocation and stores selected place cards.",
@@ -417,7 +411,7 @@ export const placepicker = {
 export const tictactoe = {
   type: "exercise",
   linkUrl: "/tic-tac-toe/",
-  cardImg: exerciseImg3,
+  cardImg: ticTacToeHomepage,
   cardAlt: "Tic-Tac-Toe game screenshot.",
   cardTitle: "Tic-Tac-Toe Game",
   cardDescription: "A standard, two-player tic-tac-toe game.",

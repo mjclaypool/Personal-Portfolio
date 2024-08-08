@@ -27,7 +27,6 @@ export default function AboutTab( {tab} ) {
           {ABOUTTAB[tab].buttons.map(topic => (
             <li key={topic.id} id={topic.id}>
               <motion.button
-                // type='button'
                 whileHover={{scale: 1.1}}
                 whileFocus={{scale: 1.1}}
                 onClick={() => handleSelectedIcon(topic.id)}
@@ -39,6 +38,7 @@ export default function AboutTab( {tab} ) {
             </li>
           ))}
         </menu>
+        <p className="tab-icon-attribution">Icon Source: <a href="https://www.flaticon.com/authors/freepik" target="_blank">Freepik</a></p>
       </div>
       <div id="about-details" className="tab-img">
         <img src={ABOUTTAB[tab].image} alt={ABOUTTAB[tab].imageAlt}/>

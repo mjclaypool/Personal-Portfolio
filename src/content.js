@@ -1,5 +1,4 @@
 import projectImg1 from './assets/project--portfolio.png';
-import projectImg2 from './assets/project--countrypicker.jpg';
 import projectImg3 from './assets/project--little-lemon.png';
 import exerciseImg1 from './assets/exercise--food-ordering-app.png';
 import exerciseImg2 from './assets/exercise--placepicker.png';
@@ -26,14 +25,16 @@ import aboutUdemyReact from './assets/about--udemy-react.png';
 
 import portfolioMockUp from './assets/case-study--portfolio.png';
 import portfolioHomepage from './assets/case-study--portfolio-homepage.png';
+import portfolioHomepageFull from './assets/case-study--portfolio-homepage-full.png';
 import portfolioAbout from './assets/case-study--portfolio-about.png';
 import portfolioCaseStudyPage from './assets/case-study--portfolio-case-study.png';
+import portfolioErrorPage from './assets/case-study--portfolio-error-page.png';
 import countriesMockUp from './assets/case-study--country-picker.png';
-import countriesHomepage from './assets/case-study--country-picker-homepage.png';
+import countriesHomepage from './assets/case-study--country-picker-homepage-dark.png';
 import countriesHomepageL from './assets/case-study--country-picker-homepage-light.png';
-import countriesSearch from './assets/case-study--country-picker-search.png';
+import countriesSearch from './assets/case-study--country-picker-search-dark.png';
 import countriesSearchL from './assets/case-study--country-picker-search-light.png';
-import countriesDetails from './assets/case-study--country-picker-details.png';
+import countriesDetails from './assets/case-study--country-picker-details-dark.png';
 import countriesDetailsL from './assets/case-study--country-picker-details-light.png';
 import lemonMockUp from './assets/case-study--little-lemon.png';
 import lemonHomepage from './assets/case-study--little-lemon-homepage.png';
@@ -141,7 +142,7 @@ export const ABOUTTAB = {
         altText: "Freepik icon of a crossed pencil and wrench, representing skills gained.",
         title: 'Skills',
         description: 'Developed numerous skills from working as a mechanical engineer that translate well into a software development role, including collaborating on multidisciplinary teams, iterating on designs, and integrating deliverables into larger systems.',
-        takeaways: 'Given my professional background, I bring a unique set of experiences in engineering and problem-solving to the software development field. Even as a newly minted mechanical engineer early in my career, I offered a fresh perspective to my project teams that promoted new ideas over routine solutions.',
+        takeaways: 'Given my professional background, I bring a unique set of experiences in engineering and problem-solving to the software development field. Even early in my career as a mechanical engineer, I offered a fresh perspective to my project teams that promoted new ideas over routine solutions.',
       },
     ],
   },
@@ -175,8 +176,8 @@ export const ABOUTTAB = {
         icon: aboutUTUXCert,
         altText: "Freepik icon of a certificate, representing a professional certificate earned from The University of Texas at Austin.",
         title: 'Post Graduate Program in UX Design',
-        description: 'Solidified user experience design concepts through multiple hands-on exercises. Collaborated with four other designers to plan out a pet health-tracking mobile app and present our concept to other peers and mentors of the program.',
-        takeaways: 'This experience afforded me an additional perspective on the UX Design field. I became more efficient using Figma plan out web designs, and learned about current design trends like inclusion of micro-animations, minimalism, and dark mode.',
+        description: 'Solidified user experience design concepts with projects in conducting user research, conducting competitive audits, and redesigning websites. Collaborated with four other designers to plan out a pet health-tracking mobile app and present our concept to other peers and mentors of the program.',
+        takeaways: 'This experience afforded me an additional perspective on the UX Design field. I became more efficient using to Figma plan out web designs, and I learned about current design trends like inclusion of micro-animations, minimalism, and dark mode.',
       },
       {
         id: 'learnFEM',
@@ -185,7 +186,7 @@ export const ABOUTTAB = {
         altText: "Freepik icon of a multiple-sized screens, representing responsive website design projects from Frontend Mentor.",
         title: 'FrontEnd Mentor Challenges',
         description: 'Practiced building web pages with HTML, CSS, Tailwind CSS, JavaScript, React.js, and Styled Components. Exercised design best practices using semantic HTML and flexboxes for building accessible, responsive web elements.',
-        takeaways: 'Through building out these projects, I enjoyed the opportunities to try out different third-party libraries and put all I have learned into practice. I am very proud of my advanced country picker webpage, where I practiced making API calls and learned how to create new components like search bars and filter elements.',
+        takeaways: 'Through building out these projects, I pushed myself to try out different third-party libraries and put all I have learned into practice. I am very proud of my advanced country-picker webpage, where I practiced making API calls and learned how to create new components like search bars and filter elements.',
       },
       {
         id: 'learnUdemy',
@@ -205,7 +206,7 @@ export const ABOUTTAB = {
 export const portfolio = {
   type: "project",
   linkUrl: "/portfolio/",
-  cardImg: projectImg1,
+  cardImg: portfolioHomepage,
   cardAlt: "Personal portfolio website screenshot",
   cardTitle: "Portfolio",
   cardDescription: "A responsive, interactive portfolio website highlighting personal growth as a designer and software developer.",
@@ -222,27 +223,28 @@ export const portfolio = {
   learnings: [
     {
       title: 'Ensure the site is enjoyable and functional across browsers and devices.',
-      insight: 'With a wide variety of screen and browser options for visiting a webpage, responsive web design is critical for delivering an uncompromised user experience across all viewports. To mitigate potential compatibility issues, I tested my application early and often on multiple browsers and devices, using browser dev tools to help identify and fix problems along the way. And to promote inclusivity of all abilities and assistive devices used by site visitors, I verified that all functionality is accessible via keyboard navigation and all non-text content includes text alternatives.',
+      insight: 'With a wide variety of screen and browser options for visiting a webpage, responsive web design is critical for delivering an uncompromised user experience across all viewports. To mitigate potential compatibility issues, I tested my application early and often on multiple browsers and devices, using browser dev tools to help identify and fix problems along the way. Additionally, I verified that all functionality is accessible via keyboard navigation and non-text content includes text alternatives to promote inclusivity of all abilities and assistive devices.',
     },
     {
       title: 'Outsource content details to a separate file (content.js).',
-      insight: 'Moving the content data out of the individual page and component files leads to leaner components, improves ease of making formatting changes and adding new content, and reduces time spent on debugging across multiple layers of a file structure. With this solution, I can easily add case study projects or about topics in the future without needing to manipulate the individual components.',
-    },
-    {
-      title: "Incorporate animations, effects, and a custom error page",
-      insight: "To make this portfolio website fun and engaging, I added animations to highlight hovered/focused elements and applied smooth transitions to scrolling and user-selected components. I also incorporated Framer Motion to enhance the feel of animated elements.",
+      insight: 'Moving data out of individual pages and component files leads to leaner components, improves ease of making formatting changes and adding new content, and reduces time spent on debugging across multiple layers of a file structure. Having created reusable elements for the "About" section and case study page, I can easily add topics or swap out case studies without needing to manipulate any components or add any pages.',
     },
     {
       title: "Improve browser-routing with React-Router-DOM",
-      insight: "With this project, I learned how to structure my SPA with children paths, create a custom error page for 404 errors, and scroll to elements on the same page as the link.",
+      insight: "To integrate the reusable case study page as a child path, I wrapped the browser router with context and utilized the useParams hook to make page connections, load the correct data, and prevent refresh errors. While building out this project, I enjoyed picking up new experiences in structuring SPAs, creating custom 404 error pages, and scrolling to different elements on a page with links. Looking forward to learning more about React router components and hooks for future projects.",
+    },
+    {
+      title: "Incorporate animations, effects, and a custom error page",
+      insight: "To make this portfolio website fun and engaging, I added animations to highlight hovered/focused elements, applied smooth transitions to scrolling and user-selected components, and created a custom 404 error page. For animations, I tried out motion components from the Framer Motion library to style elements entering the viewport and enhance the feel of interactive elements.",
     },
   ],
   image: portfolioMockUp,
   altText: "Laptop mock-up of final portfolio design.",
   screenshots: [
-    portfolioHomepage,
+    portfolioHomepageFull,
     portfolioAbout,
     portfolioCaseStudyPage,
+    portfolioErrorPage,
   ],
   repoLink: "https://github.com/mjclaypool/Personal-Portfolio",
 }
@@ -250,7 +252,7 @@ export const portfolio = {
 export const countryPicker = {
   type: "project",
   linkUrl: "/country-picker/",
-  cardImg: projectImg2,
+  cardImg: countriesHomepage,
   cardAlt: "Country-Picker web application screenshot",
   cardTitle: "Country-Picker App",
   cardDescription: "A country-picking app that pulls and displays country data from the REST Countries API.",
@@ -318,7 +320,7 @@ export const littleLemon = {
     },
     {
       title: "Develop useful client-side form validation",
-      insight: "Setting users up for success with informative error messages prevents frustration and improves the overall user experience. With any form's development, I make sure users are guided towards valid inputs with straightforward and specific error messages and not bombarded with errors on individual keystrokes.",
+      insight: "Setting users up for success with informative error messages prevents frustration and improves the overall user experience. With any form's development, I make sure users are guided towards valid inputs with straightforward and specific error messages and not bothered with errors on individual keystrokes.",
     },
     {
       title: "Use the useReducer Hook",
@@ -365,6 +367,7 @@ export const foodOrderingApp = {
     'Sending HTTP Requests',
     'Building reusable modal components',
     'Handling form submission and validation',
+    'Using context to share state data',
   ],
   image: foodOrderingMockUp,
   altText: "Laptop mock-up of the food ordering app.",
@@ -396,6 +399,7 @@ export const placepicker = {
   outcomes: "Over the course of this exercise, I further developed my coding skills by practicing:",
   learnings: [
     'Fetching data from a dummy backend API',
+    'Defining asynchronous functions',
     'Handling side-effects and HTTP errors',
     'Employing optimistic UI updating',
   ],

@@ -1,29 +1,25 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-
-import exerciseImg1 from '../assets/exercise--food-ordering-app.png';
-import exerciseImg2 from '../assets/exercise--placepicker.png';
-import exerciseImg3 from '../assets/exercise--tic-tac-toe.png';
+import CaseStudyContext from '../store/CaseStudyContext.jsx';
 
 export default function Exercises() {
+  const caseStudyCtx = useContext(CaseStudyContext);
+
   return (
     <section className='body-section'>
       <h2 className="section-header" id="exercises">Exercises</h2>
       <div className="exercises-section">
-        <Link to="/case-study--food-ordering/" className="card">
-          <img src={exerciseImg1} alt="Food ordering app screenshot" className="img-card" />
-          <h4>Food Ordering App</h4>
-          <p>A food ordering app that populates selected foods, quantities, and prices in a cart for checkout.</p>
-        </Link>
-        <Link to="/case-study--placepicker/" className="card">
-          <img src={exerciseImg2} alt="Place-picking app screenshot" className="img-card" />
-          <h4>Place-Picker App</h4>
-          <p>A place-picking app that sorts available places by geolocation and stores selected place cards.</p>
-        </Link>
-        <Link to="/case-study--tic-tac-toe/" className="card">
-          <img src={exerciseImg3} alt="Tic-Tac-Toe game screenshot" className="img-card" />
-          <h4>Tic-Tac-Toe Game</h4>
-          <p>A standard, two-player tic-tac-toe game.</p>
-        </Link>
+        {caseStudyCtx.exercises.map(card => (
+          <Link to={card.linkUrl} className="card" key={card.cardTitle}>
+            <img
+              src={card.cardImg}
+              alt={card.cardAlt}
+              className="img-card"
+            />
+            <h4>{card.cardTitle}</h4>
+            <p>{card.cardDescription}</p>
+          </Link>
+        ))}
       </div>
     </section>
   )

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export default function Footer( {img} ) {
   return (
     <footer id='main-footer'>
-      <HashLink to="/#" id='footer-title'>
+      <HashLink to="/#" id='footer-title' aria-label="return-to-homepage">
         <img src={img} alt='My profile picture' />
         <span>Mallory Claypool</span>
       </HashLink>

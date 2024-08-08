@@ -18,7 +18,7 @@ export default function Header( {img} ) {
 
   return (
     <header id='main-header'>
-      <Link to='/' id='header-title'>
+      <Link to='/' id='header-title' aria-label="return-to-homepage">
         <img src={img} alt='Profile Picture' />
         <span>Mallory Claypool</span>
       </Link>
@@ -29,7 +29,7 @@ export default function Header( {img} ) {
       </div>
       {isOpen && <Drawer onDone={handleDone}/>}
       <div id='header-hamburger'>
-        <button type="button" onClick={handleShowDrawer}>
+        <button type="button" aria-label="navigation-menu" onClick={handleShowDrawer}>
           <img src={hamburgerIcon} alt="Menu icon created by Febrian Hidayat - Flaticon" />
         </button>
       </div>

@@ -1,3 +1,10 @@
+import projectImg1 from './assets/project--portfolio.png';
+import projectImg2 from './assets/project--countrypicker.jpg';
+import projectImg3 from './assets/project--little-lemon.png';
+import exerciseImg1 from './assets/exercise--food-ordering-app.png';
+import exerciseImg2 from './assets/exercise--placepicker.png';
+import exerciseImg3 from './assets/exercise--tic-tac-toe.png';
+
 import eduImg from './assets/ut-austin-tx.jpeg';
 import aboutEdu from './assets/about--education.png';
 import aboutResearch from './assets/about--research.png';
@@ -196,206 +203,240 @@ export const ABOUTTAB = {
 // Project Case Studies
 
 export const portfolio = {
-    tagLine: 'An interactive personal portfolio that showcases my skills as a front-end software developer.',
-    objective: 'Design and build an engaging portfolio website that allows users to:',
-    requirements: [
-      'See "Hero", "Projects", "Exercises", and "About" sections on the homepage.',
-      'Use links in the header and footer to navigate to their respective content sections.',
-      'View individual project and exercise case studies via their links on the homepage.',
-      'Interact with education, work experience, and continuous learning content in the "About" section.',
-      'Connect via the LinkedIn and GitHub links in the footer section.'
-    ],
-    learnings: [
-      {
-        title: 'Ensure the site is enjoyable and functional across browsers and devices.',
-        insight: 'With a wide variety of screen and browser options for visiting a webpage, responsive web design is critical for delivering an uncompromised user experience across all viewports.',
-      },
-      {
-        title: 'Outsource content details to a separate file (content.js).',
-        insight: 'Moving the content data out of the individual page and component files leads to leaner components, improves ease of making formatting changes and adding new content, and reduces time spent on debugging across multiple layers of a file structure.',
-      },
-      {
-        title: 'Follow accessibility guidelines as outlined by the WCAG.',
-        insight: 'To be inclusive of all abilities and assistive devices used by site visitors, this website follows accessibility principles of being perceivable, operable, understandable, and robust. Specific examples applied to this portfolio include ensuring all functionality is accessible via keyboard navigation and all non-text content includes text alternatives.',
-      },
-      {
-        title: "Incorporate animations and effects",
-        insight: "To make this portfolio website fun and engaging, I added animations to highlight hovered elements and applied smooth transitions to scrolling and user-selected components. I also incorporated Framer Motion to enhance the feel of animated elements.",
-      },
-      {
-        title: "Improve browser-routing with React-Router-DOM",
-        insight: "With this project, I learned how to structure my SPA with children paths, create a custom error page for 404 errors, and scroll to elements on the same page as the link.",
-      }
-    ],
-    image: portfolioMockUp,
-    altText: "Laptop mock-up of final portfolio design.",
-    screenshots: [
-      portfolioHomepage,
-      portfolioAbout,
-      portfolioCaseStudyPage,
-    ],
-    repoLink: "https://github.com/mjclaypool/Personal-Portfolio",
-  }
+  type: "project",
+  linkUrl: "/portfolio/",
+  cardImg: projectImg1,
+  cardAlt: "Personal portfolio website screenshot",
+  cardTitle: "Portfolio",
+  cardDescription: "A responsive, interactive portfolio website highlighting personal growth as a designer and software developer.",
+  caseStudyTitle: "Portfolio Case Study",
+  tagLine: 'An interactive personal portfolio that showcases my skills as a front-end software developer.',
+  objective: 'Design and build an engaging portfolio website that allows users to:',
+  requirements: [
+    'See "Hero", "Projects", "Exercises", and "About" sections on the homepage.',
+    'Use links in the header and footer to navigate to their respective content sections.',
+    'View individual project and exercise case studies via their links on the homepage.',
+    'Interact with education, work experience, and continuous learning content in the "About" section.',
+    'Connect via the LinkedIn and GitHub links in the footer section.'
+  ],
+  learnings: [
+    {
+      title: 'Ensure the site is enjoyable and functional across browsers and devices.',
+      insight: 'With a wide variety of screen and browser options for visiting a webpage, responsive web design is critical for delivering an uncompromised user experience across all viewports. To mitigate potential compatibility issues, I tested my application early and often on multiple browsers and devices, using browser dev tools to help identify and fix problems along the way. And to promote inclusivity of all abilities and assistive devices used by site visitors, I verified that all functionality is accessible via keyboard navigation and all non-text content includes text alternatives.',
+    },
+    {
+      title: 'Outsource content details to a separate file (content.js).',
+      insight: 'Moving the content data out of the individual page and component files leads to leaner components, improves ease of making formatting changes and adding new content, and reduces time spent on debugging across multiple layers of a file structure. With this solution, I can easily add case study projects or about topics in the future without needing to manipulate the individual components.',
+    },
+    {
+      title: "Incorporate animations, effects, and a custom error page",
+      insight: "To make this portfolio website fun and engaging, I added animations to highlight hovered/focused elements and applied smooth transitions to scrolling and user-selected components. I also incorporated Framer Motion to enhance the feel of animated elements.",
+    },
+    {
+      title: "Improve browser-routing with React-Router-DOM",
+      insight: "With this project, I learned how to structure my SPA with children paths, create a custom error page for 404 errors, and scroll to elements on the same page as the link.",
+    },
+  ],
+  image: portfolioMockUp,
+  altText: "Laptop mock-up of final portfolio design.",
+  screenshots: [
+    portfolioHomepage,
+    portfolioAbout,
+    portfolioCaseStudyPage,
+  ],
+  repoLink: "https://github.com/mjclaypool/Personal-Portfolio",
+}
 
-  export const countryPicker = {
-    tagLine: 'An interactive country-picker application that pulls country data from ',
-    objective: 'Per the design brief from Frontend Mentor, build a webpage that allows users to:',
-    requirements: [
-      'See all countries from the API on the homepage.',
-      'Search for a country using an input field.',
-      'Filter countries by region.',
-      'Click on a country to see more detailed information on a separate page.',
-      'Click through to the border countries on the detail page.',
-      "View the optimal layout for the interface depending on their device's screen size.",
-      'See hover and focus states for all interactive elements on the page.',
-    ],
-    learnings: [
-      {
-        title: 'Optimize user experience with responsive web design',
-        insight: 'This section is a work-in-progress.'
-      },
-      {
-        title: 'Seamlessly execute REST API calls',
-        insight: 'This section is a work-in-progress.'
-      },
-      {
-        title: "Build cohesive search bar and filter drop-down elements",
-        insight: "Used context and the useReducer hook from React to handle filtering countries by region and displaying countries by a user's search bar keystrokes. Both functionalities tap into the same state, so displayed countries reflect both searched and filtered results simultaneously.",
-      },
-      {
-        title: 'Incorporate Tailwind CSS styling',
-        insight: 'This section is a work-in-progress.'
-      },
-    ],
-    image: countriesMockUp,
-    altText: "Laptop mock-up of country-picker design.",
-    screenshots: [
-      countriesHomepage,
-      countriesSearch,
-      countriesDetails,
-      countriesHomepageL,
-      countriesSearchL,
-      countriesDetailsL,
-    ],
-    repoLink: "https://github.com/mjclaypool/Frontend-Mentor-Challenges/tree/main/rest-countries-api-with-color-theme-switcher-master",
-  }
+export const countryPicker = {
+  type: "project",
+  linkUrl: "/country-picker/",
+  cardImg: projectImg2,
+  cardAlt: "Country-Picker web application screenshot",
+  cardTitle: "Country-Picker App",
+  cardDescription: "A country-picking app that pulls and displays country data from the REST Countries API.",
+  caseStudyTitle: "Country-Picker Case Study",
+  tagLine: 'An interactive country-picker application that pulls country data from ',
+  objective: 'Per the design brief from Frontend Mentor, build a webpage that allows users to:',
+  requirements: [
+    'See all countries from the API on the homepage.',
+    'Search for a country using an input field.',
+    'Filter countries by region.',
+    'Click on a country to see more detailed information on a separate page.',
+    'Click through to the border countries on the detail page.',
+    "View the optimal layout for the interface depending on their device's screen size.",
+    'See hover and focus states for all interactive elements on the page.',
+  ],
+  learnings: [
+    {
+      title: 'Seamlessly execute REST API calls',
+      insight: "Used Fetch API to asynchronously perform GET requests from REST Countries API endpoints, and managed side-effects with the useEffect hook. The first request retrieves a subset of country data to populate the cards on the main page. The second request is triggered whenever a country is selected by the user, retrieving and displaying in-depth country details on that country's page."
+    },
+    {
+      title: "Build cohesive search bar and filter drop-down elements",
+      insight: "Applied the useContext and useReducer hooks from React to display countries by region and/or keystrokes in the search bar. Since both functionalities tap into a shared state, the user is able search and filter countries by region simultaneously. Additionally, this shared state persists after the user navigates to a country's details page, so the user will return to the previous search/filter results when the back button is clicked. By choosing to manage state with context, I streamlined state-sharing among sibling components, prevented any consideration of prop-drilling in the solution, and improved the user's experience by keeping track of their inputs.",
+    },
+    {
+      title: 'Incorporate Tailwind CSS styling',
+      insight: 'Practiced using the popular CSS framework, Tailwind CSS, to bolster maintainability and speed of implementing future updates. Gained experience using responsive utility variants, and looking forward to learning more about directives and reusing styles.'
+    },
+  ],
+  image: countriesMockUp,
+  altText: "Laptop mock-up of country-picker design.",
+  screenshots: [
+    countriesHomepage,
+    countriesSearch,
+    countriesDetails,
+    countriesHomepageL,
+    countriesSearchL,
+    countriesDetailsL,
+  ],
+  repoLink: "https://github.com/mjclaypool/Frontend-Mentor-Challenges/tree/main/rest-countries-api-with-color-theme-switcher-master",
+}
 
-  export const littleLemon = {
-    tagLine: "Addition of table-booking functionality to a fictional Mediterranean restaurant's website.",
-    objective: 'Provided with a UI kit, build a Little Lemon restaurant website that empowers users to:',
-    requirements: [
-      'Navigate to the "Reserve a Table" page via the navigation bar, footer, and respective CTA on the homepage.',
-      'Select a date, time, number of guests, and occasion for making a reservation.',
-      'Choose a time from date-specific availability, which shall be randomly generated by an API-like script.',
-      'Receive useful error messages (if applicable) via client-side form validation.',
-      'Obtain a reservation summary upon successful form submission.',
-      'See hover and focus states for all interactive elements on the page.',
-    ],
-    learnings: [
-      {
-        title: "Integrate browser-routing with React-Router-DOM",
-        insight: "I relied on a combination of BrowserRouter, Routes, Route, useNavigate, and useLocation to build this single-page application. This was my first attempt at routing pages, and I have since adopted a more streamlined and readable approach to browser-routing with createBrowserRouter, RouterProvider, Link, and NavLink.",
-      },
-      {
-        title: "Develop useful client-side form validation",
-        insight: "Setting users up for success with informative error messages prevents frustration and improves the overall user experience. With any form's development, I make sure users are guided towards valid inputs with straightforward and specific error messages and not bombarded with errors on individual keystrokes.",
-      },
-      {
-        title: "Use the useReducer Hook",
-        insight: "I used the useReducer hook to update the available times state for booking on any chosen date. I learned that useReducer is a powerful hook for handling more complicated state management than would otherwise be handled by useState.",
-      },
-      {
-        title: "Build tests with React-Testing-Library",
-        insight: "This project introduced me to writing unit tests for React components, mirroring the declarative nature of programming in React by focusing on testing the UI. Although there is still a lot of room for me to grow is this area, I appreciate the importance of unit testing throughout the software development process. I look forward to exploring other testing frameworks like Playwright for future projects.",
-      },
-    ],
-    image: lemonMockUp,
-    altText: "Laptop mock-up of the Little Lemon restaurant website.",
-    screenshots: [
-      lemonHomepage,
-      lemonBookingPage,
-      lemonConfirmationPage,
-    ],
-    repoLink: "https://github.com/mjclaypool/Restaurant-Booking-Project",
-  }
+export const littleLemon = {
+  type: "project",
+  linkUrl: "/little-lemon/",
+  cardImg: projectImg3,
+  cardAlt: "Little Lemon restaurant website screenshot.",
+  cardTitle: "Little Lemon Website",
+  cardDescription: "A responsive website for a fictional medeterranean restaurant with table-booking functionality.",
+  caseStudyTitle: "Little Lemon Case Study",
+  tagLine: "Addition of table-booking functionality to a fictional Mediterranean restaurant's website.",
+  objective: 'Provided with a UI kit, build a Little Lemon restaurant website that empowers users to:',
+  requirements: [
+    'Navigate to the "Reserve a Table" page via the navigation bar, footer, and respective CTA on the homepage.',
+    'Select a date, time, number of guests, and occasion for making a reservation.',
+    'Choose a time from date-specific availability, which shall be randomly generated by an API-like script.',
+    'Receive useful error messages (if applicable) via client-side form validation.',
+    'Obtain a reservation summary upon successful form submission.',
+    'See hover and focus states for all interactive elements on the page.',
+  ],
+  learnings: [
+    {
+      title: "Integrate browser-routing with React-Router-DOM",
+      insight: "I relied on a combination of BrowserRouter, Routes, Route, useNavigate, and useLocation to build this single-page application. This was my first attempt at routing pages, and I have since adopted a more streamlined and readable approach to browser-routing with createBrowserRouter, RouterProvider, Link, and NavLink.",
+    },
+    {
+      title: "Develop useful client-side form validation",
+      insight: "Setting users up for success with informative error messages prevents frustration and improves the overall user experience. With any form's development, I make sure users are guided towards valid inputs with straightforward and specific error messages and not bombarded with errors on individual keystrokes.",
+    },
+    {
+      title: "Use the useReducer Hook",
+      insight: "I used the useReducer hook to update the available times state for booking on any chosen date. I learned that useReducer is a powerful hook for handling more complicated state management than would otherwise be handled by useState.",
+    },
+    {
+      title: "Build tests with React-Testing-Library",
+      insight: "This project introduced me to writing unit tests for React components, mirroring the declarative nature of programming in React by focusing on testing the UI. Although there is still a lot of room for me to grow is this area, I appreciate the importance of unit testing throughout the software development process. I look forward to exploring other testing frameworks like Playwright for future projects.",
+    },
+  ],
+  image: lemonMockUp,
+  altText: "Laptop mock-up of the Little Lemon restaurant website.",
+  screenshots: [
+    lemonHomepage,
+    lemonBookingPage,
+    lemonConfirmationPage,
+  ],
+  repoLink: "https://github.com/mjclaypool/Restaurant-Booking-Project",
+}
 
 
-  // Exercise Case Studies
+// Exercise Case Studies
 
-  export const foodOrderingApp = {
-    tagLine: "A React exercise on sending HTTP Requests, building Modals, using Context, and creating custom hooks.",
-    objective: "Provided with a dummy backend and CSS styling, build a food-ordering app that allows users to:",
-    requirements: [
-      'Add dishes to a virtual cart by clicking "Add to Cart" CTAs on menu items.',
-      'See a count of dishes in the cart displayed on the homepage cart button.',
-      'View an accurate cart summary when the cart button is clicked.',
-      'Fill out a checkout form when the "Go to Checkout" CTA is clicked.',
-      'See useful error messages if the form is incorrectly completed.',
-      'Receive an order confirmation when the form is successfully submitted to the dummy backend.'
-    ],
-    outcomes: "Over the course of this exercise, I further developed my coding skills by practicing:",
-    learnings: [
-      'Sending HTTP Requests',
-      'Building reusable modal components',
-      'Handling form submission and validation',
-    ],
-    image: foodOrderingMockUp,
-    altText: "Laptop mock-up of the food ordering app.",
-    screenshots: [
-      foodOrderingHomepage,
-      foodOrderingCart,
-      foodOrderingForm,
-      foodOrderingConfirmation,
-    ],
-    repoLink: "https://github.com/mjclaypool/Udemy-React-Projects/tree/main/18_Food-Order-App",
-  }
+export const foodOrderingApp = {
+  type: "exercise",
+  linkUrl: "/food-ordering-app/",
+  cardImg: exerciseImg1,
+  cardAlt: "Food ordering app screenshot.",
+  cardTitle: "Food Ordering App",
+  cardDescription: "A food ordering app that populates selected foods, quantities, and prices in a cart for checkout.",
+  caseStudyTitle: "Food Ordering App Exercise",
+  tagLine: "A React exercise on sending HTTP Requests, building Modals, using Context, and creating custom hooks.",
+  objective: "Provided with a dummy backend and CSS styling, build a food-ordering app that allows users to:",
+  requirements: [
+    'Add dishes to a virtual cart by clicking "Add to Cart" CTAs on menu items.',
+    'See a count of dishes in the cart displayed on the homepage cart button.',
+    'View an accurate cart summary when the cart button is clicked.',
+    'Fill out a checkout form when the "Go to Checkout" CTA is clicked.',
+    'See useful error messages if the form is incorrectly completed.',
+    'Receive an order confirmation when the form is successfully submitted to the dummy backend.'
+  ],
+  outcomes: "Over the course of this exercise, I further developed my coding skills by practicing:",
+  learnings: [
+    'Sending HTTP Requests',
+    'Building reusable modal components',
+    'Handling form submission and validation',
+  ],
+  image: foodOrderingMockUp,
+  altText: "Laptop mock-up of the food ordering app.",
+  screenshots: [
+    foodOrderingHomepage,
+    foodOrderingCart,
+    foodOrderingForm,
+    foodOrderingConfirmation,
+  ],
+  repoLink: "https://github.com/mjclaypool/Udemy-React-Projects/tree/main/18_Food-Order-App",
+}
 
-  export const placepicker = {
-    tagLine: "A React exercise on handling side effects, sending HTTP Requests, and using async/await.",
-    objective: "Provided with a dummy backend and CSS styling, build a place-picking app that allows users to:",
-    requirements: [
-      'See available places sorted by distance to the user and loaded from a dummy backend.',
-      'Click places in the "Available places" section to move into the "I would like to visit..." section.',
-      'Click places in the "I would like to visit..." section to remove them from the section.',
-      'See a loading message while the application fetches data from the backend, and see an error message if it fails to fetch.',
-    ],
-    outcomes: "Over the course of this exercise, I further developed my coding skills by practicing:",
-    learnings: [
-      'Fetching data from a dummy backend API',
-      'Handling side-effects and HTTP errors',
-      'Employing optimistic UI updating',
-    ],
-    image: placepickerMockUp,
-    altText: "Laptop mock-up of place-picking app.",
-    screenshots: [
-      placepickerLoading,
-      placepickerHomepage,
-      placepickerAdd,
-      placepickerRemove,
-    ],
-    repoLink: "https://github.com/mjclaypool/Udemy-React-Projects/tree/main/15_HTTP-PlacePicker",
-  }
+export const placepicker = {
+  type: "exercise",
+  linkUrl: "/place-picker/",
+  cardImg: exerciseImg2,
+  cardAlt: "Place-picking app screenshot.",
+  cardTitle: "Place-Picker App",
+  cardDescription: "A place-picking app that sorts available places by geolocation and stores selected place cards.",
+  caseStudyTitle: "Place-Picker Exercise",
+  tagLine: "A React exercise on handling side effects, sending HTTP Requests, and using async/await.",
+  objective: "Provided with a dummy backend and CSS styling, build a place-picking app that allows users to:",
+  requirements: [
+    'See available places sorted by distance to the user and loaded from a dummy backend.',
+    'Click places in the "Available places" section to move into the "I would like to visit..." section.',
+    'Click places in the "I would like to visit..." section to remove them from the section.',
+    'See a loading message while the application fetches data from the backend, and see an error message if it fails to fetch.',
+  ],
+  outcomes: "Over the course of this exercise, I further developed my coding skills by practicing:",
+  learnings: [
+    'Fetching data from a dummy backend API',
+    'Handling side-effects and HTTP errors',
+    'Employing optimistic UI updating',
+  ],
+  image: placepickerMockUp,
+  altText: "Laptop mock-up of place-picking app.",
+  screenshots: [
+    placepickerLoading,
+    placepickerHomepage,
+    placepickerAdd,
+    placepickerRemove,
+  ],
+  repoLink: "https://github.com/mjclaypool/Udemy-React-Projects/tree/main/15_HTTP-PlacePicker",
+}
 
-  export const tictactoe = {
-    tagLine: "An early React exercise on writing JSX code, building components, and managing state with hooks.",
-    objective: "Provided with CSS styling, build a Tic-Tac-Toe game that allows the user to:",
-    requirements: [
-      'Rename "Player 1" and "Player 2" to the desired player name.',
-      'Determine which player is active at any moment in the game.',
-      'See a game summary when either a player wins or the game ends in a draw.',
-    ],
-    outcomes: "Over the course of this exercise, I further developed my coding skills by practicing:",
-    learnings: [
-      'Building reusable components',
-      'Managing state with the useState hook',
-      'Using props and lifting state up',
-    ],
-    image: ticTacToeMockUp,
-    altText: "Laptop mock-up of the Tic-Tac-Toe game.",
-    screenshots: [
-      ticTacToeHomepage,
-      ticTacToeGame,
-      ticTacToeEnd,
-    ],
-    repoLink: "https://github.com/mjclaypool/Udemy-React-Projects/tree/main/4_Tic-Tac-Toe",
-  }
+export const tictactoe = {
+  type: "exercise",
+  linkUrl: "/tic-tac-toe/",
+  cardImg: exerciseImg3,
+  cardAlt: "Tic-Tac-Toe game screenshot.",
+  cardTitle: "Tic-Tac-Toe Game",
+  cardDescription: "A standard, two-player tic-tac-toe game.",
+  caseStudyTitle: "Tic-Tac-Toe Exercise",
+  tagLine: "An early React exercise on writing JSX code, building components, and managing state with hooks.",
+  objective: "Provided with CSS styling, build a Tic-Tac-Toe game that allows the user to:",
+  requirements: [
+    'Rename "Player 1" and "Player 2" to the desired player name.',
+    'Determine which player is active at any moment in the game.',
+    'See a game summary when either a player wins or the game ends in a draw.',
+  ],
+  outcomes: "Over the course of this exercise, I further developed my coding skills by practicing:",
+  learnings: [
+    'Building reusable components',
+    'Managing state with the useState hook',
+    'Using props and lifting state up',
+  ],
+  image: ticTacToeMockUp,
+  altText: "Laptop mock-up of the Tic-Tac-Toe game.",
+  screenshots: [
+    ticTacToeHomepage,
+    ticTacToeGame,
+    ticTacToeEnd,
+  ],
+  repoLink: "https://github.com/mjclaypool/Udemy-React-Projects/tree/main/4_Tic-Tac-Toe",
+}

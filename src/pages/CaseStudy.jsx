@@ -16,6 +16,7 @@ export default function CaseStudy() {
   useEffect(() => {
     caseStudyCtx.showCaseStudy(params.caseStudy)
     setIsLoading(false)
+    document.getElementById('main-header').scrollIntoView();
   }, [params.caseStudy])
 
   return (

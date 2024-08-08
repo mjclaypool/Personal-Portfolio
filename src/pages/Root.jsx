@@ -1,4 +1,4 @@
-import { Outlet, ScrollRestoration } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
 import Header from "../components/Header";
 import Footer from '../components/Footer';
@@ -10,7 +10,6 @@ function RootLayout() {
     <>
       <Header img={avatar}/>
       <main>
-        <ScrollRestoration />
         <Outlet />
       </main>
       <Footer img={avatar}/>

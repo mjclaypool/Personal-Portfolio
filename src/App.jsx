@@ -8,12 +8,12 @@ import './index.css'
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/Personal-Portfolio/',
     element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
-      { path: '/', element: <HomePage /> },
-      { path: '/:caseStudy', element: <CaseStudy /> },
+      { path: '/Personal-Portfolio/', element: <HomePage /> },
+      { path: '/Personal-Portfolio/:caseStudy', element: <CaseStudy /> },
     ]
   }
 ])

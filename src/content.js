@@ -224,8 +224,8 @@ export const portfolio = {
       insight: 'Moving data out of individual pages and component files leads to leaner components, improves ease of making formatting changes and adding new content, and reduces time spent on debugging across multiple layers of a file structure. Having created reusable elements for the "About" section and case study page, I can easily add topics or swap out case studies without needing to manipulate any components or add any pages.',
     },
     {
-      title: "Improve browser-routing with React-Router-DOM",
-      insight: "To integrate the reusable case study page as a child path, I wrapped the browser router with context and utilized the useParams hook to make page connections, load the correct data, and prevent refresh errors. While building out this project, I enjoyed picking up new experiences in structuring SPAs, creating custom 404 error pages, and scrolling to different elements on a page with links. Looking forward to learning more about React router components and hooks for future projects.",
+      title: "Improve routing with React-Router-DOM",
+      insight: "To integrate the reusable case study page as a child path, I wrapped the router with context and utilized the useParams hook to make page connections, load the targeted data, and prevent refresh errors. However, when I deployed the project to GitHub Pages, I realized I could not refresh pages other than the homepage without getting a GitHub 404 error. I quickly learned that GitHub Pages cannot handle dynamic routing of SPAs with browser routing, so I switched to hash routing since it does not require server-side support. In doing so, I enjoyed picking up new experiences in structuring SPAs, and I look forward to learning more about React router components and hooks for future projects.",
     },
     {
       title: "Incorporate animations, effects, and a custom error page",

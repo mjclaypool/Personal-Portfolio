@@ -251,7 +251,8 @@ export const countryPicker = {
   cardTitle: "Country-Picker App",
   cardDescription: "A country-picking app that pulls and displays country data from the REST Countries API.",
   caseStudyTitle: "Country-Picker Case Study",
-  tagLine: 'An interactive country-picker application that pulls country data from ',
+  tagLine: ['An interactive country-picker application that pulls country data from '],
+  tagLineLink: ["https://restcountries.com/", "REST Countries API."],
   objective: 'Per the design brief from Frontend Mentor, build a webpage that allows users to:',
   requirements: [
     'See all countries from the API on the homepage.',
@@ -363,6 +364,7 @@ export const foodOrderingApp = {
     'Handling form submission and validation',
     'Using context to share state data',
   ],
+  insights: "After using context for the first time in this exercise, I have integrated it into every subsequent project. Context helped me build cohesive filter drop-down and search bar elements in the Country-Picker project, and it enabled me to route and load project-specific data into a reusable case study page for this portfolio. I am proud of what I have built thus far with createContext and the useContext hook, and I look forward using context more in applications like e-commerce sites and multi-step forms.",
   image: foodOrderingMockUp,
   altText: "Laptop mock-up of the food ordering app.",
   screenshots: [
@@ -397,6 +399,7 @@ export const placepicker = {
     'Handling side-effects and HTTP errors',
     'Employing optimistic UI updating',
   ],
+  insights: "This exercise really helped me understand when and how to implement the useEffect hook and asynchronous functions. Additionally, the provided CSS styling inspired me to learn how to create animations with keyframes and frameworks like Framer Motion. I tied some of what I learned into the interactive elements of this portfolio, and I am eager to incorporate more animations into future development projects.",
   image: placepickerMockUp,
   altText: "Laptop mock-up of place-picking app.",
   screenshots: [
@@ -420,8 +423,9 @@ export const tictactoe = {
   objective: "Provided with CSS styling, build a Tic-Tac-Toe game that allows the user to:",
   requirements: [
     'Rename "Player 1" and "Player 2" to the desired player name.',
-    'Determine which player is active at any moment in the game.',
-    'See a game summary when either a player wins or the game ends in a draw.',
+    'Keep track of which player is active at any moment in the game.',
+    'Implement game logic to trigger a game-over with a win or draw.',
+    "See a running history of player moves and a game summary at the game's conclusion.",
   ],
   outcomes: "Over the course of this exercise, I further developed my coding skills by practicing:",
   learnings: [
@@ -429,6 +433,7 @@ export const tictactoe = {
     'Managing state with the useState hook',
     'Using props and lifting state up',
   ],
+  insights: "This game was the first project I completed for the React: The Complete Guide 2024 course on Udemy, and it immediately inspired me to try building my own game. Enter The Match Game - a memory matching game that counts the number of clicks taken to match all of the hidden pairs on the board. There is definitely room for improvement from all that I have learned since its launch, but I still enjoy pulling it up and reminding myself of my early enthusiasm for learning React. Check it out at https://mjclaypool.github.io/Match-Game/",
   image: ticTacToeMockUp,
   altText: "Laptop mock-up of the Tic-Tac-Toe game.",
   screenshots: [

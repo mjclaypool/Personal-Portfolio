@@ -28,17 +28,16 @@ export default function CaseStudy() {
               <h1>{caseStudyCtx.caseStudy.caseStudyTitle}</h1>
               <p className="case-study-tagline">
                 {caseStudyCtx.caseStudy.tagLine}
+                {caseStudyCtx.caseStudy.tagLineLink &&
+                  <a href={caseStudyCtx.caseStudy.tagLineLink[0]}>
+                    {caseStudyCtx.caseStudy.tagLineLink[1]}
+                  </a>
+                }
               </p>
               <Objectives
                 objective={caseStudyCtx.caseStudy.objective}
                 requirements={caseStudyCtx.caseStudy.requirements}
               />
-              {caseStudyCtx.caseStudy.type == "exercise" &&
-                <Outcomes
-                  outcomes={caseStudyCtx.caseStudy.outcomes}
-                  learnings={caseStudyCtx.caseStudy.learnings}
-                />
-              }
             </div>
             <div className="case-study-mockup-region">
               <img
@@ -48,6 +47,13 @@ export default function CaseStudy() {
               />
             </div>
           </div>
+          {caseStudyCtx.caseStudy.type == "exercise" &&
+            <Outcomes
+              outcomes={caseStudyCtx.caseStudy.outcomes}
+              learnings={caseStudyCtx.caseStudy.learnings}
+              insights={caseStudyCtx.caseStudy.insights}
+            />
+          }
           {caseStudyCtx.caseStudy.type == "project" &&
             <Process learnings={caseStudyCtx.caseStudy.learnings} />
           }

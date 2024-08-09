@@ -1,4 +1,4 @@
-export default function Outcomes( {outcomes, learnings, children}) {
+export default function Outcomes( {outcomes, learnings, insights, children}) {
   return (
     <div id="outcomes-section">
       <h2>Outcomes:</h2>
@@ -8,6 +8,7 @@ export default function Outcomes( {outcomes, learnings, children}) {
           <li key={concept}>{concept}</li>
         ))}
       </ul>
+      <p>{insights}</p>
       {children}
     </div>
   )

@@ -199,7 +199,7 @@ export const ABOUTTAB = {
 
 export const portfolio = {
   type: "project",
-  linkUrl: "/Personal-Portfolio/portfolio/",
+  linkUrl: "/portfolio/",
   cardImg: portfolioHomepage,
   cardAlt: "Personal portfolio website screenshot",
   cardTitle: "Portfolio",
@@ -245,7 +245,7 @@ export const portfolio = {
 
 export const countryPicker = {
   type: "project",
-  linkUrl: "/Personal-Portfolio/country-picker/",
+  linkUrl: "/country-picker/",
   cardImg: countriesHomepage,
   cardAlt: "Country-Picker web application screenshot",
   cardTitle: "Country-Picker App",
@@ -292,7 +292,7 @@ export const countryPicker = {
 
 export const littleLemon = {
   type: "project",
-  linkUrl: "/Personal-Portfolio/little-lemon/",
+  linkUrl: "/little-lemon/",
   cardImg: lemonHomepage,
   cardAlt: "Little Lemon restaurant website screenshot.",
   cardTitle: "Little Lemon Website",
@@ -341,7 +341,7 @@ export const littleLemon = {
 
 export const foodOrderingApp = {
   type: "exercise",
-  linkUrl: "/Personal-Portfolio/food-ordering-app/",
+  linkUrl: "/food-ordering-app/",
   cardImg: foodOrderingHomepage,
   cardAlt: "Food ordering app screenshot.",
   cardTitle: "Food Ordering App",
@@ -378,7 +378,7 @@ export const foodOrderingApp = {
 
 export const placepicker = {
   type: "exercise",
-  linkUrl: "/Personal-Portfolio/place-picker/",
+  linkUrl: "/place-picker/",
   cardImg: placepickerHomepage,
   cardAlt: "Place-picking app screenshot.",
   cardTitle: "Place-Picker App",
@@ -413,7 +413,7 @@ export const placepicker = {
 
 export const tictactoe = {
   type: "exercise",
-  linkUrl: "/Personal-Portfolio/tic-tac-toe/",
+  linkUrl: "/tic-tac-toe/",
   cardImg: ticTacToeHomepage,
   cardAlt: "Tic-Tac-Toe game screenshot.",
   cardTitle: "Tic-Tac-Toe Game",

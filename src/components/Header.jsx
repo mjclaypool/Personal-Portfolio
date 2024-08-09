@@ -18,14 +18,14 @@ export default function Header( {img} ) {
 
   return (
     <header id='main-header'>
-      <Link to='/Personal-Portfolio/' id='header-title' aria-label="return-to-homepage">
+      <Link to='/' id='header-title' aria-label="return-to-homepage">
         <img src={img} alt='Profile Picture' />
         <span>Mallory Claypool</span>
       </Link>
       <div id='header-nav'>
-        <HashLink to="/Personal-Portfolio/#projects" className="nav-elem">Projects</HashLink>
-        <HashLink to="/Personal-Portfolio/#exercises" className="nav-elem">Exercises</HashLink>
-        <HashLink to="/Personal-Portfolio/#about" className="nav-elem">About</HashLink>
+        <HashLink to="/#projects" className="nav-elem">Projects</HashLink>
+        <HashLink to="/#exercises" className="nav-elem">Exercises</HashLink>
+        <HashLink to="/#about" className="nav-elem">About</HashLink>
       </div>
       {isOpen && <Drawer onDone={handleDone}/>}
       <div id='header-hamburger'>

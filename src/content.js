@@ -241,6 +241,7 @@ export const portfolio = {
     portfolioErrorPage,
   ],
   repoLink: "https://github.com/mjclaypool/Personal-Portfolio",
+  liveLink: "https://mjclaypool.github.io/Personal-Portfolio/",
 }
 
 export const countryPicker = {
@@ -287,7 +288,8 @@ export const countryPicker = {
     countriesSearchL,
     countriesDetailsL,
   ],
-  repoLink: "https://github.com/mjclaypool/Frontend-Mentor-Challenges/tree/main/rest-countries-api-with-color-theme-switcher-master",
+  repoLink: "https://github.com/mjclaypool/REST-Countries-API",
+  liveLink: "https://mjclaypool.github.io/REST-Countries-API/",
 }
 
 export const littleLemon = {
@@ -296,7 +298,7 @@ export const littleLemon = {
   cardImg: lemonHomepage,
   cardAlt: "Little Lemon restaurant website screenshot.",
   cardTitle: "Little Lemon Website",
-  cardDescription: "A responsive website for a fictional medeterranean restaurant with table-booking functionality.",
+  cardDescription: "A responsive website for a fictional Mediterranean restaurant with table-booking functionality.",
   caseStudyTitle: "Little Lemon Case Study",
   tagLine: "Addition of table-booking functionality to a fictional Mediterranean restaurant's website.",
   objective: 'Provided with a UI kit, build a Little Lemon restaurant website that empowers users to:',
@@ -336,6 +338,35 @@ export const littleLemon = {
   repoLink: "https://github.com/mjclaypool/Restaurant-Booking-Project",
 }
 
+// export const bookmarkingHomepage = {
+//   type: "project",
+//   linkUrl: "/bookmarking-homepage/",
+//   cardImg: This section is in-progress,
+//   cardAlt: "Bookmark, a bookmark manager homepage screenshot.",
+//   cardTitle: "Bookmark Homepage",
+//   cardDescription: "A responsive homepage for a fictional bookmark manager.",
+//   caseStudyTitle: "Bookmark Case Study",
+//   tagLine: "Responsive bookmark manager homepage featuring an interactive tab section, FAQ accordian, and contact form.",
+//   objective: 'Per the design brief from Frontend Mentor, build a webpage that allows users to:',
+//   requirements: [
+//     'View the optimal layout for the site depending on their device's screen size.',
+//     'See hover states for all interactive elements on the page.',
+//     'Receive an error message when the newsletter form is submitted if the input field is empth or the email address is not formatted correctly.',
+//   ],
+//   learnings: [
+//     {
+//       title: "This section is in-progress.",
+//       insight: "This section is in-progress.",
+//     },
+//   ],
+//   image: This section is in-progress,
+//   altText: "Laptop mock-up of the Bookmark homepage.",
+//   screenshots: [
+//     This section is in-progress,
+//   ],
+//   repoLink: "https://github.com/mjclaypool/Restaurant-Booking-Project",
+// }
+
 
 // Exercise Case Studies
 
@@ -348,7 +379,7 @@ export const foodOrderingApp = {
   cardDescription: "A food ordering app that populates selected foods, quantities, and prices in a cart for checkout.",
   caseStudyTitle: "Food Ordering App Exercise",
   tagLine: "A React exercise on sending HTTP Requests, building Modals, using Context, and creating custom hooks.",
-  objective: "Provided with a dummy backend and CSS styling, build a food-ordering app that allows users to:",
+  objective: 'Following a "React: The Complete Guide 2024" video tutorial, build a food-ordering app that allows users to:',
   requirements: [
     'Add dishes to a virtual cart by clicking "Add to Cart" CTAs on menu items.',
     'See a count of dishes in the cart displayed on the homepage cart button.',
@@ -385,7 +416,7 @@ export const placepicker = {
   cardDescription: "A place-picking app that sorts available places by geolocation and stores selected place cards.",
   caseStudyTitle: "Place-Picker Exercise",
   tagLine: "A React exercise on handling side effects, sending HTTP Requests, and using async/await.",
-  objective: "Provided with a dummy backend and CSS styling, build a place-picking app that allows users to:",
+  objective: 'Following a "React: The Complete Guide 2024" video tutorial, build a place-picking app that allows users to:',
   requirements: [
     'See available places sorted by distance to the user and loaded from a dummy backend.',
     'Click places in the "Available places" section to move into the "I would like to visit..." section.',
@@ -399,7 +430,7 @@ export const placepicker = {
     'Handling side-effects and HTTP errors',
     'Employing optimistic UI updating',
   ],
-  insights: "This exercise really helped me understand when and how to implement the useEffect hook and asynchronous functions. Additionally, the provided CSS styling inspired me to learn how to create animations with keyframes and frameworks like Framer Motion. I tied some of what I learned into the interactive elements of this portfolio, and I am eager to incorporate more animations into future development projects.",
+  insights: "This exercise really helped me understand when and how to implement the useEffect hook and asynchronous functions. Additionally, the provided CSS styling inspired me to learn how to create animations with keyframes and frameworks like Framer Motion. I tied some of what I learned into the interactive elements of this portfolio, like the hover effect for the projects and exercises cards, and I have continued building playful animations for most of my subsequent projects.",
   image: placepickerMockUp,
   altText: "Laptop mock-up of place-picking app.",
   screenshots: [
@@ -420,7 +451,7 @@ export const tictactoe = {
   cardDescription: "A standard, two-player tic-tac-toe game.",
   caseStudyTitle: "Tic-Tac-Toe Exercise",
   tagLine: "An early React exercise on writing JSX code, building components, and managing state with hooks.",
-  objective: "Provided with CSS styling, build a Tic-Tac-Toe game that allows the user to:",
+  objective: 'Following a "React: The Complete Guide 2024" video tutorial, build a Tic-Tac-Toe game that allows the user to:',
   requirements: [
     'Rename "Player 1" and "Player 2" to the desired player name.',
     'Keep track of which player is active at any moment in the game.',
@@ -433,7 +464,7 @@ export const tictactoe = {
     'Managing state with the useState hook',
     'Using props and lifting state up',
   ],
-  insights: "This game was the first project I completed for the React: The Complete Guide 2024 course on Udemy, and it immediately inspired me to try building my own game. Enter The Match Game - a memory matching game that counts the number of clicks taken to match all of the hidden pairs on the board. There is definitely room for improvement from all that I have learned since its launch, but I still enjoy pulling it up and reminding myself of my early enthusiasm for learning React. Check it out at https://mjclaypool.github.io/Match-Game/",
+  insights: 'This game was the first project I completed for the React: The Complete Guide 2024 course on Udemy, and it immediately inspired me to try building my own game. Enter "Match Game" - a memory matching game that counts the number of clicks taken to match all of the hidden pairs on the board. There is definitely room for improvement from all that I have learned since its launch, but I still enjoy pulling it up and reminding myself of my early enthusiasm for learning React. Check it out at https://mjclaypool.github.io/Match-Game/',
   image: ticTacToeMockUp,
   altText: "Laptop mock-up of the Tic-Tac-Toe game.",
   screenshots: [

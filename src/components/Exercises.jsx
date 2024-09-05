@@ -6,21 +6,25 @@ export default function Exercises() {
   const caseStudyCtx = useContext(CaseStudyContext);
 
   return (
-    <section className='body-section'>
-      <h2 className="section-header" id="exercises">Exercises</h2>
-      <div className="exercises-section">
+    <div id='exercises' className='flex flex-col p-8'>
+      <h2 className="font-bold text-3xl self-center py-6">Exercises</h2>
+      <div className="flex flex-col lg:flex-row flex-wrap gap-8 justify-center items-center">
         {caseStudyCtx.exercises.map(card => (
-          <Link to={card.linkUrl} className="card" key={card.cardTitle}>
+          <Link
+            to={card.linkUrl}
+            key={card.cardTitle}
+            className="flex flex-col w-[80vw] max-w-[400px] h-[300px] border-2 border-n-dark-grey bg-n-dark-grey rounded-xl overflow-hidden hover:shadow-card focus:shadow-card"
+          >
             <img
               src={card.cardImg}
               alt={card.cardAlt}
-              className="img-card"
+              className="h-[165px] object-cover object-top border-2 border-n-dark-grey rounded-xl overflow-hidden"
             />
-            <h4>{card.cardTitle}</h4>
-            <p>{card.cardDescription}</p>
+            <h4 className="font-bold text-xl p-4">{card.cardTitle}</h4>
+            <p className="leading-tight p-4 pt-0">{card.cardDescription}</p>
           </Link>
         ))}
       </div>
-    </section>
+    </div>
   )
 }

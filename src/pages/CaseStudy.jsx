@@ -20,13 +20,13 @@ export default function CaseStudy() {
   }, [params.caseStudy])
 
   return (
-    <>
+    <div className="flex justify-center">
       {!isLoading && caseStudyCtx.caseStudy !="error" ?
-        <section className="case-study-content">
-          <div className="case-study-intro">
+        <section className='relative flex flex-col w-full px-8 lg:px-24 lg:max-w-[1600px]'>
+          <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
             <div>
-              <h1>{caseStudyCtx.caseStudy.caseStudyTitle}</h1>
-              <p className="case-study-tagline">
+              <h1 className="font-bold text-4xl my-10 lg:text-5xl">{caseStudyCtx.caseStudy.caseStudyTitle}</h1>
+              <p className="leading-tight mb-10">
                 {caseStudyCtx.caseStudy.tagLine}
                 {caseStudyCtx.caseStudy.tagLineLink &&
                   <a href={caseStudyCtx.caseStudy.tagLineLink[0]}>
@@ -39,11 +39,11 @@ export default function CaseStudy() {
                 requirements={caseStudyCtx.caseStudy.requirements}
               />
             </div>
-            <div className="case-study-mockup-region">
+            <div className="flex justify-center py-12 lg:py-0">
               <img
                 src={caseStudyCtx.caseStudy.image}
                 alt-text={caseStudyCtx.caseStudy.altText}
-                className="case-study-mockup"
+                className='w-[320px] h-[320px] object-cover rounded-full border-2 border-n-light-grey lg:w-[400px] lg:h-[400px]'
               />
             </div>
           </div>
@@ -63,6 +63,6 @@ export default function CaseStudy() {
       :
       <ErrorPage />
       }
-    </>
+    </div>
   )
 }

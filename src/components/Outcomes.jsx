@@ -1,14 +1,14 @@
 export default function Outcomes( {outcomes, learnings, insights, children}) {
   return (
-    <div id="outcomes-section">
-      <h2>Outcomes:</h2>
-      <p>{outcomes}</p>
-      <ul className="outcomes-list">
+    <div className="pb-8">
+      <h2 className="font-bold text-3xl text-start text-p-ice-blue pb-4">Outcomes:</h2>
+      <p className="pb-2">{outcomes}</p>
+      <ul className="list-disc leading-tight pl-8 pb-4">
         {learnings.map(concept => (
           <li key={concept}>{concept}</li>
         ))}
       </ul>
-      <p>{insights}</p>
+      <p className="leading-tight">{insights}</p>
       {children}
     </div>
   )

@@ -1,9 +1,9 @@
 export default function Objectives( {objective, requirements, children} ) {
   return (
-    <div id="objectives-section">
-      <h2>Objectives:</h2>
-      <p>{objective}</p>
-      <ul className="objectives-list">
+    <div>
+      <h2 className="font-bold text-3xl text-start text-p-ice-blue pb-4">Objectives:</h2>
+      <p className="pb-2">{objective}</p>
+      <ul className="list-disc leading-tight pl-8">
         {requirements.map(req => (
           <li key={req}>{req}</li>
         ))}

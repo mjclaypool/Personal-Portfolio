@@ -17,18 +17,18 @@ export default function Header( {img} ) {
   }
 
   return (
-    <header id='main-header'>
-      <Link to='/' id='header-title' aria-label="return-to-homepage">
-        <img src={img} alt='Profile Picture' />
-        <span>Mallory Claypool</span>
+    <header id='main-header' className="flex gap-8 justify-between items-center p-8 my-0 mx-auto font-bold">
+      <Link to='/' aria-label="return-to-homepage" className="flex gap-4 items-center">
+        <img src={img} alt='Profile Picture' className="w-16 h-16 object-contain border-2 border-n-light-grey rounded-full" />
+        <span className="text-xl">Mallory Claypool</span>
       </Link>
-      <div id='header-nav'>
-        <HashLink to="/#projects" className="nav-elem">Projects</HashLink>
-        <HashLink to="/#exercises" className="nav-elem">Exercises</HashLink>
-        <HashLink to="/#about" className="nav-elem">About</HashLink>
+      <div className="hidden xl:block">
+        <HashLink to="/#projects" className="hover:text-p-ice-blue focus:text-p-ice-blue">Projects</HashLink>
+        <HashLink to="/#exercises" className="hover:text-p-ice-blue focus:text-p-ice-blue">Exercises</HashLink>
+        <HashLink to="/#about" className="hover:text-p-ice-blue focus:text-p-ice-blue">About</HashLink>
       </div>
       {isOpen && <Drawer onDone={handleDone}/>}
-      <div id='header-hamburger'>
+      <div>
         <button type="button" aria-label="navigation-menu-open" onClick={handleShowDrawer}>
           <img src={hamburgerIcon} alt="Freepik menu icon - Flaticon" />
         </button>

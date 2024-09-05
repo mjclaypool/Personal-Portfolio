@@ -1,6 +1,6 @@
 export default function Links({ repoLink }) {
   return (
-    <div>
+    <div className="mb-12">
       <h2 className="font-bold text-3xl text-start text-p-ice-blue pb-4">
         Links:
       </h2>

@@ -6,9 +6,9 @@ export default function Projects() {
   const caseStudyCtx = useContext(CaseStudyContext);
 
   return (
-    <section className='flex flex-col p-8'>
+    <div id='projects' className='flex flex-col p-8'>
       <h2 className="font-bold text-3xl self-center py-6">Projects</h2>
-      <div className="flex flex-col flex-wrap gap-8 justify-center items-center">
+      <div className="flex flex-col lg:flex-row flex-wrap gap-8 justify-center items-center">
         {caseStudyCtx.projects.map(card => (
           <Link
             to={card.linkUrl}
@@ -25,6 +25,6 @@ export default function Projects() {
           </Link>
         ))}
       </div>
-    </section>
+    </div>
   )
 }

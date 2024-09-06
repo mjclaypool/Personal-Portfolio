@@ -24,7 +24,6 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
 - Flexbox
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
@@ -34,8 +33,8 @@ Users should be able to:
 - Live Site URL: [Personal Portfolio](https://mjclaypool.github.io/Personal-Portfolio/)
 
 ### Screenshots
-![](./src/assets/case-study--portfolio-homepage.png)
+![](./public/assets/case-study--portfolio-homepage.png)
 
-![](./src/assets/case-study--portfolio-case-study.png)
+![](./public/assets/case-study--portfolio-case-study.png)
 
-![](./src/assets/case-study--portfolio-error-page.png)
+![](./public/assets/case-study--portfolio-error-page.png)

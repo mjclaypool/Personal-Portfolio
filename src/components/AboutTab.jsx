@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
-import { ABOUTTAB } from "../content";
+import { ABOUTTAB } from "../data/aboutData.js";
 
 import AboutDetails from "./AboutDetails";
 
@@ -34,7 +34,7 @@ export default function AboutTab( {tab} ) {
                 onClick={() => handleSelectedIcon(topic.id)}
                 className="flex flex-col justify-center items-center gap-2 rounded-md w-[112px] xl:w-[130px] h-[136px] leading-tight hover:bg-[radial-gradient(rgba(24,127,179,0.9)_0%,_rgba(24,127,179,0)_60%)] focus:bg-[radial-gradient(rgba(24,127,179,0.9)_0%,_rgba(24,127,179,0)_60%)]"
               >
-                <img src={topic.icon} alt={topic.altText} className="w-[55%]"/>
+                <img src={topic.icon} alt={topic.altText} loading="eager" className="w-[55%]"/>
                 {topic.caption}
               </motion.button>
             </li>
@@ -45,7 +45,7 @@ export default function AboutTab( {tab} ) {
         </p>
       </div>
       <div id="about-details" className='relative flex lg:flex-3 justify-center items-center h-[622px] overflow-hidden rounded-b-md'>
-        <img src={ABOUTTAB[tab].image} alt={ABOUTTAB[tab].imageAlt} className="h-full object-cover"/>
+        <img src={ABOUTTAB[tab].image} alt={ABOUTTAB[tab].imageAlt} loading="eager" className="h-full object-cover"/>
         <div className='absolute w-full h-full bg-gradient-to-b lg:bg-gradient-to-r from-[rgba(1,13,19,1)] from-0% via-[rgba(1,13,19,0.1)] via-90% to-[rgba(1,13,19,0)] to-100%'/>
         {selectedTopic && <AboutDetails content={ABOUTTAB[tab].buttons.find(({ id }) => id == selectedTopic)}/>}
       </div>

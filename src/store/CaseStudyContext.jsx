@@ -1,5 +1,6 @@
 import { useState, createContext } from "react";
-import { portfolio, countryPicker, littleLemon, foodOrderingApp, placepicker, tictactoe } from "../content.js";
+import projects from "../data/projectData.json";
+import exercises from "../data/exerciseData.json";
 
 const CaseStudyContext = createContext({
   caseStudy: [],
@@ -11,28 +12,22 @@ const CaseStudyContext = createContext({
 export function CaseStudyContextProvider({children}) {
   const [caseStudy, setCaseStudy] = useState([]);
 
-  function showCaseStudy(proj) {
-      if (proj == "portfolio") {
-        setCaseStudy(portfolio);
-      } else if (proj == "country-picker") {
-        setCaseStudy(countryPicker);
-      } else if (proj == "little-lemon") {
-        setCaseStudy(littleLemon);
-      } else if (proj == "food-ordering-app") {
-        setCaseStudy(foodOrderingApp);
-      } else if (proj == "place-picker") {
-        setCaseStudy(placepicker);
-      } else if (proj == "tic-tac-toe") {
-        setCaseStudy(tictactoe);
-      } else {
-        setCaseStudy("error");
-      }
+  function showCaseStudy(caseStudy) {
+    const selectedProj = projects.filter((project) => project.id == caseStudy);
+    const selectedExercise = exercises.filter((exercise) => exercise.id == caseStudy);
+    if (selectedProj.length > 0) {
+      setCaseStudy(selectedProj[0]);
+    } else if (selectedExercise.length > 0) {
+      setCaseStudy(selectedExercise[0]);
+    } else {
+      setCaseStudy("error");
+    }
   }
 
   const caseStudyContext = {
     caseStudy: caseStudy,
-    projects: [ portfolio, countryPicker, littleLemon ],
-    exercises: [ foodOrderingApp, placepicker, tictactoe ],
+    projects: projects,
+    exercises: exercises,
     showCaseStudy,
   };
 

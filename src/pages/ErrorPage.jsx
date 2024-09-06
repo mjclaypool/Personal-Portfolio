@@ -3,8 +3,8 @@ import errorImg from '../assets/everett-bartels-FJMK4VKW-Xw-unsplash.jpg';
 
 export default function ErrorPage() {
   return (
-    <div className='relative flex flex-col min-h-[100vh] font-bold'>
-      <img src={errorImg} alt="Error image of a dead-end road" className="absolute top-0 right-0 h-full w-full object-cover z-0" />
+    <div className='relative flex flex-col min-h-[100vh] w-[100vw] font-bold'>
+      <img src={errorImg} alt="Error image of a dead-end road" loading="eager" className="absolute top-0 right-0 h-full w-full object-cover z-0" />
       <div className="absolute h-full w-[100vw] bg-gradient-to-t from-[rgba(8,33,45,1)] from-0% via-[rgba(8,33,45,0.4)] via-30% to-[rgba(8,33,45,0)] to-100% z-10" />
       <div className="relative flex flex-col items-center text-center w-full text-n-very-dark-blue mt-[12vh] px-16 z-20">
         <h1 className="text-4xl my-8">Oops...</h1>

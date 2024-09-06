@@ -18,6 +18,7 @@ export default function Projects() {
             <img
               src={card.cardImg}
               alt={card.cardAlt}
+              loading="lazy"
               className="h-[165px] object-cover object-top border-2 border-n-dark-grey rounded-xl overflow-hidden"
             />
             <h4 className="font-bold text-xl p-4">{card.cardTitle}</h4>

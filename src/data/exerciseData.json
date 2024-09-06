@@ -1,0 +1,104 @@
+[
+  {
+    "id": "food-ordering-app",
+    "linkUrl": "/food-ordering-app/",
+    "cardImg": "./assets/case-study--food-ordering-homepage.png",
+    "cardAlt": "Food ordering app screenshot.",
+    "cardTitle": "Food Ordering App",
+    "cardDescription": "A food ordering app that populates selected foods, quantities, and prices in a cart for checkout.",
+    "caseStudyTitle": "Food Ordering App Exercise",
+    "tagLine": "A React exercise on sending HTTP Requests, building Modals, using Context, and creating custom hooks.",
+    "objective": "Following a 'React: The Complete Guide 2024' video tutorial, build a food-ordering app that allows users to:",
+    "requirements": [
+      "Add dishes to a virtual cart by clicking 'Add to Cart' CTAs on menu items.",
+      "See a count of dishes in the cart displayed on the homepage cart button.",
+      "View an accurate cart summary when the cart button is clicked.",
+      "Fill out a checkout form when the 'Go to Checkout' CTA is clicked.",
+      "See useful error messages if the form is incorrectly completed.",
+      "Receive an order confirmation when the form is successfully submitted to the dummy backend."
+    ],
+    "outcomes": "Over the course of this exercise, I further developed my coding skills by practicing:",
+    "learnings": [
+      "Sending HTTP Requests",
+      "Building reusable modal components",
+      "Handling form submission and validation",
+      "Using context to share state data"
+    ],
+    "insights": "After using context for the first time in this exercise, I have integrated it into every subsequent project. Context helped me build cohesive filter drop-down and search bar elements in the Country-Picker project, and it enabled me to route and load project-specific data into a reusable case study page for this portfolio. I am proud of what I have built thus far with createContext and the useContext hook, and I look forward using context more in applications like e-commerce sites and multi-step forms.",
+    "image": "./assets/case-study--food-ordering.png",
+    "altText": "Laptop mock-up of the food ordering app.",
+    "screenshots": [
+      "./assets/case-study--food-ordering-homepage.png",
+      "./assets/case-study--food-ordering-cart.png",
+      "./assets/case-study--food-ordering-form.png",
+      "./assets/case-study--food-ordering-confirmation.png"
+    ],
+    "repoLink": "https://github.com/mjclaypool/Udemy-React-Projects/tree/main/18_Food-Order-App"
+  },
+  {
+    "id": "place-picker",
+    "linkUrl": "/place-picker/",
+    "cardImg": "./assets/case-study--placepicker-homepage.png",
+    "cardAlt": "Place-picking app screenshot.",
+    "cardTitle": "Place-Picker App",
+    "cardDescription": "A place-picking app that sorts available places by geolocation and stores selected place cards.",
+    "caseStudyTitle": "Place-Picker Exercise",
+    "tagLine": "A React exercise on handling side effects, sending HTTP Requests, and using async/await.",
+    "objective": "Following a 'React: The Complete Guide 2024' video tutorial, build a place-picking app that allows users to:",
+    "requirements": [
+      "See available places sorted by distance to the user and loaded from a dummy backend.",
+      "Click places in the 'Available places' section to move into the 'I would like to visit...' section.",
+      "Click places in the 'I would like to visit...'' section to remove them from the section.",
+      "See a loading message while the application fetches data from the backend, and see an error message if it fails to fetch."
+    ],
+    "outcomes": "Over the course of this exercise, I further developed my coding skills by practicing:",
+    "learnings": [
+      "Fetching data from a dummy backend API",
+      "Defining asynchronous functions",
+      "Handling side-effects and HTTP errors",
+      "Employing optimistic UI updating"
+    ],
+    "insights": "This exercise really helped me understand when and how to implement the useEffect hook and asynchronous functions. Additionally, the provided CSS styling inspired me to learn how to create animations with keyframes and frameworks like Framer Motion. I tied some of what I learned into the interactive elements of this portfolio, like the hover effect for the projects and exercises cards, and I have continued building playful animations for most of my subsequent projects.",
+    "image": "./assets/case-study--placepicker.png",
+    "altText": "Laptop mock-up of place-picking app.",
+    "screenshots": [
+      "./assets/case-study--placepicker-loading.png",
+      "./assets/case-study--placepicker-homepage.png",
+      "./assets/case-study--placepicker-add-places.png",
+      "./assets/case-study--placepicker-remove-places.png"
+    ],
+    "repoLink": "https://github.com/mjclaypool/Udemy-React-Projects/tree/main/15_HTTP-PlacePicker"
+  },
+  {
+    "id": "tic-tac-toe",
+    "linkUrl": "/tic-tac-toe/",
+    "cardImg": "./assets/case-study--tic-tac-toe-homepage.png",
+    "cardAlt": "Tic-Tac-Toe game screenshot.",
+    "cardTitle": "Tic-Tac-Toe Game",
+    "cardDescription": "A standard, two-player tic-tac-toe game.",
+    "caseStudyTitle": "Tic-Tac-Toe Exercise",
+    "tagLine": "An early React exercise on writing JSX code, building components, and managing state with hooks.",
+    "objective": "Following a 'React: The Complete Guide 2024' video tutorial, build a Tic-Tac-Toe game that allows the user to:",
+    "requirements": [
+      "Rename 'Player 1' and 'Player 2' to the desired player name.",
+      "Keep track of which player is active at any moment in the game.",
+      "Implement game logic to trigger a game-over with a win or draw.",
+      "See a running history of player moves and a game summary at the game's conclusion."
+    ],
+    "outcomes": "Over the course of this exercise, I further developed my coding skills by practicing:",
+    "learnings": [
+      "Building reusable components",
+      "Managing state with the useState hook",
+      "Using props and lifting state up"
+    ],
+    "insights": "This game was the first project I completed for the 'React: The Complete Guide 2024' course on Udemy, and it immediately inspired me to try building my own game. Enter 'Match Game' - a memory matching game that counts the number of clicks taken to match all of the hidden pairs on the board. There is definitely room for improvement from all that I have learned since its launch, but I still enjoy pulling it up and reminding myself of my early enthusiasm for learning React. Check it out at https://mjclaypool.github.io/Match-Game/",
+    "image": "./assets/case-study--tic-tac-toe.png",
+    "altText": "Laptop mock-up of the Tic-Tac-Toe game.",
+    "screenshots": [
+      "./assets/case-study--tic-tac-toe-homepage.png",
+      "./assets/case-study--tic-tac-toe-active-game.png",
+      "./assets/case-study--tic-tac-toe-gameover.png"
+    ],
+    "repoLink": "https://github.com/mjclaypool/Udemy-React-Projects/tree/main/4_Tic-Tac-Toe"
+  }
+]

@@ -1,0 +1,140 @@
+[
+  {
+    "id": "portfolio",
+    "linkUrl": "/portfolio/",
+    "cardImg": "./assets/case-study--portfolio-homepage.png",
+    "cardAlt": "Personal portfolio website screenshot",
+    "cardTitle": "Portfolio",
+    "cardDescription": "A responsive, interactive portfolio website highlighting personal growth as a designer and software developer.",
+    "caseStudyTitle": "Portfolio Case Study",
+    "tagLine": "An interactive personal portfolio that showcases my skills as a front-end software developer.",
+    "objective": "Design and build an engaging portfolio website that allows users to:",
+    "requirements": [
+      "See 'Hero', 'Projects', 'Exercises', and 'About' sections on the homepage.",
+      "Use links in the header and footer to navigate to their respective content sections.",
+      "View individual project and exercise case studies via their links on the homepage.",
+      "Interact with education, work experience, and continuous learning content in the 'About' section.",
+      "Connect via the LinkedIn and GitHub links in the footer section."
+    ],
+    "learnings": [
+      {
+        "title": "Ensure the site is enjoyable and functional across browsers and devices.",
+        "insight": "With a wide variety of screen and browser options for visiting a webpage, responsive web design is critical for delivering an uncompromised user experience across all viewports. To mitigate potential compatibility issues, I tested my application early and often on multiple browsers and devices, using browser dev tools to help identify and fix problems along the way. Additionally, I verified that all functionality is accessible via keyboard navigation and non-text content includes text alternatives to promote inclusivity of all abilities and assistive devices."
+      },
+      {
+        "title": "Outsource content details to a separate file (content.js).",
+        "insight": "Moving data out of individual pages and component files leads to leaner components, improves ease of making formatting changes and adding new content, and reduces time spent on debugging across multiple layers of a file structure. Having created reusable elements for the 'About' section and case study page, I can easily add topics or swap out case studies without needing to manipulate any components or add any pages."
+      },
+      {
+        "title": "Improve routing with React-Router-DOM",
+        "insight": "To integrate the reusable case study page as a child path, I wrapped the router with context and utilized the useParams hook to make page connections, load the targeted data, and prevent refresh errors. However, when I deployed the project to GitHub Pages, I realized I could not refresh pages other than the homepage without getting a GitHub 404 error. I quickly learned that GitHub Pages cannot handle dynamic routing of SPAs with browser routing, so I switched to hash routing since it does not require server-side support. In doing so, I enjoyed picking up new experiences in structuring SPAs, and I look forward to learning more about React router components and hooks for future projects."
+      },
+      {
+        "title": "Incorporate animations, effects, and a custom error page",
+        "insight": "To make this portfolio website fun and engaging, I added animations to highlight hovered/focused elements, applied smooth transitions to scrolling and user-selected components, and created a custom 404 error page. For animations, I tried out motion components from the Framer Motion library to style elements entering the viewport and enhance the feel of interactive elements."
+      }
+    ],
+    "image": "./assets/case-study--portfolio.png",
+    "altText": "Laptop mock-up of final portfolio design.",
+    "screenshots": [
+      "./assets/case-study--portfolio-homepage-full.png",
+      "./assets/case-study--portfolio-about.png",
+      "./assets/case-study--portfolio-case-study.png",
+      "./assets/case-study--portfolio-error-page.png"
+    ],
+    "repoLink": "https://github.com/mjclaypool/Personal-Portfolio",
+    "liveLink": "https://mjclaypool.github.io/Personal-Portfolio/"
+  },
+  {
+    "id": "country-picker",
+    "linkUrl": "/country-picker/",
+    "cardImg": "./assets/case-study--country-picker-homepage-dark.png",
+    "cardAlt": "Country-Picker web application screenshot",
+    "cardTitle": "Country-Picker App",
+    "cardDescription": "A country-picking app that pulls and displays country data from the REST Countries API.",
+    "caseStudyTitle": "Country-Picker Case Study",
+    "tagLine": ["An interactive country-picker application that pulls country data from "],
+    "tagLineLink": ["https://restcountries.com/", "REST Countries API."],
+    "objective": "Per the design brief from Frontend Mentor, build a webpage that allows users to:",
+    "requirements": [
+      "See all countries from the API on the homepage.",
+      "Search for a country using an input field.",
+      "Filter countries by region.",
+      "Click on a country to see more detailed information on a separate page.",
+      "Click through to the border countries on the detail page.",
+      "View the optimal layout for the interface depending on their device's screen size.",
+      "See hover and focus states for all interactive elements on the page."
+    ],
+    "learnings": [
+      {
+        "title": "Seamlessly execute REST API calls",
+        "insight": "Used Fetch API to asynchronously perform GET requests from REST Countries API endpoints, and managed side-effects with the useEffect hook. The first request retrieves a subset of country data to populate the cards on the main page. The second request is triggered whenever a country is selected by the user, retrieving and displaying in-depth country details on that country's page."
+      },
+      {
+        "title": "Build cohesive search bar and filter drop-down elements",
+        "insight": "Applied the useContext and useReducer hooks from React to display countries by region and/or keystrokes in the search bar. Since both functionalities tap into a shared state, the user is able search and filter countries by region simultaneously. Additionally, this shared state persists after the user navigates to a country's details page, so the user will return to the previous search/filter results when the back button is clicked. By choosing to manage state with context, I streamlined state-sharing among sibling components, prevented any consideration of prop-drilling in the solution, and improved the user's experience by keeping track of their inputs."
+      },
+      {
+        "title": "Incorporate Tailwind CSS styling",
+        "insight": "Practiced using the popular CSS framework, Tailwind CSS, to bolster maintainability and speed of implementing future updates. Gained experience using responsive utility variants, and looking forward to learning more about directives and reusing styles."
+      }
+    ],
+    "image": "./assets/case-study--country-picker.png",
+    "altText": "Laptop mock-up of country-picker design.",
+    "screenshots": [
+      "./assets/case-study--country-picker-homepage-dark.png",
+      "./assets/case-study--country-picker-search-dark.png",
+      "./assets/case-study--country-picker-details-dark.png",
+      "./assets/case-study--country-picker-homepage-light.png",
+      "./assets/case-study--country-picker-search-light.png",
+      "./assets/case-study--country-picker-details-light.png"
+    ],
+    "repoLink": "https://github.com/mjclaypool/REST-Countries-API",
+    "liveLink": "https://mjclaypool.github.io/REST-Countries-API/"
+  },
+  {
+    "id": "little-lemon",
+    "linkUrl": "/little-lemon/",
+    "cardImg": "./assets/case-study--little-lemon-homepage.png",
+    "cardAlt": "Little Lemon restaurant website screenshot.",
+    "cardTitle": "Little Lemon Website",
+    "cardDescription": "A responsive website for a fictional Mediterranean restaurant with table-booking functionality.",
+    "caseStudyTitle": "Little Lemon Case Study",
+    "tagLine": "Addition of table-booking functionality to a fictional Mediterranean restaurant's website.",
+    "objective": "Provided with a UI kit, build a Little Lemon restaurant website that empowers users to:",
+    "requirements": [
+      "Navigate to the 'Reserve a Table' page via the navigation bar, footer, and respective CTA on the homepage.",
+      "Select a date, time, number of guests, and occasion for making a reservation.",
+      "Choose a time from date-specific availability, which shall be randomly generated by an API-like script.",
+      "Receive useful error messages (if applicable) via client-side form validation.",
+      "Obtain a reservation summary upon successful form submission.",
+      "See hover and focus states for all interactive elements on the page."
+    ],
+    "learnings": [
+      {
+        "title": "Integrate browser-routing with React-Router-DOM",
+        "insight": "I relied on a combination of BrowserRouter, Routes, Route, useNavigate, and useLocation to build this single-page application. This was my first attempt at routing pages, and I have since adopted a more streamlined and readable approach to browser-routing with createBrowserRouter, RouterProvider, Link, and NavLink."
+      },
+      {
+        "title": "Develop useful client-side form validation",
+        "insight": "Setting users up for success with informative error messages prevents frustration and improves the overall user experience. With any form's development, I make sure users are guided towards valid inputs with straightforward and specific error messages and not bothered with errors on individual keystrokes."
+      },
+      {
+        "title": "Use the useReducer Hook",
+        "insight": "I used the useReducer hook to update the available times state for booking on any chosen date. I learned that useReducer is a powerful hook for handling more complicated state management than would otherwise be handled by useState."
+      },
+      {
+        "title": "Build tests with React-Testing-Library",
+        "insight": "This project introduced me to writing unit tests for React components, mirroring the declarative nature of programming in React by focusing on testing the UI. Although there is still a lot of room for me to grow is this area, I appreciate the importance of unit testing throughout the software development process. I look forward to exploring other testing frameworks like Playwright for future projects."
+      }
+    ],
+    "image": "./assets/case-study--little-lemon.png",
+    "altText": "Laptop mock-up of the Little Lemon restaurant website.",
+    "screenshots": [
+      "./assets/case-study--little-lemon-homepage.png",
+      "./assets/case-study--little-lemon-booking-page.png",
+      "./assets/case-study--little-lemon-confirmation-page.png"
+    ],
+    "repoLink": "https://github.com/mjclaypool/Restaurant-Booking-Project"
+  }
+]

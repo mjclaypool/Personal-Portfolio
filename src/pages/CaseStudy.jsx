@@ -42,7 +42,7 @@ export default function CaseStudy() {
               <img
                 src={caseStudyCtx.caseStudy.image}
                 alt-text={caseStudyCtx.caseStudy.altText}
-                className='w-[320px] h-[320px] object-cover rounded-full border-2 border-n-light-grey lg:w-[400px] lg:h-[400px]'
+                className='w-[320px] h-[320px] object-cover rounded-full border-2 border-n-light-grey lg:w-[400px] lg:h-[400px] animate-hero-load'
               />
             </div>
           </div>

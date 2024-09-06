@@ -8,7 +8,7 @@ export default function Exercises() {
   return (
     <div id='exercises' className='flex flex-col p-8'>
       <h2 className="font-bold text-3xl self-center py-6">Exercises</h2>
-      <div className="flex flex-col lg:flex-row flex-wrap gap-8 justify-center items-center">
+      <div className="flex flex-col lg:flex-row flex-wrap gap-8 justify-center items-center animate-load-images">
         {caseStudyCtx.exercises.map(card => (
           <Link
             to={card.linkUrl}

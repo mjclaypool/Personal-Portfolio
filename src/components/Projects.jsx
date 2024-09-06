@@ -8,7 +8,7 @@ export default function Projects() {
   return (
     <div id='projects' className='flex flex-col p-8'>
       <h2 className="font-bold text-3xl self-center py-6">Projects</h2>
-      <div className="flex flex-col lg:flex-row flex-wrap gap-8 justify-center items-center">
+      <div className="flex flex-col lg:flex-row flex-wrap gap-8 justify-center items-center animate-load-images">
         {caseStudyCtx.projects.map(card => (
           <Link
             to={card.linkUrl}

@@ -42,6 +42,16 @@ export default function Footer( {img} ) {
               Github
             </motion.a>
           </div>
+          <motion.a
+            whileHover={{scale: 1.1}}
+            whileFocus={{scale: 1.1}}
+            transition={{type: 'spring', duration: '0.3'}}
+            href="https://www.frontendmentor.io/profile/mjclaypool/solutions"
+            target="_blank"
+            className={`${connectLink} mt-3`}
+          >
+            Frontend Mentor
+          </motion.a>
         </div>
       </div>
     </footer>

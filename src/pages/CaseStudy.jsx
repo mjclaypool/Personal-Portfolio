@@ -38,11 +38,11 @@ export default function CaseStudy() {
                 requirements={caseStudyCtx.caseStudy.requirements}
               />
             </div>
-            <div className="flex justify-center py-12 lg:py-0">
+            <div className="flex justify-center py-12 lg:py-0 animate-hero-load">
               <img
                 src={caseStudyCtx.caseStudy.image}
                 alt-text={caseStudyCtx.caseStudy.altText}
-                className='w-[320px] h-[320px] object-cover rounded-full border-2 border-n-light-grey lg:w-[400px] lg:h-[400px] animate-hero-load'
+                className='w-[320px] h-[320px] object-cover rounded-full border-2 border-n-light-grey lg:w-[400px] lg:h-[400px]'
               />
             </div>
           </div>

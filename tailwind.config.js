@@ -21,7 +21,7 @@ export default {
       },
       keyframes: {
         slideUpFadeIn: {
-          "from": { opacity: '0', transform: 'translateY(36px)' },
+          "from": { opacity: '0', transform: 'translateY(50px)' },
           "to": { opacity: '1', transform: 'translateY(0)' },
         },
         expansion: {
@@ -36,10 +36,26 @@ export default {
           "from": { transform: 'translateX(100%)' },
           "to": { transform: 'translateX(0%)' },
         },
+        fadeIn: {
+          "from": { opacity: '0' },
+          "to": { opacity: '1' },
+        },
+        slideInFromTop: {
+          "from": { transform: 'translateY(-100%)' },
+          "to": { transform: 'translateY(0%)' },
+        },
+        slideInFromLeft: {
+          "from": { transform: 'translateX(-100%)' },
+          "to": { transform: 'translateX(0%)' },
+        },
       },
       animation: {
         'drawer-open': 'slideInFromRight .2s ease-out forwards',
         'select-about-topic': 'expansion 0.1s linear forwards',
+        'load-images': 'slideUpFadeIn 0.3s ease-out forwards',
+        'hero-load': 'fadeIn 0.5s ease-out forwards',
+        'view-details': 'slideInFromTop .2s ease-out forwards',
+        'view-details-lg': 'slideInFromLeft .2s ease-out forwards',
       },
     },
   },

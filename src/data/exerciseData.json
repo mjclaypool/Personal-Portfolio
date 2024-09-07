@@ -18,7 +18,7 @@
       "Receive an order confirmation when the form is successfully submitted to the dummy backend."
     ],
     "outcomes": "Over the course of this exercise, I further developed my coding skills by practicing:",
-    "learnings": [
+    "skills": [
       "Sending HTTP Requests",
       "Building reusable modal components",
       "Handling form submission and validation",
@@ -52,7 +52,7 @@
       "See a loading message while the application fetches data from the backend, and see an error message if it fails to fetch."
     ],
     "outcomes": "Over the course of this exercise, I further developed my coding skills by practicing:",
-    "learnings": [
+    "skills": [
       "Fetching data from a dummy backend API",
       "Defining asynchronous functions",
       "Handling side-effects and HTTP errors",
@@ -86,7 +86,7 @@
       "See a running history of player moves and a game summary at the game's conclusion."
     ],
     "outcomes": "Over the course of this exercise, I further developed my coding skills by practicing:",
-    "learnings": [
+    "skills": [
       "Building reusable components",
       "Managing state with the useState hook",
       "Using props and lifting state up"

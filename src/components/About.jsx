@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from "framer-motion";
 
 import AboutTab from './AboutTab';
 
@@ -11,7 +12,7 @@ export default function About() {
 
   return (
     <div className="flex justify-center">
-      <div className="flex flex-col font-bold p-8 lg:px-24 lg:max-w-[1600px]">
+      <div className="flex flex-col font-bold p-8 xl:px-24 lg:max-w-[1600px]">
         <h2 className="text-3xl self-center py-6" id='about'>About</h2>
         <div className="flex flex-col self-center max-w-full">
           <menu className="flex justify-between gap-2 lg:max-w-[400px] lg:ml-10">
@@ -23,6 +24,9 @@ export default function About() {
               >
                 Education
               </button>
+              {selectedTab === 'edu' &&
+                <motion.div layoutId="tab-indicator" className="absolute top-0 w-full h-full bg-p-glacier-blue rounded-t-md z-0" />
+              }
             </li>
             <li className="relative flex-1 text-center hover:text-p-ice-blue focus:text-p-ice-blue">
               <button
@@ -32,6 +36,9 @@ export default function About() {
               >
                 Work
               </button>
+              {selectedTab === 'work' &&
+                <motion.div layoutId="tab-indicator" className="absolute top-0 w-full h-full bg-p-glacier-blue rounded-t-md z-0" />
+              }
             </li>
             <li className="relative flex-1 text-center hover:text-p-ice-blue focus:text-p-ice-blue">
               <button
@@ -41,6 +48,9 @@ export default function About() {
               >
                 Learning
               </button>
+              {selectedTab === 'learning' &&
+                <motion.div layoutId="tab-indicator" className="absolute top-0 w-full h-full bg-p-glacier-blue rounded-t-md z-0" />
+              }
             </li>
           </menu>
           <AboutTab tab={selectedTab}/>

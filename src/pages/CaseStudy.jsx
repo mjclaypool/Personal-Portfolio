@@ -26,40 +26,35 @@ export default function CaseStudy() {
           <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
             <div>
               <h1 className="font-bold text-4xl my-10 lg:text-5xl">{caseStudyCtx.caseStudy.caseStudyTitle}</h1>
-              <p className="leading-tight mb-10">
+              <p className="leading-tight mb-6">
                 {caseStudyCtx.caseStudy.tagLine}
                 {caseStudyCtx.caseStudy.tagLineLink &&
-                  <a href={caseStudyCtx.caseStudy.tagLineLink[0]}>
-                    {caseStudyCtx.caseStudy.tagLineLink[1]}
-                  </a>
+                  <a href={caseStudyCtx.caseStudy.tagLineLink[0]}>{caseStudyCtx.caseStudy.tagLineLink[1]}</a>
                 }
               </p>
+              <Links repoLink={caseStudyCtx.caseStudy.repoLink} liveLink={caseStudyCtx.caseStudy.liveLink} />
               <Objectives
                 objective={caseStudyCtx.caseStudy.objective}
                 requirements={caseStudyCtx.caseStudy.requirements}
               />
             </div>
-            <div className="flex justify-center py-12 lg:py-0">
+            <div className="flex justify-center py-12 lg:py-0 animate-hero-load">
               <img
                 src={caseStudyCtx.caseStudy.image}
                 alt-text={caseStudyCtx.caseStudy.altText}
-                loading="eager"
                 className='w-[320px] h-[320px] object-cover rounded-full border-2 border-n-light-grey lg:w-[400px] lg:h-[400px]'
               />
             </div>
           </div>
-          {caseStudyCtx.caseStudy.type == "exercise" &&
+          {caseStudyCtx.caseStudy.outcomes &&
             <Outcomes
               outcomes={caseStudyCtx.caseStudy.outcomes}
-              learnings={caseStudyCtx.caseStudy.learnings}
+              skills={caseStudyCtx.caseStudy.skills}
               insights={caseStudyCtx.caseStudy.insights}
             />
           }
-          {caseStudyCtx.caseStudy.type == "project" &&
-            <Process learnings={caseStudyCtx.caseStudy.learnings} />
-          }
+          {caseStudyCtx.caseStudy.learnings && <Process learnings={caseStudyCtx.caseStudy.learnings} />}
           <Screenshots screenshots={caseStudyCtx.caseStudy.screenshots} />
-          <Links repoLink={caseStudyCtx.caseStudy.repoLink} />
         </section>
       }
       {isLoading && caseStudyCtx.caseStudy !== "error" && <div className="w-[100vw] h-[100vh]"/>}

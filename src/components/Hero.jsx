@@ -3,7 +3,7 @@ import heroImg from "../assets/pexels-daniel-smyth-83914874-10406128.jpg";
 export default function Hero() {
   return (
     <div className='relative flex justify-center items-center h-[60vh] w-[100vw]'>
-      <img src={heroImg} alt="CNC machine cutting into a metal block" loading="eager" className="absolute h-full w-full object-cover z-0" />
+      <img src={heroImg} alt="CNC machine cutting into a metal block" className="absolute h-full w-full object-cover z-0 animate-hero-load" />
       <div className="absolute h-full w-full bg-gradient-to-r from-[rgba(1,13,19,1)] from-20% to-[rgba(1,13,19,0)] to-100% z-10" />
       <div className='relative flex flex-col w-full px-8 z-20 lg:px-24 lg:max-w-[1600px]'>
         <h1 className="font-bold text-4xl my-8 xl:text-5xl lg:max-w-[60%]">

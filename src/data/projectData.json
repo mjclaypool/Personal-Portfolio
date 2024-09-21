@@ -1,11 +1,55 @@
 [
   {
+    "id": "audiophile-website",
+    "linkUrl": "/audiophile-website/",
+    "cardImg": "./assets/case-study--audiophile-homepage.png",
+    "cardAlt": "Audiophile website screenshot.",
+    "cardTitle": "Audiophile Website",
+    "cardDescription": "A responsive, pixel-perfect website for a fictional e-commerce company using Typescript and React.js.",
+    "caseStudyTitle": "Audiophile Website Case Study",
+    "tagLine": "An interactive, scalable e-commerce website with pixel-perfect styling.",
+    "objective": "Provided with a Figma design file, build a Audiophile e-commerce website that empowers users to:",
+    "requirements": [
+      "View the optimal layout for the app depending on their device's screen size.",
+      "Add/Remove products from the cart.",
+      "Edit product quantities in the cart.",
+      "Fill in all fields in the checkout.",
+      "See correct checkout totals depending on the products in the cart.",
+      "See an order confirmation modal after checking out with an order summary."
+    ],
+    "learnings": [
+      {
+        "title": "Define SPA routing with React Router DOM",
+        "insight": "Created routing between the homepage, category pages, product pages, and checkout page with HashRouter (since BrowserRouter is not compatible with GitHub Pages). Used Link to connect navigation links and CTAs to their respective pages, and used the useParams hook to build a back button to move up from product pages to their respective category page. With dynamic path parameters, this e-commerce site could easily be scaled up with more products by simply adding more objects to the JSON data file."
+      },
+      {
+        "title": "Use context to manage shared state",
+        "insight": "Created two context providers to manage shared state across the site: CartContext and UserProgressContext. The CartContext manages adding items to the cart from the product pages, removing items from inside the cart modal, and updating quantities of products from both locations. The UserProgressContext then handles the user's movement throughout the main site and modals such as the mobile navigation menu, cart, and checkout confirmation. It also performs a validation check on the checkout form, preventing the user from progressing to the checkout confirmation before completing all of the required fields."
+      },
+      {
+        "title": "Develop useful client-side form validation",
+        "insight": "Setting users up for success with informative error messages is critical in preventing frustration and improving the overall user experience. For this form, I set up regex patterns to make sure user inputs matched valid formats for email addresses, phone numbers, and payment details, and I defined a general validation check to make sure no field is left empty. I set error messages to only be displayed to the user after they click away from the input field, giving them a chance to fill out the form correctly before being guided towards a valid input as needed. The submit button them becomes clickable only after all fields are validated, which is important for maintaining user trust particularly when handling their payment information."
+      }
+    ],
+    "image": "./assets/case-study--audiophile.png",
+    "altText": "Laptop mock-up of the Little Lemon restaurant website.",
+    "screenshots": [
+      "./assets/case-study--audiophile-homepage.png",
+      "./assets/case-study--audiophile-category.png",
+      "./assets/case-study--audiophile-product.png",
+      "./assets/case-study--audiophile-cart.png",
+      "./assets/case-study--audiophile-checkout.png"
+    ],
+    "repoLink": "https://github.com/mjclaypool/Audiophile-Website",
+    "liveLink": "https://mjclaypool.github.io/Audiophile-Website/"
+  },
+  {
     "id": "portfolio",
     "linkUrl": "/portfolio/",
     "cardImg": "./assets/case-study--portfolio-homepage.png",
     "cardAlt": "Personal portfolio website screenshot",
-    "cardTitle": "Portfolio",
-    "cardDescription": "A responsive, interactive portfolio website highlighting personal growth as a designer and software developer.",
+    "cardTitle": "Personal Portfolio",
+    "cardDescription": "A responsive, interactive portfolio website using React.js and Framer Motion that highlights my design and development skills.",
     "caseStudyTitle": "Portfolio Case Study",
     "tagLine": "An interactive personal portfolio that showcases my skills as a front-end software developer.",
     "objective": "Design and build an engaging portfolio website that allows users to:",
@@ -22,11 +66,11 @@
         "insight": "With a wide variety of screen and browser options for visiting a webpage, responsive web design is critical for delivering an uncompromised user experience across all viewports. To mitigate potential compatibility issues, I tested my application early and often on multiple browsers and devices, using browser dev tools to help identify and fix problems along the way. Additionally, I verified that all functionality is accessible via keyboard navigation and non-text content includes text alternatives to promote inclusivity of all abilities and assistive devices."
       },
       {
-        "title": "Outsource content details to a separate file (content.js).",
+        "title": "Create and efficiently call upon JSON data files.",
         "insight": "Moving data out of individual pages and component files leads to leaner components, improves ease of making formatting changes and adding new content, and reduces time spent on debugging across multiple layers of a file structure. Having created reusable elements for the 'About' section and case study page, I can easily add topics or swap out case studies without needing to manipulate any components or add any pages."
       },
       {
-        "title": "Improve routing with React-Router-DOM",
+        "title": "Define SPA routing with React Router DOM",
         "insight": "To integrate the reusable case study page as a child path, I wrapped the router with context and utilized the useParams hook to make page connections, load the targeted data, and prevent refresh errors. However, when I deployed the project to GitHub Pages, I realized I could not refresh pages other than the homepage without getting a GitHub 404 error. I quickly learned that GitHub Pages cannot handle dynamic routing of SPAs with browser routing, so I switched to hash routing since it does not require server-side support. In doing so, I enjoyed picking up new experiences in structuring SPAs, and I look forward to learning more about React router components and hooks for future projects."
       },
       {
@@ -51,7 +95,7 @@
     "cardImg": "./assets/case-study--country-picker-homepage-dark.png",
     "cardAlt": "Country-Picker web application screenshot",
     "cardTitle": "Country-Picker App",
-    "cardDescription": "A country-picking app that pulls and displays country data from the REST Countries API.",
+    "cardDescription": "An interactive country-picking app that displays country data from the REST Countries API using React.js and Tailwind CSS.",
     "caseStudyTitle": "Country-Picker Case Study",
     "tagLine": ["An interactive country-picker application that pulls country data from "],
     "tagLineLink": ["https://restcountries.com/", "REST Countries API."],
@@ -91,50 +135,5 @@
     ],
     "repoLink": "https://github.com/mjclaypool/REST-Countries-API",
     "liveLink": "https://mjclaypool.github.io/REST-Countries-API/"
-  },
-  {
-    "id": "little-lemon",
-    "linkUrl": "/little-lemon/",
-    "cardImg": "./assets/case-study--little-lemon-homepage.png",
-    "cardAlt": "Little Lemon restaurant website screenshot.",
-    "cardTitle": "Little Lemon Website",
-    "cardDescription": "A responsive website for a fictional Mediterranean restaurant with table-booking functionality.",
-    "caseStudyTitle": "Little Lemon Case Study",
-    "tagLine": "Addition of table-booking functionality to a fictional Mediterranean restaurant's website.",
-    "objective": "Provided with a UI kit, build a Little Lemon restaurant website that empowers users to:",
-    "requirements": [
-      "Navigate to the 'Reserve a Table' page via the navigation bar, footer, and respective CTA on the homepage.",
-      "Select a date, time, number of guests, and occasion for making a reservation.",
-      "Choose a time from date-specific availability, which shall be randomly generated by an API-like script.",
-      "Receive useful error messages (if applicable) via client-side form validation.",
-      "Obtain a reservation summary upon successful form submission.",
-      "See hover and focus states for all interactive elements on the page."
-    ],
-    "learnings": [
-      {
-        "title": "Integrate browser-routing with React-Router-DOM",
-        "insight": "I relied on a combination of BrowserRouter, Routes, Route, useNavigate, and useLocation to build this single-page application. This was my first attempt at routing pages, and I have since adopted a more streamlined and readable approach to browser-routing with createBrowserRouter, RouterProvider, Link, and NavLink."
-      },
-      {
-        "title": "Develop useful client-side form validation",
-        "insight": "Setting users up for success with informative error messages prevents frustration and improves the overall user experience. With any form's development, I make sure users are guided towards valid inputs with straightforward and specific error messages and not bothered with errors on individual keystrokes."
-      },
-      {
-        "title": "Use the useReducer Hook",
-        "insight": "I used the useReducer hook to update the available times state for booking on any chosen date. I learned that useReducer is a powerful hook for handling more complicated state management than would otherwise be handled by useState."
-      },
-      {
-        "title": "Build tests with React-Testing-Library",
-        "insight": "This project introduced me to writing unit tests for React components, mirroring the declarative nature of programming in React by focusing on testing the UI. Although there is still a lot of room for me to grow is this area, I appreciate the importance of unit testing throughout the software development process. I look forward to exploring other testing frameworks like Playwright for future projects."
-      }
-    ],
-    "image": "./assets/case-study--little-lemon.png",
-    "altText": "Laptop mock-up of the Little Lemon restaurant website.",
-    "screenshots": [
-      "./assets/case-study--little-lemon-homepage.png",
-      "./assets/case-study--little-lemon-booking-page.png",
-      "./assets/case-study--little-lemon-confirmation-page.png"
-    ],
-    "repoLink": "https://github.com/mjclaypool/Restaurant-Booking-Project"
   }
 ]

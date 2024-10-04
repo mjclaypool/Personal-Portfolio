@@ -1,5 +1,64 @@
 [
   {
+    "id": "finance",
+    "linkUrl": "/finance/",
+    "cardImg": "./assets/case-study--finance-overview.png",
+    "cardAlt": "Finance website screenshot",
+    "cardTitle": "Personal Finance App",
+    "cardDescription": "A highly interactive personal finance application using TypeScript, React.js, Tailwind CSS and Chart.js.",
+    "caseStudyTitle": "Personal Finance Case Study",
+    "tagLine": "A responsive, interactive personal finance application using TypeScript, React.js, Tailwind CSS and Chart.js.",
+    "objective": "Per the design brief from Frontend Mentor, build a webpage that allows users to:",
+    "requirements": [
+      "See all of the personal finance app data at-a-glance on the overview page.",
+      "View all transactions on the transactions page with pagination for every ten transactions.",
+      "Search, sort, and filter transactions.",
+      "Create, read, update, delete (CRUD) budgets and saving pots.",
+      "View the latest three transactions for each budget category created.",
+      "View progress towards each pot.",
+      "Add money to and withdraw money from pots.",
+      "View recurring bills and the status of each for the current month.",
+      "Search and sort recurring bills.",
+      "Receive validation messages if required form fields aren't completed.",
+      "Navigate the whole app and perform all actions using only their keyboard.",
+      "View the optimal layout for the interface depending on their device's screen size.",
+      "See hover and focus states for all interactive elements on the page."
+    ],
+    "learnings": [
+      {
+        "title": "Make data accessible throughout application with context",
+        "insight": "Since the JSON data of account balances, transactions, budgets and pots are accessed on multiple levels throughout the application, I used context to provide pages and components with a single source of truth. With the createContext hook, I imported the JSON data, created constant variables of balances and transactions, and initialized state variables of budgets and pots. By providing these variables and relevant state updating functions to the full app, all pages are ensured to reflect the latest additions, updates, or deletions of state data."
+      },
+      {
+        "title": "Define reusable and configurable UI components",
+        "insight": "With repeated styling calls across multiple components, like the white background with fixed padding and rounded corners for almost every component, one of my main focuses for this project was on building reusable wrappers and UI components. I defined props to handle variants of dropdowns, buttons and section headings, and I am continuing to refine my component tree and improve code readability."
+      },
+      {
+        "title": "Create cohesive search, sort, and filter elements",
+        "insight": "For the Transactions and Recurring Bills pages, I used context again to ensure any combination of search, sort, and filtering inputs would be reflected in the search results. I created a utility file and defined functions to help with these operations, from relatively straightforward search and filter functions to multiple bubble sorting algorithms to handle the different sorting options."
+      },
+      {
+        "title": "Build budgets doughnut chart using Chart.js",
+        "insight": "I wanted to gain experience using a good data visualization library, so I used Chart.js to build my budgets doughnut chart. Although this was only one component in my application, I really liked how configurable and easy-to-use the chart was. I am definitely looking forward to finding more use cases for Chart.js in future projects."
+      },
+      {
+        "title": "Handle page navigation with HashRouter, Links, useEffect and useLocation",
+        "insight": "As with all projects I deploy to GitHub Pages, I set up my project with HashRouter and Links to navigate between the pages of my application. However, I initially ran into an issue where refreshing on any page would disconnect the page per the URL and page stored in context. I had been updating the page in context whenever a Link was clicked, but, after realizing that refreshing the page resets the context, I decided to pivot to changing the page in context whenever the URL changes. By using the pathname of useLocation as a dependency for my useEffect hook, I was able to ensure that the app always knows its current page."
+      }
+    ],
+    "image": "./assets/case-study--finance.png",
+    "altText": "Laptop mock-up of personal finance app design.",
+    "screenshots": [
+      "./assets/case-study--finance-overview.png",
+      "./assets/case-study--finance-transactions.png",
+      "./assets/case-study--finance-budgets.png",
+      "./assets/case-study--finance-pots.png",
+      "./assets/case-study--finance-recurring.png"
+    ],
+    "repoLink": "https://github.com/mjclaypool/Personal-Finance-App",
+    "liveLink": "https://mjclaypool.github.io/Personal-Finance-App/"
+  },
+  {
     "id": "audiophile-website",
     "linkUrl": "/audiophile-website/",
     "cardImg": "./assets/case-study--audiophile-homepage.png",
@@ -29,6 +88,10 @@
       {
         "title": "Develop useful client-side form validation",
         "insight": "Setting users up for success with informative error messages is critical in preventing frustration and improving the overall user experience. For this form, I set up regex patterns to make sure user inputs matched valid formats for email addresses, phone numbers, and payment details, and I defined a general validation check to make sure no field is left empty. I set error messages to only be displayed to the user after they click away from the input field, giving them a chance to fill out the form correctly before being guided towards a valid input as needed. The submit button them becomes clickable only after all fields are validated, which is important for maintaining user trust particularly when handling their payment information."
+      },
+      {
+        "title": "Incorporate Tailwind CSS styling",
+        "insight": "Practiced using the popular CSS framework, Tailwind CSS, to bolster maintainability and speed of implementing future updates. Gained experience using responsive utility variants, and looking forward to learning more about directives and reusing styles."
       }
     ],
     "image": "./assets/case-study--audiophile.png",
@@ -88,52 +151,5 @@
     ],
     "repoLink": "https://github.com/mjclaypool/Personal-Portfolio",
     "liveLink": "https://mjclaypool.github.io/Personal-Portfolio/"
-  },
-  {
-    "id": "country-picker",
-    "linkUrl": "/country-picker/",
-    "cardImg": "./assets/case-study--country-picker-homepage-dark.png",
-    "cardAlt": "Country-Picker web application screenshot",
-    "cardTitle": "Country-Picker App",
-    "cardDescription": "An interactive country-picking app that displays country data from the REST Countries API using React.js and Tailwind CSS.",
-    "caseStudyTitle": "Country-Picker Case Study",
-    "tagLine": ["An interactive country-picker application that pulls country data from "],
-    "tagLineLink": ["https://restcountries.com/", "REST Countries API."],
-    "objective": "Per the design brief from Frontend Mentor, build a webpage that allows users to:",
-    "requirements": [
-      "See all countries from the API on the homepage.",
-      "Search for a country using an input field.",
-      "Filter countries by region.",
-      "Click on a country to see more detailed information on a separate page.",
-      "Click through to the border countries on the detail page.",
-      "View the optimal layout for the interface depending on their device's screen size.",
-      "See hover and focus states for all interactive elements on the page."
-    ],
-    "learnings": [
-      {
-        "title": "Seamlessly execute REST API calls",
-        "insight": "Used Fetch API to asynchronously perform GET requests from REST Countries API endpoints, and managed side-effects with the useEffect hook. The first request retrieves a subset of country data to populate the cards on the main page. The second request is triggered whenever a country is selected by the user, retrieving and displaying in-depth country details on that country's page."
-      },
-      {
-        "title": "Build cohesive search bar and filter drop-down elements",
-        "insight": "Applied the useContext and useReducer hooks from React to display countries by region and/or keystrokes in the search bar. Since both functionalities tap into a shared state, the user is able search and filter countries by region simultaneously. Additionally, this shared state persists after the user navigates to a country's details page, so the user will return to the previous search/filter results when the back button is clicked. By choosing to manage state with context, I streamlined state-sharing among sibling components, prevented any consideration of prop-drilling in the solution, and improved the user's experience by keeping track of their inputs."
-      },
-      {
-        "title": "Incorporate Tailwind CSS styling",
-        "insight": "Practiced using the popular CSS framework, Tailwind CSS, to bolster maintainability and speed of implementing future updates. Gained experience using responsive utility variants, and looking forward to learning more about directives and reusing styles."
-      }
-    ],
-    "image": "./assets/case-study--country-picker.png",
-    "altText": "Laptop mock-up of country-picker design.",
-    "screenshots": [
-      "./assets/case-study--country-picker-homepage-dark.png",
-      "./assets/case-study--country-picker-search-dark.png",
-      "./assets/case-study--country-picker-details-dark.png",
-      "./assets/case-study--country-picker-homepage-light.png",
-      "./assets/case-study--country-picker-search-light.png",
-      "./assets/case-study--country-picker-details-light.png"
-    ],
-    "repoLink": "https://github.com/mjclaypool/REST-Countries-API",
-    "liveLink": "https://mjclaypool.github.io/REST-Countries-API/"
   }
 ]

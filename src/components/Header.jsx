@@ -28,7 +28,6 @@ export default function Header( {img} ) {
         </Link>
         <div className="hidden lg:flex gap-8">
           <HashLink to="/#projects" className={hashLink}>Projects</HashLink>
-          <HashLink to="/#exercises" className={hashLink}>Exercises</HashLink>
           <HashLink to="/#about" className={hashLink}>About</HashLink>
         </div>
         <button

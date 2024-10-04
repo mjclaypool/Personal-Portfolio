@@ -1,6 +1,5 @@
 import Hero from '../components/Hero';
 import Projects from '../components/Projects';
-import Exercises from '../components/Exercises';
 import About from '../components/About';
 
 export default function HomePage() {
@@ -8,7 +7,6 @@ export default function HomePage() {
     <>
       <Hero />
       <Projects />
-      <Exercises />
       <About />
     </>
   )

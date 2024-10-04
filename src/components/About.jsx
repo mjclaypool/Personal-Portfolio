@@ -12,7 +12,7 @@ export default function About() {
 
   return (
     <div className="flex justify-center">
-      <div className="flex flex-col font-bold p-8 xl:px-24 lg:max-w-[1600px]">
+      <div className="flex flex-col font-bold p-8 pb-16 xl:px-24 lg:max-w-[1600px]">
         <h2 className="text-3xl self-center py-6" id='about'>About</h2>
         <div className="flex flex-col self-center max-w-full">
           <menu className="flex justify-between gap-2 lg:max-w-[400px] lg:ml-10">

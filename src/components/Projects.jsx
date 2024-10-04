@@ -7,7 +7,7 @@ export default function Projects() {
   const caseStudyCtx = useContext(CaseStudyContext);
 
   return (
-    <div id='projects' className='flex flex-col p-8'>
+    <div id='projects' className='flex flex-col px-8 py-16'>
       <h2 className="font-bold text-3xl self-center py-6">Projects</h2>
       <div className="flex flex-col lg:flex-row flex-wrap gap-8 justify-center items-center animate-load-images">
         {caseStudyCtx.projects.map(card => (

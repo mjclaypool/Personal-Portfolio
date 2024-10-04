@@ -15,7 +15,6 @@ export default function Footer( {img} ) {
         <div className="flex flex-col gap-2 text-center px-8 lg:text-start lg:pt-8">
           <h3 className="text-2xl pb-4">Pages:</h3>
           <HashLink to="/#projects" className={hashLink}>Projects</HashLink>
-          <HashLink to="/#exercises" className={hashLink}>Exercises</HashLink>
           <HashLink to="/#about" className={hashLink}>About</HashLink>
         </div>
         <div className="lg:pt-8">

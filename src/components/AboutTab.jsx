@@ -25,19 +25,21 @@ export default function AboutTab( {tab} ) {
         <h4 className='text-xl'>{ABOUTTAB[tab].dates}</h4>
         <menu className="flex flex-wrap justify-center gap-2 lg:gap-y-1 max-w-full mt-8 mb-4">
           {ABOUTTAB[tab].buttons.map(topic => (
-            <li key={topic.id} id={topic.id} className="relative">
-              <motion.button
-                whileHover={{scale: 1.1}}
-                whileFocus={{scale: 1.1}}
-                transition={{ duration: 0.1 }}
-                onClick={() => handleSelectedIcon(topic.id)}
-                className="relative flex flex-col justify-center items-center gap-2 w-[136px] h-[136px] leading-tight z-10 hover:bg-[radial-gradient(rgba(24,127,179,0.9)_0%,_rgba(24,127,179,0)_60%)] focus:bg-[radial-gradient(rgba(24,127,179,0.9)_0%,_rgba(24,127,179,0)_60%)]"
-              >
+            <motion.li
+              key={topic.id}
+              id={topic.id}
+              className="relative"
+              whileHover={{scale: 1.1}}
+              whileFocus={{scale: 1.1}}
+              transition={{ duration: 0.1 }}
+              onClick={() => handleSelectedIcon(topic.id)}
+            >
+              <button className="relative flex flex-col justify-center items-center gap-2 w-[136px] h-[136px] leading-tight z-10 hover:bg-[radial-gradient(rgba(24,127,179,0.9)_0%,_rgba(24,127,179,0)_60%)] focus:bg-[radial-gradient(rgba(24,127,179,0.9)_0%,_rgba(24,127,179,0)_60%)]">
                 <img src={topic.icon} alt={topic.altText} className="w-[55%]"/>
                 {topic.caption}
-              </motion.button>
-              {selectedTopic == topic.id && <motion.div layoutId="topic-indicator" className="absolute w-full h-full top-0 rounded-md bg-p-glacier-blue z-0" />}
-            </li>
+              </button>
+              {selectedTopic == topic.id && <div className="absolute w-full h-full top-0 rounded-md bg-p-glacier-blue z-0" />}
+            </motion.li>
           ))}
         </menu>
         <p className="absolute bottom-0 right-0 font-normal text-xs text-center py-2 px-8 lg:right-auto lg:pl-0">

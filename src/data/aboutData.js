@@ -97,7 +97,7 @@ export const ABOUTTAB = {
       },
       {
         id: 'workSkills',
-        caption: 'Transferrable Skills',
+        caption: 'Skills',
         icon: aboutSkills,
         altText: "Skills icon",
         title: 'Skills',

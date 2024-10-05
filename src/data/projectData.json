@@ -64,7 +64,7 @@
     "cardImg": "./assets/case-study--audiophile-homepage.png",
     "cardAlt": "Audiophile website screenshot.",
     "cardTitle": "Audiophile Website",
-    "cardDescription": "A responsive, pixel-perfect website for a fictional e-commerce company using Typescript and React.js.",
+    "cardDescription": "A responsive, pixel-perfect website for a fictional e-commerce company using TypeScript and React.js.",
     "caseStudyTitle": "Audiophile Website Case Study",
     "tagLine": "An interactive, scalable e-commerce website with pixel-perfect styling.",
     "objective": "Provided with a Figma design file, build a Audiophile e-commerce website that empowers users to:",

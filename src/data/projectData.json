@@ -1,5 +1,52 @@
 [
   {
+    "id": "into-the-movieverse",
+    "linkUrl": "/into-the-movieverse/",
+    "cardImg": "./assets/case-study--movieverse-recommendations.png",
+    "cardAlt": "Into the MovieVerse website screenshot.",
+    "cardTitle": "Movie Recommendation Website",
+    "cardDescription": "A responsive, fullstack movie recommendation website built with Python, Flask, TypeScript, and React.js.",
+    "caseStudyTitle": "Movie Recommendation Case Study",
+    "tagLine": "An interactive, fullstack movie recommendation website using Python, Flask, TypeScript, and React.js.",
+    "objective": "Design and build a user-centered movie recommendation system that uses machine learning to provide personalized title suggestions to individual users.",
+    "requirements": [
+      "View the optimal layout for the app depending on their device's screen size.",
+      "Scroll through popular movies within the selected MovieLens dataset.",
+      "Search movies within the dataset with search bar filtering.",
+      "Browse movies within the dataset using a dropdown menu.",
+      "Rate selected movies between 0.5 and 5.",
+      "See personalized movie recommendations based on the user's rating history."
+    ],
+    "learnings": [
+      {
+        "title": "Data collection and environment setup",
+        "insight": "After deciding to build my recommender system with collaborative filtering, I downloaded a MovieLens dataset from GroupLens with over 100,000 ratings across 9,000 movies for 610 users. I then set up a virtual environment, installed libraries like Pandas, NumPy, and Scikit-learn, and performed some data exploration to better understand the dataset."
+      },
+      {
+        "title": "Building the recommender model",
+        "insight": "To implement collaborative filtering, I first used scikit-learn's cosine similarity function to identify similar users to the current user. Then, I generated recommendations by compiling a list of highly rated movies by similar users, filtering out movies that the current user has already rated, and serving up the top 10 from the filtered list. I initially used matrix factorization as the basis for my model because it is less memory intensive and accounts well for latent factors; however, I decided to pivot after assessing its performance metrics and finding it required an unreasonable number of ratings before its recommendations became relevant."
+      },
+      {
+        "title": "Creating API endpoints",
+        "insight": "In order to connect the model to my front-end application, I used Flask to create custom API endpoints that handled posting new user ratings and getting new movie recommendations. Additionally, I created endpoints that communicated with the OMDb API to get movie poster images and plot summaries for recommended movies. My most rewarding takeaway from this phase of the project was learning how to efficiently test these endpoints with Insomnia - an awesome open-source application for testing and troubleshooting APIs."
+      },
+      {
+        "title": "Deploying the fullstack application",
+        "insight": "I hosted my front-end application on GitHub Pages, but I needed a different solution for hosting the backend since GitHub Pages does not support hosting server-side code. I chose to use PythonAnywhere's free tier to deploy my backend application and used its server/error logs to troubleshoot issues that had not occured during local testing. PythonAnywhere was really easy to learn and use, and I look forward to using it again for future fullstack projects."
+      }
+    ],
+    "image": "./assets/case-study--movieverse.png",
+    "altText": "Laptop mock-up of the Into the MovieVerse website.",
+    "screenshots": [
+      "./assets/case-study--movieverse-recommendations.png",
+      "./assets/case-study--movieverse-search.png",
+      "./assets/case-study--movieverse-modal.png",
+      "./assets/case-study--movieverse-browse.png"
+    ],
+    "repoLink": "https://github.com/mjclaypool/Into-The-MovieVerse",
+    "liveLink": "https://mjclaypool.github.io/Into-The-MovieVerse/"
+  },
+  {
     "id": "finance",
     "linkUrl": "/finance/",
     "cardImg": "./assets/case-study--finance-overview.png",
@@ -95,7 +142,7 @@
       }
     ],
     "image": "./assets/case-study--audiophile.png",
-    "altText": "Laptop mock-up of the Little Lemon restaurant website.",
+    "altText": "Laptop mock-up of the Audiophile website.",
     "screenshots": [
       "./assets/case-study--audiophile-homepage.png",
       "./assets/case-study--audiophile-category.png",
@@ -105,51 +152,5 @@
     ],
     "repoLink": "https://github.com/mjclaypool/Audiophile-Website",
     "liveLink": "https://mjclaypool.github.io/Audiophile-Website/"
-  },
-  {
-    "id": "portfolio",
-    "linkUrl": "/portfolio/",
-    "cardImg": "./assets/case-study--portfolio-homepage.png",
-    "cardAlt": "Personal portfolio website screenshot",
-    "cardTitle": "Personal Portfolio",
-    "cardDescription": "A responsive, interactive portfolio website using React.js and Framer Motion that highlights my design and development skills.",
-    "caseStudyTitle": "Portfolio Case Study",
-    "tagLine": "An interactive personal portfolio that showcases my skills as a front-end software developer.",
-    "objective": "Design and build an engaging portfolio website that allows users to:",
-    "requirements": [
-      "See 'Hero', 'Projects', 'Exercises', and 'About' sections on the homepage.",
-      "Use links in the header and footer to navigate to their respective content sections.",
-      "View individual project and exercise case studies via their links on the homepage.",
-      "Interact with education, work experience, and continuous learning content in the 'About' section.",
-      "Connect via the LinkedIn and GitHub links in the footer section."
-    ],
-    "learnings": [
-      {
-        "title": "Ensure the site is enjoyable and functional across browsers and devices.",
-        "insight": "With a wide variety of screen and browser options for visiting a webpage, responsive web design is critical for delivering an uncompromised user experience across all viewports. To mitigate potential compatibility issues, I tested my application early and often on multiple browsers and devices, using browser dev tools to help identify and fix problems along the way. Additionally, I verified that all functionality is accessible via keyboard navigation and non-text content includes text alternatives to promote inclusivity of all abilities and assistive devices."
-      },
-      {
-        "title": "Create and efficiently call upon JSON data files.",
-        "insight": "Moving data out of individual pages and component files leads to leaner components, improves ease of making formatting changes and adding new content, and reduces time spent on debugging across multiple layers of a file structure. Having created reusable elements for the 'About' section and case study page, I can easily add topics or swap out case studies without needing to manipulate any components or add any pages."
-      },
-      {
-        "title": "Define SPA routing with React Router DOM",
-        "insight": "To integrate the reusable case study page as a child path, I wrapped the router with context and utilized the useParams hook to make page connections, load the targeted data, and prevent refresh errors. However, when I deployed the project to GitHub Pages, I realized I could not refresh pages other than the homepage without getting a GitHub 404 error. I quickly learned that GitHub Pages cannot handle dynamic routing of SPAs with browser routing, so I switched to hash routing since it does not require server-side support. In doing so, I enjoyed picking up new experiences in structuring SPAs, and I look forward to learning more about React router components and hooks for future projects."
-      },
-      {
-        "title": "Incorporate animations, effects, and a custom error page",
-        "insight": "To make this portfolio website fun and engaging, I added animations to highlight hovered/focused elements, applied smooth transitions to scrolling and user-selected components, and created a custom 404 error page. For animations, I tried out motion components from the Framer Motion library to style elements entering the viewport and enhance the feel of interactive elements."
-      }
-    ],
-    "image": "./assets/case-study--portfolio.png",
-    "altText": "Laptop mock-up of final portfolio design.",
-    "screenshots": [
-      "./assets/case-study--portfolio-homepage-full.png",
-      "./assets/case-study--portfolio-about.png",
-      "./assets/case-study--portfolio-case-study.png",
-      "./assets/case-study--portfolio-error-page.png"
-    ],
-    "repoLink": "https://github.com/mjclaypool/Personal-Portfolio",
-    "liveLink": "https://mjclaypool.github.io/Personal-Portfolio/"
   }
 ]

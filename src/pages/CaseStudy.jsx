@@ -12,10 +12,13 @@ export default function CaseStudy() {
   const params = useParams();
   const caseStudyCtx = useContext(CaseStudyContext);
   const [isLoading, setIsLoading] = useState(true);
+  const [imgLoad, setImgLoad] = useState(false)
 
   useEffect(() => {
     caseStudyCtx.showCaseStudy(params.caseStudy)
     setIsLoading(false)
+    // reset image loaded state when the caseStudy changes
+    setImgLoad(false)
     document.getElementById('main-header').scrollIntoView();
   }, [params.caseStudy])
 
@@ -23,7 +26,7 @@ export default function CaseStudy() {
     <div className="flex justify-center">
       {!isLoading && caseStudyCtx.caseStudy !== "error" &&
         <section className='relative flex flex-col w-full px-8 lg:px-24 lg:max-w-[1600px]'>
-          <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
+          <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center lg:gap-8">
             <div>
               <h1 className="font-bold text-4xl my-10 lg:text-5xl">{caseStudyCtx.caseStudy.caseStudyTitle}</h1>
               <p className="leading-tight mb-6">
@@ -39,11 +42,21 @@ export default function CaseStudy() {
               />
             </div>
             <div className="flex justify-center py-12 lg:py-0 animate-hero-load">
-              <img
-                src={caseStudyCtx.caseStudy.image}
-                alt-text={caseStudyCtx.caseStudy.altText}
-                className='w-[320px] h-[320px] object-cover rounded-full border-2 border-n-light-grey lg:w-[400px] lg:h-[400px]'
-              />
+              <div className="relative rounded-full overflow-hidden w-[320px] h-[320px] border-2 border-n-light-grey lg:w-[400px] lg:h-[400px]">
+                {!imgLoad && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-white">
+                    <div className="w-10 h-10 border-4 border-gray-200 border-t-p-glacier-blue rounded-full animate-spin" />
+                  </div>
+                )}
+                <img
+                  src={caseStudyCtx.caseStudy.image}
+                  alt={caseStudyCtx.caseStudy.altText}
+                  loading="lazy"
+                  className={`w-full h-full object-cover transition-opacity duration-300 ${imgLoad ? 'opacity-100' : 'opacity-0'}`}
+                  onLoad={() => setImgLoad(true)}
+                  onError={() => setImgLoad(true)}
+                />
+              </div>
             </div>
           </div>
           {caseStudyCtx.caseStudy.outcomes &&

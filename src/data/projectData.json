@@ -2,7 +2,7 @@
   {
     "id": "into-the-movieverse",
     "linkUrl": "/into-the-movieverse/",
-    "cardImg": "./assets/case-study--movieverse-recommendations.png",
+    "cardImg": "./assets/case-study--movieverse-recommendations-scaled.png",
     "cardAlt": "Into the MovieVerse website screenshot.",
     "cardTitle": "Movie Recommendation Website",
     "cardDescription": "A responsive, fullstack movie recommendation website built with Python, Flask, TypeScript, and React.js.",
@@ -49,7 +49,7 @@
   {
     "id": "finance",
     "linkUrl": "/finance/",
-    "cardImg": "./assets/case-study--finance-overview.png",
+    "cardImg": "./assets/case-study--finance-overview-scaled.png",
     "cardAlt": "Finance website screenshot",
     "cardTitle": "Personal Finance App",
     "cardDescription": "A highly interactive personal finance application using TypeScript, React.js, Tailwind CSS and Chart.js.",
@@ -108,7 +108,7 @@
   {
     "id": "audiophile-website",
     "linkUrl": "/audiophile-website/",
-    "cardImg": "./assets/case-study--audiophile-homepage.png",
+    "cardImg": "./assets/case-study--audiophile-homepage-scaled.png",
     "cardAlt": "Audiophile website screenshot.",
     "cardTitle": "Audiophile Website",
     "cardDescription": "A responsive, pixel-perfect website for a fictional e-commerce company using TypeScript and React.js.",
@@ -141,7 +141,7 @@
         "insight": "Practiced using the popular CSS framework, Tailwind CSS, to bolster maintainability and speed of implementing future updates. Gained experience using responsive utility variants, and looking forward to learning more about directives and reusing styles."
       }
     ],
-    "image": "./assets/case-study--audiophile.png",
+    "image": "./assets/case-study--audiophile-scaled.png",
     "altText": "Laptop mock-up of the Audiophile website.",
     "screenshots": [
       "./assets/case-study--audiophile-homepage.png",

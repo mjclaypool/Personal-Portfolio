@@ -1,4 +1,4 @@
-import heroImg from "../assets/pexels-daniel-smyth-83914874-10406128.jpg";
+import heroImg from "../assets/hero-banner.png";
 
 export default function Hero() {
   return (

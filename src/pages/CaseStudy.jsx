@@ -51,7 +51,6 @@ export default function CaseStudy() {
                 <img
                   src={caseStudyCtx.caseStudy.image}
                   alt={caseStudyCtx.caseStudy.altText}
-                  loading="lazy"
                   className={`w-full h-full object-cover transition-opacity duration-300 ${imgLoad ? 'opacity-100' : 'opacity-0'}`}
                   onLoad={() => setImgLoad(true)}
                   onError={() => setImgLoad(true)}

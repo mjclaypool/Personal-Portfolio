@@ -1,16 +1,16 @@
-import eduImg from '../assets/ut-austin-tx.jpeg';
+import eduImg from '../assets/ut-austin-tx.png';
 import aboutEdu from '../assets/about--education.png';
 import aboutResearch from '../assets/about--research.png';
 import aboutAwards from '../assets/about--award.png';
 import aboutLeadership from '../assets/about--leader.png';
 import aboutInternship from '../assets/about--work.png';
 
-import workImg from '../assets/newport-ri.jpg';
+import workImg from '../assets/newport-ri.png';
 import aboutSummary from '../assets/about--work-summary.png';
 import aboutWorkAwards from '../assets/about--award.png';
 import aboutSkills from '../assets/about--skills.png';
 
-import learningImg from '../assets/raleigh-nc.jpeg';
+import learningImg from '../assets/raleigh-nc.png';
 import aboutUXCert from '../assets/about--ux-certificate.png';
 import aboutFrontendCert from '../assets/about--frontend-certificate.png';
 import aboutUTUXCert from '../assets/about--utux-certificate.png';

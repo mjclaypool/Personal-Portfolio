@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import errorImg from '../assets/everett-bartels-FJMK4VKW-Xw-unsplash.jpg';
+import errorImg from '../assets/error-image.png';
 
 export default function ErrorPage() {
   return (

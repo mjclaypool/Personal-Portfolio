@@ -25,6 +25,7 @@ export default function Drawer( {onDone}) {
         <div className="border-b-4 border-p-glacier-blue w-full"/>
         <HashLink to="/#projects" className="text-xl py-2 px-7 hover:text-p-glacier-blue focus:text-p-glacier-blue" onClick={handleCloseDrawer}>Projects</HashLink>
         <HashLink to="/#about" className="text-xl py-2 px-7 hover:text-p-glacier-blue focus:text-p-glacier-blue" onClick={handleCloseDrawer}>About</HashLink>
+        <HashLink to="/#interests" className="text-xl py-2 px-7 hover:text-p-glacier-blue focus:text-p-glacier-blue" onClick={handleCloseDrawer}>Interests</HashLink>
       </div>
     </Modal>
   )

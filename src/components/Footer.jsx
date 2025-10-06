@@ -16,6 +16,7 @@ export default function Footer( {img} ) {
           <h3 className="text-2xl pb-4">Pages:</h3>
           <HashLink to="/#projects" className={hashLink}>Projects</HashLink>
           <HashLink to="/#about" className={hashLink}>About</HashLink>
+          <HashLink to="/#interests" className={hashLink}>Interests</HashLink>
         </div>
         <div className="lg:pt-8">
           <h3 className="text-2xl pb-4">Connect:</h3>
@@ -45,11 +46,11 @@ export default function Footer( {img} ) {
             whileHover={{scale: 1.1}}
             whileFocus={{scale: 1.1}}
             transition={{type: 'spring', duration: '0.3'}}
-            href="https://www.frontendmentor.io/profile/mjclaypool/solutions"
+            href="https://www.artstation.com/mjclay"
             target="_blank"
             className={`${connectLink} mt-3`}
           >
-            Frontend Mentor
+            ArtStation
           </motion.a>
         </div>
       </div>

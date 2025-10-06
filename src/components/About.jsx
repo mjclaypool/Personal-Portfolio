@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import AboutTab from './AboutTab';
 
 export default function About() {
-  const [selectedTab, setSelectedTab] = useState('edu');
+  const [selectedTab, setSelectedTab] = useState('underedu');
 
   function handleSelectedTab(userSelectedTab) {
     setSelectedTab(userSelectedTab);

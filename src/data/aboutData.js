@@ -164,5 +164,5 @@ export const ABOUTTAB = {
         takeaways: 'In my current courses, I am developing my data analysis and visualization skills, gaining more experience with Java, and learning SQL.',
       },
     ],
-  }
+  },
 }

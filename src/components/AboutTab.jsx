@@ -1,10 +1,14 @@
 import { useState, useMemo } from "react";
+import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import { ABOUTTAB } from "../data/aboutData.js";
 
 import AboutDetails from "./AboutDetails";
 
-export default function AboutTab( {tab} ) {
+export default function AboutTab({ tab }) {
+  AboutTab.propTypes = {
+    tab: PropTypes.string.isRequired,
+  };
   const [selectedTopic, setSelectedTopic] = useState('');
 
   function handleSelectedIcon(selection) {

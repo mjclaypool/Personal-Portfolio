@@ -15,16 +15,16 @@ export default function About() {
       <div className="flex flex-col font-bold p-8 pb-16 xl:px-24 lg:max-w-[1600px]">
         <h2 className="text-3xl self-center py-6" id='about'>About</h2>
         <div className="flex flex-col self-center max-w-full">
-          <menu className="flex justify-between gap-2 lg:max-w-[400px] lg:ml-10">
+          <menu className="flex justify-between gap-2 lg:max-w-[625px] lg:ml-10">
             <li className="relative flex-1 text-center hover:text-p-ice-blue focus:text-p-ice-blue">
               <button
                 type='button'
-                onClick={() => handleSelectedTab('edu')}
-                className={selectedTab === 'edu' ? 'activeTab' : 'inactiveTab'}
+                onClick={() => handleSelectedTab('underedu')}
+                className={selectedTab === 'underedu' ? 'activeTab' : 'inactiveTab'}
               >
-                Education
+                Undergraduate Education
               </button>
-              {selectedTab === 'edu' &&
+              {selectedTab === 'underedu' &&
                 <motion.div layoutId="tab-indicator" className="absolute top-0 w-full h-full bg-p-glacier-blue rounded-t-md z-0" />
               }
             </li>
@@ -34,7 +34,7 @@ export default function About() {
                 onClick={() => handleSelectedTab('work')}
                 className={selectedTab === 'work' ? 'activeTab' : 'inactiveTab'}
               >
-                Work
+                Professional Experience
               </button>
               {selectedTab === 'work' &&
                 <motion.div layoutId="tab-indicator" className="absolute top-0 w-full h-full bg-p-glacier-blue rounded-t-md z-0" />
@@ -46,9 +46,21 @@ export default function About() {
                 onClick={() => handleSelectedTab('learning')}
                 className={selectedTab === 'learning' ? 'activeTab' : 'inactiveTab'}
               >
-                Learning
+                Professional Development
               </button>
               {selectedTab === 'learning' &&
+                <motion.div layoutId="tab-indicator" className="absolute top-0 w-full h-full bg-p-glacier-blue rounded-t-md z-0" />
+              }
+            </li>
+            <li className="relative flex-1 text-center hover:text-p-ice-blue focus:text-p-ice-blue">
+              <button
+                type='button'
+                onClick={() => handleSelectedTab('gradedu')}
+                className={selectedTab === 'gradedu' ? 'activeTab' : 'inactiveTab'}
+              >
+                Graduate Education
+              </button>
+              {selectedTab === 'gradedu' &&
                 <motion.div layoutId="tab-indicator" className="absolute top-0 w-full h-full bg-p-glacier-blue rounded-t-md z-0" />
               }
             </li>

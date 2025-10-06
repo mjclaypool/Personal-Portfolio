@@ -14,11 +14,9 @@ import learningImg from '../assets/raleigh-nc.png';
 import aboutUXCert from '../assets/about--ux-certificate.png';
 import aboutFrontendCert from '../assets/about--frontend-certificate.png';
 import aboutUTUXCert from '../assets/about--utux-certificate.png';
-import aboutFrontendMentor from '../assets/about--frontend-mentor.png';
-import aboutUdemyReact from '../assets/about--udemy-react.png';
 
 export const ABOUTTAB = {
-  edu: {
+  underedu: {
     title: 'The University of Texas at Austin',
     dates: '2014 - 2018',
     image: eduImg,
@@ -107,8 +105,8 @@ export const ABOUTTAB = {
     ],
   },
   learning: {
-    title: 'Professional Development',
-    dates: '2023 - present',
+    title: 'Professional Development - UX/UI, Software Development',
+    dates: '2023 - 2024',
     image: learningImg,
     imageAlt: 'Image of the sky from within a forest near Raleigh, NC USA.',
     buttons: [
@@ -138,25 +136,33 @@ export const ABOUTTAB = {
         title: 'Post Graduate Program in UX Design',
         description: 'Solidified user experience design concepts with projects in conducting user research, conducting competitive audits, and redesigning websites. Collaborated with four other designers to plan out a pet health-tracking mobile app and present our concept to other peers and mentors of the program.',
         takeaways: 'This experience afforded me an additional perspective on the UX Design field. I became more efficient using Figma to plan out web designs, and I learned more about current design trends and best practices.',
-      },
-      {
-        id: 'learnFEM',
-        caption: 'Frontend Mentor',
-        icon: aboutFrontendMentor,
-        altText: "Development icon",
-        title: 'FrontEnd Mentor Challenges',
-        description: 'Gained hands-on experience building accessible, responsive web applications in a professional workflow. Practiced building and deploying websites with a variety of languages and libraries, gravitating towards TypeScript, React.js, semantic HTML and Tailwind CSS.',
-        takeaways: 'Through building out these projects, I pushed myself to routinely try out new libraries and practice writing efficient, reusable code. I am particularly proud of my latest two projects, the Personal Finance App and the Audiophile Website, both of which I was able to develop and deploy with about one week\'s time.',
-      },
-      {
-        id: 'learnUdemy',
-        caption: 'Udemy React',
-        icon: aboutUdemyReact,
-        altText: "Development icon",
-        title: 'React: The Complete Guide 2024',
-        description: "Built upon React.js foundational knowledge, learning advanced React concepts and embracing best practices through dozens of hands-on exercises. Gained a deeper understanding of the innerworkings of React and how to structure React projects.",
-        takeaways: 'I am continuing to boost my technical skills with this course by developing apps with advanced state management, authentication, animations, and API calls. Currently making advancements on learning Next.js to develop fullstack applications.',
-      },
+      }
     ],
   },
+  gradedu: {
+    title: 'Clemson University',
+    dates: '2025 - present',
+    image: learningImg,
+    imageAlt: 'Image of the sky from within a forest near Raleigh, NC USA.',
+    buttons: [
+      {
+        id: 'eduDegree',
+        caption: 'M.S. Computer Science',
+        icon: aboutEdu,
+        altText: "Degree icon",
+        title: 'M.S. Computer Science',
+        description: 'Began pursuing a Master of Science in Computer Science from Clemson University in the Spring 2025 semester. Current GPA of 3.5 with an expected graduation of Spring 2027.',
+        takeaways: 'Completed coursework includes Design and Analysis of Algorithms and AI-Receptive Software Development. Currently taking Applied Data Science and Database Management Systems.',
+      },
+      {
+        id: 'eduResearch',
+        caption: 'Skills',
+        icon: aboutSkills,
+        altText: "Skills icon",
+        title: 'Skills',
+        description: "From completed coursework, I gained in-depth knowledge of data structures and algorithm design. I also created a fullstack movie recommender system as a course project where I strengthened my front-end design and development skills, gained experience creating and using APIs, and learned how to implement machine learning algorithms.",
+        takeaways: 'In my current courses, I am developing my data analysis and visualization skills, gaining more experience with Java, and learning SQL.',
+      },
+    ],
+  }
 }

@@ -1,9 +1,9 @@
 import { createHashRouter, RouterProvider } from 'react-router-dom';
-import { CaseStudyContextProvider } from './store/CaseStudyContext';
-import RootLayout from './pages/Root';
-import HomePage from './pages/HomePage';
-import CaseStudy from './pages/CaseStudy';
-import ErrorPage from './pages/ErrorPage';
+import { CaseStudyContextProvider } from './store/CaseStudyContext.tsx';
+import RootLayout from './pages/Root.tsx';
+import HomePage from './pages/HomePage.tsx';
+import CaseStudy from './pages/CaseStudy.tsx';
+import ErrorPage from './pages/ErrorPage.tsx';
 import './index.css'
 
 const router = createHashRouter([

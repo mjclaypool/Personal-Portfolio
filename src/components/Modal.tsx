@@ -1,20 +1,26 @@
+import { ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 
-export default function Modal({children, onClose}) {
+type modalProps = {
+  onClose: () => void,
+  children: ReactNode
+}
+
+export default function Modal( props: modalProps ) {
   return createPortal(
     <>
       <div
         className='fixed w-full h-[100vh] bg-n-very-dark-blue bg-opacity-75 z-30'
-        onClick={onClose}
+        onClick={props.onClose}
       />
       <dialog
         className="fixed h-[100vh] w-[50%] z-40 bg-n-dark-grey mx-[50%] rounded-l-md animate-drawer-open"
-        onClose={onClose}
+        onClose={props.onClose}
         open
       >
-        {children}
+        {props.children}
       </dialog>
     </>,
-    document.getElementById('modal')
+    document.getElementById('modal')!
   );
 }

@@ -1,16 +1,16 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
-import CaseStudyContext from '../store/CaseStudyContext.jsx';
+import CaseStudyContext from '../store/CaseStudyContext.tsx';
 
-export default function Exercises() {
+export default function Projects() {
   const caseStudyCtx = useContext(CaseStudyContext);
 
   return (
-    <div id='exercises' className='flex flex-col p-8'>
-      <h2 className="font-bold text-3xl self-center py-6">Exercises</h2>
+    <div id='projects' className='flex flex-col px-8 py-16'>
+      <h2 className="font-bold text-3xl self-center py-6">Projects</h2>
       <div className="flex flex-col lg:flex-row flex-wrap gap-8 justify-center items-center animate-load-images">
-        {caseStudyCtx.exercises.map(card => (
+        {caseStudyCtx.projects.map(card => (
           <motion.div
             key={card.cardTitle}
             whileHover={{scale: 1.05}}
@@ -18,7 +18,7 @@ export default function Exercises() {
             transition={{ duration: 0.1 }}
           >
             <Link
-              to={card.linkUrl}
+              to={card.id}
               className="flex flex-col w-[80vw] max-w-[400px] min-h-[305px] border-2 border-n-dark-grey bg-n-dark-grey rounded-xl overflow-hidden hover:shadow-card focus:shadow-card"
             >
               <img

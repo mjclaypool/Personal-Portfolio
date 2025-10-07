@@ -1,17 +1,20 @@
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
-import Modal from "./Modal";
+import Modal from "./Modal.tsx";
 import closeIcon from "../assets/drawer--close.png";
 
-export default function Drawer( {onDone}) {
+type drawerProps = {
+  onDone: () => void
+}
 
+export default function Drawer( props : drawerProps) {
   function handleCloseDrawer() {
-    onDone();
+    props.onDone();
   }
 
   return (
-    <Modal onClose={onDone}>
+    <Modal onClose={props.onDone}>
       <div id="drawer" className="flex flex-col gap-4 font-raleway font-bold text-n-light-grey py-[44px]">
         <button
           type="button"

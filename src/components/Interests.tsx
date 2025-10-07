@@ -20,7 +20,7 @@ export default function Interests() {
                         <a
                             href="https://www.artstation.com/artwork/AZNGVq"
                             target="_blank"
-                            aria-level="Open live site for Sombra's Machine Pistor - Overwatch 2 Fan Art in a new tab"
+                            aria-label="Open live site for Sombra's Machine Pistor - Overwatch 2 Fan Art in a new tab"
                         >
                             <img src={owimg} className="max-h-[280px] rounded-xl hover:shadow-card focus:shadow-card cursor-pointer" />
                         </a>
@@ -35,7 +35,7 @@ export default function Interests() {
                         <a
                             href="https://www.artstation.com/artwork/NqNZPz"
                             target="_blank"
-                            aria-level="Open live site for Trek Marlin 6 in a new tab"
+                            aria-label="Open live site for Trek Marlin 6 in a new tab"
                         >
                             <img src={bikeimg} className="max-h-[280px] rounded-xl hover:shadow-card focus:shadow-card cursor-pointer" />
                         </a>

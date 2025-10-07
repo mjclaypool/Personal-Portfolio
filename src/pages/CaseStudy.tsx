@@ -1,12 +1,11 @@
 import { useState, useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Objectives from "../components/Objectives.jsx";
-import Outcomes from "../components/Outcomes.jsx";
-import Process from "../components/Process.jsx";
-import Screenshots from "../components/Screenshots.jsx";
-import Links from "../components/Links.jsx";
-import CaseStudyContext from "../store/CaseStudyContext.jsx";
-import ErrorPage from "../pages/ErrorPage.jsx";
+import Objectives from "../components/Objectives.tsx";
+import Process from "../components/Process.tsx";
+import Screenshots from "../components/Screenshots.tsx";
+import Links from "../components/Links.tsx";
+import CaseStudyContext from "../store/CaseStudyContext.tsx";
+import ErrorPage from "./ErrorPage.js";
 
 export default function CaseStudy() {
   const params = useParams();
@@ -15,25 +14,26 @@ export default function CaseStudy() {
   const [imgLoad, setImgLoad] = useState(false)
 
   useEffect(() => {
-    caseStudyCtx.showCaseStudy(params.caseStudy)
+    if (params.caseStudy) {
+      caseStudyCtx.showCaseStudy(params.caseStudy);
+    }
     setIsLoading(false)
-    // reset image loaded state when the caseStudy changes
     setImgLoad(false)
-    document.getElementById('main-header').scrollIntoView();
+    document.getElementById('main-header')!.scrollIntoView();
   }, [params.caseStudy])
 
   return (
     <div className="flex justify-center">
-      {!isLoading && caseStudyCtx.caseStudy !== "error" &&
+      {!isLoading && caseStudyCtx.caseStudy.id !== "error" &&
         <section className='relative flex flex-col w-full px-8 lg:px-24 lg:max-w-[1600px]'>
           <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center lg:gap-8">
             <div>
               <h1 className="font-bold text-4xl my-10 lg:text-5xl">{caseStudyCtx.caseStudy.caseStudyTitle}</h1>
               <p className="leading-tight mb-6">
                 {caseStudyCtx.caseStudy.tagLine}
-                {caseStudyCtx.caseStudy.tagLineLink &&
+                {/* {caseStudyCtx.caseStudy.tagLineLink &&
                   <a href={caseStudyCtx.caseStudy.tagLineLink[0]}>{caseStudyCtx.caseStudy.tagLineLink[1]}</a>
-                }
+                } */}
               </p>
               <Links repoLink={caseStudyCtx.caseStudy.repoLink} liveLink={caseStudyCtx.caseStudy.liveLink} />
               <Objectives
@@ -58,19 +58,12 @@ export default function CaseStudy() {
               </div>
             </div>
           </div>
-          {caseStudyCtx.caseStudy.outcomes &&
-            <Outcomes
-              outcomes={caseStudyCtx.caseStudy.outcomes}
-              skills={caseStudyCtx.caseStudy.skills}
-              insights={caseStudyCtx.caseStudy.insights}
-            />
-          }
           {caseStudyCtx.caseStudy.learnings && <Process learnings={caseStudyCtx.caseStudy.learnings} />}
           <Screenshots screenshots={caseStudyCtx.caseStudy.screenshots} />
         </section>
       }
-      {isLoading && caseStudyCtx.caseStudy !== "error" && <div className="w-[100vw] h-[100vh]"/>}
-      {caseStudyCtx.caseStudy =="error" && <ErrorPage />}
+      {isLoading && caseStudyCtx.caseStudy.id !== "error" && <div className="w-[100vw] h-[100vh]"/>}
+      {caseStudyCtx.caseStudy.id =="error" && <ErrorPage />}
     </div>
   )
 }

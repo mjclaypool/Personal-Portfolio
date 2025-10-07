@@ -1,7 +1,6 @@
 [
   {
     "id": "into-the-movieverse",
-    "linkUrl": "/into-the-movieverse/",
     "cardImg": "./assets/case-study--movieverse-recommendations-scaled.png",
     "cardAlt": "Into the MovieVerse website screenshot.",
     "cardTitle": "Movie Recommendation Website",
@@ -48,7 +47,6 @@
   },
   {
     "id": "finance",
-    "linkUrl": "/finance/",
     "cardImg": "./assets/case-study--finance-overview-scaled.png",
     "cardAlt": "Finance website screenshot",
     "cardTitle": "Personal Finance App",
@@ -107,7 +105,6 @@
   },
   {
     "id": "audiophile-website",
-    "linkUrl": "/audiophile-website/",
     "cardImg": "./assets/case-study--audiophile-homepage-scaled.png",
     "cardAlt": "Audiophile website screenshot.",
     "cardTitle": "Audiophile Website",

@@ -16,7 +16,7 @@ export default function About() {
       <div className="flex flex-col font-bold p-8 pb-16 md:py-16 xl:px-24 lg:max-w-[1600px]">
         <HomeSectionHeading label='About' />
         <div className="flex flex-col self-center max-w-full">
-          <menu className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:max-w-[650px] lg:ml-10">
+          <menu className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:max-w-[650px] lg:ml-10 border-t-2 lg:border-none border-cc-light-grey rounded-t-xl">
             {caseStudyCtx.aboutTabs.map(tab => (
               <li key={tab.tabName} className="relative text-center items-center hover:text-p-ice-blue focus:text-p-ice-blue">
                 <button

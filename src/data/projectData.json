@@ -1,13 +1,71 @@
 [
   {
+    "id": "home-edge",
+    "cardImg": "case-study--home-edge-login-cropped.png",
+    "cardAlt": "Screenshot of Home Edge application.",
+    "cardTitle": "Home Maintenance Management App",
+    "cardDescription": "A human-centered, fullstack application that interfaces with an LLM to help users manage their home maintenance tasks.",
+    "caseStudyTitle": "Home Maintenance Management App Case Study",
+    "tagLine": "An interactive, fullstack home maintenance management prototype that uses Google Gemini to help users manage home maintenance tasks.",
+    "objective": "Design and build a human-AI system that promotes explainability, trust, and a positive user experience when managing home maintenance tasks.",
+    "requirements": [
+      "Display the optimal layout for the app depending on the device's screen size.",
+      "Manage access with login authentication.",
+      "View all and upcoming tasks on the user dashboard",
+      "Add tasks for tracking with an AI assistant.",
+      "Set task frequencies, reminders, and custom notes for each task.",
+      "Update or delete tasks on tasks' dedicated details pages."
+    ],
+    "learnings": [
+      {
+        "title": "Identifying needs through user research",
+        "insight": "Research was performed through a user needs survey to better understand the current ways users manage their home maintenance tasks and identify their common pain points. Most participants responded that they rely, at least partially, on mental notes to manage up to ten tasks of various frequencies, and they shared that they often struggle to remember to perform their tasks when they had originally planned. Through quantitative and qualitative analysis, the problem space was confirmed, and requirements were defined for developing a user-centered tool that helps users set up and manage their home maintenance needs."
+      },
+      {
+        "title": "Form validation and authentication with Flask",
+        "insight": "On the login screen, users are prompted to enter a username and password to gain access to the rest of the application. On the front-end, form validation checks that users have entered a valid username and password before permitting them to move forward, and an informative error message helps users recover if they have entered incorrect credentials. Additionally, a state variable, managed with React Context, holds users on the login screen until they have entered the correct credentials, preventing users from bypassing this screen with url manipulation.\n\nThen, on the back-end, HTTPBasicAuth's \"login_required\" decorator prevents users that have not entered the correct credentials from accessing the app's custom APIs that manage the flow of data within the application. With multiple layers of security, these features aim to simulate protecting user data and prevent misuse of this prototype application.",
+        "demo": "case-study--home-edge-video-loggingIn.mp4"
+      },
+      {
+        "title": "Chat scripting with dialog nodes",
+        "insight": "When users want to set up tasks for tracking, they click or tap the blue \"+\" button to open up the chat modal. This feature resembles digital messaging systems, where system and user responses are presented as a scrollable dialog. Stored in a JSON file, this dialog is structured as a series of node objects, with each node having a node id, dialog text, a response type (either multiple choice or free response), multiple choice options (if applicable), and pointers to the next node based on user input. As users interact with the chat, the system follows the dialog script and sends requests to the back-end accordingly.",
+        "demo": "case-study--home-edge-video-addingTask.mp4"
+      },
+      {
+        "title": "Prompt engineering and grounding with web search",
+        "insight": "Users are prompted to either describe a task that they would like to track or request task recommendations from the application. Users' inputs are subsequently inserted into one of two pre-structured prompts for sending through the Gemini API. These prompts were engineered to encourage the Gemini API to return data in a predictable format that can be programmatically handled by the back-end application.\n\nAdditionally, with the \"google_search\" tool enabled, responses are grounded in real web results. Metadata for where the AI system sourced its response are returned with the system's output and is also processed by the back-end. Providing these citations to users, at the time of query and on each task's details page, promotes explainability and trust in the AI system."
+      },
+      {
+        "title": "Creating custom API endpoints with Flask",
+        "insight": "Custom API endpoints were developed with Flask to handle communication between the application and the Google Gemini API and to manage CRUD operations of task data. For example, when the user types out a task for tracking in the chat, the application fetches a response from the \"get_task_details\" endpoint. This endpoint inserts the task name into the appropriate prompt, sends it through the Gemini API, parses the returned response, updates a JSON file with the new task, and returns the task details to the front-end.\n\nOther endpoints help manage the flow of data within the app, like updating task frequencies, setting reminders, and adding custom notes. Users can perform these actions within the chat and from their tasks' details pages. If users decide that they no longer wish to manage a task, they can remove the task with the \"Delete Task\" button at the bottom of its details page. To protect users from unintentionally deleting task data, a confirmation modal promotes safety by prompting the user to confirm the action. If they do so, the \"delete_task\" endpoint handles removing the data from the JSON file. Overall, these endpoints provide flexibility for users to personalize their task management in the way that best fits their home maintenance needs as they change.",
+        "demo": "case-study--home-edge-video-editingTask.mp4"
+      },
+      {
+        "title": "Performing usability testing",
+        "insight": "Usability testing was performed to evaluate the effectiveness of the human-AI system, identify opportunities for improvement, and assess the overall user experience. After the front-end was deployed on GitHub Pages and the back-end on Vercel, users were provided a script for setting up home maintenance tasks and encouraged to think aloud as they worked through the study. When they were finished, they were encouraged to complete a post-study survey to reflect on their experiences.\n\nUsers rated the usability of the system highly and believe it provides the right kind of utility to help them achieve their home maintenance management needs. They also identified some opportunities for increased customizability to further improve their user experiences, like being able to strike through or mark off tasks when they are completed and being able to edit AI content to better align with their specific home systems. For a future iteration of this project, these quality of life updates will be a priority for empowering users to manage their home systems with ease."
+      }
+    ],
+    "image": "case-study--home-edge-task-page-cropped.png",
+    "altText": "Screenshot of a task's details page on the Home Edge app.",
+    "screenshots": [
+      "case-study--home-edge-login.png",
+      "case-study--home-edge-dashboard.png",
+      "case-study--home-edge-chat.png",
+      "case-study--home-edge-task-page.png",
+      "case-study--home-edge-confirm-delete.png"
+    ],
+    "repoLink": "https://github.com/mjclaypool/HomeEdgeApp",
+    "liveLink": "https://mjclaypool.github.io/HomeEdgeApp/"
+  },
+  {
     "id": "into-the-movieverse",
-    "cardImg": "./assets/case-study--movieverse-recommendations-scaled.png",
-    "cardAlt": "Into the MovieVerse website screenshot.",
+    "cardImg": "case-study--movieverse-recommendations-scaled.png",
+    "cardAlt": "Screenshot of Into the MovieVerse website.",
     "cardTitle": "Movie Recommendation Website",
-    "cardDescription": "A responsive, fullstack movie recommendation website built with Python, Flask, TypeScript, and React.js.",
+    "cardDescription": "A responsive, fullstack application that uses machine learning to provide users with personalized movie recommendations.",
     "caseStudyTitle": "Movie Recommendation Case Study",
-    "tagLine": "An interactive, fullstack movie recommendation website using Python, Flask, TypeScript, and React.js.",
-    "objective": "Design and build a user-centered movie recommendation system that uses machine learning to provide personalized title suggestions to individual users.",
+    "tagLine": "An interactive, fullstack movie recommendation website built with Python, Flask, TypeScript, and React.js.",
+    "objective": "Design and build a user-centered movie recommendation system that uses collaborative filtering to provide users with personalized movie recommendations.",
     "requirements": [
       "Display the optimal layout for the app depending on the device's screen size.",
       "Scroll through popular movies within the selected MovieLens dataset.",
@@ -34,21 +92,21 @@
         "insight": "I hosted my front-end application on GitHub Pages, but I needed a different solution for hosting the backend since GitHub Pages does not support hosting server-side code. I chose to use PythonAnywhere's free tier to deploy my backend application and used its server/error logs to troubleshoot issues that had not occured during local testing. PythonAnywhere was really easy to learn and use, and I look forward to using it again for future fullstack projects."
       }
     ],
-    "image": "./assets/case-study--movieverse.png",
+    "image": "case-study--movieverse.png",
     "altText": "Laptop mock-up of the Into the MovieVerse website.",
     "screenshots": [
-      "./assets/case-study--movieverse-recommendations.png",
-      "./assets/case-study--movieverse-search.png",
-      "./assets/case-study--movieverse-modal.png",
-      "./assets/case-study--movieverse-browse.png"
+      "case-study--movieverse-recommendations.png",
+      "case-study--movieverse-search.png",
+      "case-study--movieverse-modal.png",
+      "case-study--movieverse-browse.png"
     ],
     "repoLink": "https://github.com/mjclaypool/Into-The-MovieVerse",
     "liveLink": "https://mjclaypool.github.io/Into-The-MovieVerse/"
   },
   {
     "id": "finance",
-    "cardImg": "./assets/case-study--finance-overview-scaled.png",
-    "cardAlt": "Finance website screenshot",
+    "cardImg": "case-study--finance-overview-scaled.png",
+    "cardAlt": "Screenshot of finance website",
     "cardTitle": "Personal Finance App",
     "cardDescription": "A highly interactive personal finance application using TypeScript, React.js, Tailwind CSS and Chart.js.",
     "caseStudyTitle": "Personal Finance Case Study",
@@ -91,22 +149,22 @@
         "insight": "As with all projects I deploy to GitHub Pages, I set up my project with HashRouter and Links to navigate between the pages of my application. However, I initially ran into an issue where refreshing on any page would disconnect the page per the URL and page stored in context. I had been updating the page in context whenever a Link was clicked, but, after realizing that refreshing the page resets the context, I decided to pivot to changing the page in context whenever the URL changes. By using the pathname of useLocation as a dependency for my useEffect hook, I was able to ensure that the app always knows its current page."
       }
     ],
-    "image": "./assets/case-study--finance.png",
+    "image": "case-study--finance.png",
     "altText": "Laptop mock-up of personal finance app design.",
     "screenshots": [
-      "./assets/case-study--finance-overview.png",
-      "./assets/case-study--finance-transactions.png",
-      "./assets/case-study--finance-budgets.png",
-      "./assets/case-study--finance-pots.png",
-      "./assets/case-study--finance-recurring.png"
+      "case-study--finance-overview.png",
+      "case-study--finance-transactions.png",
+      "case-study--finance-budgets.png",
+      "case-study--finance-pots.png",
+      "case-study--finance-recurring.png"
     ],
     "repoLink": "https://github.com/mjclaypool/Personal-Finance-App",
     "liveLink": "https://mjclaypool.github.io/Personal-Finance-App/"
   },
   {
     "id": "audiophile-website",
-    "cardImg": "./assets/case-study--audiophile-homepage-scaled.png",
-    "cardAlt": "Audiophile website screenshot.",
+    "cardImg": "case-study--audiophile-homepage-scaled.png",
+    "cardAlt": "Screenshot of Audiophile website.",
     "cardTitle": "Audiophile Website",
     "cardDescription": "A responsive, pixel-perfect website for a fictional e-commerce company using TypeScript and React.js.",
     "caseStudyTitle": "Audiophile Website Case Study",
@@ -138,14 +196,14 @@
         "insight": "Practiced using the popular CSS framework, Tailwind CSS, to bolster maintainability and speed of implementing future updates. Gained experience using responsive utility variants, and looking forward to learning more about directives and reusing styles."
       }
     ],
-    "image": "./assets/case-study--audiophile-scaled.png",
+    "image": "case-study--audiophile-scaled.png",
     "altText": "Laptop mock-up of the Audiophile website.",
     "screenshots": [
-      "./assets/case-study--audiophile-homepage.png",
-      "./assets/case-study--audiophile-category.png",
-      "./assets/case-study--audiophile-product.png",
-      "./assets/case-study--audiophile-cart.png",
-      "./assets/case-study--audiophile-checkout.png"
+      "case-study--audiophile-homepage.png",
+      "case-study--audiophile-category.png",
+      "case-study--audiophile-product.png",
+      "case-study--audiophile-cart.png",
+      "case-study--audiophile-checkout.png"
     ],
     "repoLink": "https://github.com/mjclaypool/Audiophile-Website",
     "liveLink": "https://mjclaypool.github.io/Audiophile-Website/"

@@ -30,7 +30,7 @@ export default function Header( props: profPic ) {
             Mallory Claypool
           </span>
         </Link>
-        <div className="hidden lg:flex gap-8">
+        <div className="hidden md:flex gap-8">
           <HashLink to="/#projects" className={hashLink}>Projects</HashLink>
           <HashLink to="/#about" className={hashLink}>About</HashLink>
           <HashLink to="/#interests" className={hashLink}>Interests</HashLink>
@@ -39,7 +39,7 @@ export default function Header( props: profPic ) {
           type="button"
           aria-label="Open mobile navigation menu"
           onClick={handleShowDrawer}
-          className="lg:hidden"
+          className="md:hidden"
         >
           <img src={hamburgerIcon} alt="Freepik menu icon by Flaticon" className="h-[18px] object-contain" />
         </button>

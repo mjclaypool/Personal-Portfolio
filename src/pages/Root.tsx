@@ -7,7 +7,7 @@ import avatar from '../assets/profile-pic.jpg';
 
 function RootLayout() {
   return (
-    <div className="relative min-h-[100vh] font-raleway text-n-light-grey bg-gradient-to-b from-[#010d13] to-[#092533]">
+    <div className="relative min-h-[100vh] font-raleway text-cc-light-grey bg-gradient-to-b from-[#11121B] from-30% to-[#25273A] to-100%">
       <Header imageSrc={avatar}/>
       <main>
         <Outlet />

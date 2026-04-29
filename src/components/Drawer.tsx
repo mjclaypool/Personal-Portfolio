@@ -9,6 +9,8 @@ type drawerProps = {
 }
 
 export default function Drawer( props : drawerProps) {
+  const linkStyle = "text-xl py-2 px-7 hover:text-p-ice-blue focus:text-p-ice-blue"
+
   function handleCloseDrawer() {
     props.onDone();
   }
@@ -24,11 +26,11 @@ export default function Drawer( props : drawerProps) {
         >
           <img src={closeIcon} alt="Freepik close icon - Flaticon" />
         </button>
-        <Link to='/' id='header-title' className="text-xl py-2 px-7 hover:text-p-glacier-blue focus:text-p-glacier-blue" onClick={handleCloseDrawer}>Home</Link>
+        <Link to='/' id='header-title' className={linkStyle} onClick={handleCloseDrawer}>Home</Link>
         <div className="border-b-4 border-p-glacier-blue w-full"/>
-        <HashLink to="/#projects" className="text-xl py-2 px-7 hover:text-p-glacier-blue focus:text-p-glacier-blue" onClick={handleCloseDrawer}>Projects</HashLink>
-        <HashLink to="/#about" className="text-xl py-2 px-7 hover:text-p-glacier-blue focus:text-p-glacier-blue" onClick={handleCloseDrawer}>About</HashLink>
-        <HashLink to="/#interests" className="text-xl py-2 px-7 hover:text-p-glacier-blue focus:text-p-glacier-blue" onClick={handleCloseDrawer}>Interests</HashLink>
+        <HashLink to="/#projects" className={linkStyle} onClick={handleCloseDrawer}>Projects</HashLink>
+        <HashLink to="/#about" className={linkStyle} onClick={handleCloseDrawer}>About</HashLink>
+        <HashLink to="/#interests" className={linkStyle} onClick={handleCloseDrawer}>Interests</HashLink>
       </div>
     </Modal>
   )

@@ -50,7 +50,7 @@ interface CaseStudyContextType {
   activeButton: aboutButton,
   changeActiveTab: (tab: string) => void,
   changeActiveButton: (buttonId: string) => void,
-  resetActiveButton: () => void,
+  resetActiveButton: (tab:aboutData) => void,
   showCaseStudy: (caseStudy: string) => void
 }
 
@@ -116,15 +116,7 @@ export function CaseStudyContextProvider({children} : PropsWithChildren) {
     liveLink: "",
   });
   const [activeTab, setActiveTab] = useState(aboutTabs[0]);
-  const [activeButton, setActiveButton] = useState({
-    id: "",
-    caption: "",
-    icon: "",
-    altText: "",
-    title: "",
-    description: "",
-    takeaways: ""
-  });
+  const [activeButton, setActiveButton] = useState(aboutTabs[0].buttons[0]);
 
   function setCaseStudyError() {
     setCaseStudy({
@@ -146,7 +138,7 @@ export function CaseStudyContextProvider({children} : PropsWithChildren) {
     })
   }
 
-  function showCaseStudy(caseStudyURL: string) {
+  function showCaseStudy( caseStudyURL : string ) {
     const selectedProj = projects.filter((project) => project.id == caseStudyURL);
     if (selectedProj.length > 0 && selectedProj[0].id && selectedProj[0].id.length > 0) {
       setCaseStudy(selectedProj[0]);
@@ -155,27 +147,19 @@ export function CaseStudyContextProvider({children} : PropsWithChildren) {
     }
   }
 
-  function resetActiveButton() {
-    setActiveButton({
-      id: "",
-      caption: "",
-      icon: "",
-      altText: "",
-      title: "",
-      description: "",
-      takeaways: ""
-    })
+  function resetActiveButton( tab : aboutData ) {
+    setActiveButton(tab.buttons[0])
   }
 
-  function changeActiveTab(tab: string) {
+  function changeActiveTab( tab : string ) {
     const newTab = aboutTabs.filter((aboutTab) => aboutTab.tabName === tab)
     if (tab != activeTab.tabName) {
       setActiveTab(newTab[0])
-      resetActiveButton()
+      resetActiveButton(newTab[0])
     }
   }
 
-  function changeActiveButton(buttonId: string) {
+  function changeActiveButton( buttonId : string ) {
     const newButton = activeTab.buttons.filter((button) => button.id === buttonId)
     if (buttonId != activeButton.id) {
       setActiveButton(newButton[0])

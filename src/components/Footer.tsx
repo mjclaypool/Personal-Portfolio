@@ -10,7 +10,7 @@ export default function Footer( props: profPic ) {
   const hashLink = "hover:text-p-ice-blue focus:text-p-ice-blue";
 
   return (
-    <footer className="flex justify-center">
+    <footer className="flex justify-center bg-gradient-to-t from-[rgba(0,0,0,.5)] from-0% to-[#2e3a41] to-50% border-t-2 border-cc-grad-dark-grey">
       <div className="flex flex-1 flex-col justify-between items-center lg:items-start gap-20 font-bold py-12 px-8 lg:flex-row lg:px-24 lg:max-w-[1200px]">
         <HashLink to="/#" aria-label="return-to-homepage" className="flex flex-col items-center gap-2">
           <img src={props.imageSrc} alt='My profile picture' loading="lazy" className="rounded-md" />

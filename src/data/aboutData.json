@@ -3,13 +3,13 @@
         "tabName": "Undergraduate Education",
         "title": "The University of Texas at Austin",
         "dates": "2014 - 2018",
-        "image": "./assets/ut-austin-tx.png",
-        "imageAlt": "Image of the 360 Bridge in Austin, TX USA.",
+        "image": "raleigh-nc.png",
+        "imageAlt": "Image of the sky from within a forest near Raleigh, NC USA.",
         "buttons": [
             {
                 "id": "eduDegree",
                 "caption": "B.S. Mechanical Engineering",
-                "icon": "./assets/about--education.png",
+                "icon": "about--education.png",
                 "altText": "Degree icon",
                 "title": "B.S. Mechanical Engineering",
                 "description": "Graduated from The University of Texas at Austin in 2018 with a Bachelor of Science in Mechanical Engineering and a Business Foundations Certificate. Earned a 3.61 GPA with coursework that included Programming & Engineering Computational Methods among other technical courses.",
@@ -18,7 +18,7 @@
             {
                 "id": "eduResearch",
                 "caption": "4 Research Projects",
-                "icon": "./assets/about--research.png",
+                "icon": "about--research.png",
                 "altText": "Research icon",
                 "title": "Research Projects",
                 "description": "Designed, built, and tested prototypes for four university research projects. These projects included an assistive gripping device for people with spinal cord injuries, an autonomous vehicle controller for warehouse navigation, a fire search-and-rescue robot, and a trash compactor for underserved communities.",
@@ -27,7 +27,7 @@
             {
                 "id": "eduAwards",
                 "caption": "4 Academic Awards",
-                "icon": "./assets/about--award.png",
+                "icon": "about--award.png",
                 "altText": "Awards icon",
                 "title": "Awards",
                 "description": "Earned University Honors for multiple semesters with a GPA over 3.5, awarded two university scholarships for academic achievements in mechanical engineering, and recognized as an Academic All-American for having a GPA over 3.7 at the women's club lacrosse national tournament.",
@@ -36,7 +36,7 @@
             {
                 "id": "eduLeadership",
                 "caption": "2 Leadership Roles",
-                "icon": "./assets/about--leader.png",
+                "icon": "about--leader.png",
                 "altText": "Leadership icon",
                 "title": "Leadership",
                 "description": "Led a senior capstone project team of four mechanical engineers to design a trash compactor for the Red Cross and Red Crescent Society, and served as President of the Texas Women's Lacrosse Club in my second year with the team.",
@@ -45,7 +45,7 @@
             {
                 "id": "eduInternship",
                 "caption": "1 Internship",
-                "icon": "./assets/about--work.png",
+                "icon": "about--work.png",
                 "altText": "Work icon",
                 "title": "ARL: UT Internship",
                 "description": "Used MATLAB and Python to integrate vehicle dynamics and troubleshoot known bugs in an autonomous underwater vehicle (AUV) run simulator. Delivered a functional program for conducting simulations of vehicle behaviors in untested conditions.",
@@ -57,13 +57,13 @@
         "tabName": "Professional Experience",
         "title": "Naval Undersea Warefare Center Division Newport",
         "dates": "2018 - 2023",
-        "image": "./assets/newport-ri.png",
-        "imageAlt": "Image from the Cliff Walk in Newport, RI USA.",
+        "image": "raleigh-nc.png",
+        "imageAlt": "Image of the sky from within a forest near Raleigh, NC USA.",
         "buttons": [
             {
                 "id": "workSummary",
                 "caption": "Summary",
-                "icon": "./assets/about--work-summary.png",
+                "icon": "about--work-summary.png",
                 "altText": "Experience icon",
                 "title": "Summary",
                 "description": "Led and contributed to the mechanical design of 10+ projects, including established fleet-integrated systems, prototype unmanned underwater vehicles, and laboratory proof-of-concept experiments. Gained invaluable experience in collaborating on cross-functional teams and learning from true experts in their fields.",
@@ -72,7 +72,7 @@
             {
                 "id": "workAwards",
                 "caption": "Awards",
-                "icon": "./assets/about--award.png",
+                "icon": "about--award.png",
                 "altText": "Awards icon",
                 "title": "Awards",
                 "description": "Awarded the annual Outstanding New Employee Award in 2019, which is presented to an entry- or intermediate-level professional who demonstrates excellence and whose growth far exceeds the normal expectations of an employee with the time in grade.",
@@ -81,7 +81,7 @@
             {
                 "id": "workSkills",
                 "caption": "Skills",
-                "icon": "./assets/about--skills.png",
+                "icon": "about--skills.png",
                 "altText": "Skills icon",
                 "title": "Skills",
                 "description": "Developed numerous skills from working as a mechanical engineer that translate well into a software development role, including collaborating on multidisciplinary teams, iterating on designs, and integrating deliverables into larger systems.",
@@ -93,13 +93,13 @@
         "tabName": "Professional Development",
         "title": "Professional Development - UX/UI, Software Development",
         "dates": "2023 - 2024",
-        "image": "./assets/raleigh-nc.png",
+        "image": "raleigh-nc.png",
         "imageAlt": "Image of the sky from within a forest near Raleigh, NC USA.",
         "buttons": [
             {
                 "id": "learnGoogleUX",
                 "caption": "Google UX Design",
-                "icon": "./assets/about--ux-certificate.png",
+                "icon": "about--ux-certificate.png",
                 "altText": "Certificate icon",
                 "title": "Google UX Design Certificate",
                 "description": "Gained foundational knowledge of user-experience design and executing the design process for digital products. Learned new techniques and resources for user research, designing for accessibility, creating wireframes, and building high-fidelity prototypes in Figma.",
@@ -108,7 +108,7 @@
             {
                 "id": "learnMetaFE",
                 "caption": "Meta Front-End Developer",
-                "icon": "./assets/about--frontend-certificate.png",
+                "icon": "about--frontend-certificate.png",
                 "altText": "Certificate icon",
                 "title": "Meta Front-End Developer Certificate",
                 "description": "Developed essential skills for success in a front-end software engineering role. Learned how to build responsive websites with HTML and CSS, create interactive experiences with JavaScript and React.js, conduct unit testing with Jest and React Testing Library, and manage code revisions with GitHub repositories.",
@@ -117,7 +117,7 @@
             {
                 "id": "learnUTUX",
                 "caption": "UT Austin UX Design",
-                "icon": "./assets/about--utux-certificate.png",
+                "icon": "about--utux-certificate.png",
                 "altText": "Certificate icon",
                 "title": "Post Graduate Program in UX Design",
                 "description": "Solidified user experience design concepts with projects in conducting user research, conducting competitive audits, and redesigning websites. Collaborated with four other designers to plan out a pet health-tracking mobile app and present our concept to other peers and mentors of the program.",
@@ -129,26 +129,26 @@
         "tabName": "Graduate Education",
         "title": "Clemson University",
         "dates": "2025 - present",
-        "image": "./assets/raleigh-nc.png",
+        "image": "raleigh-nc.png",
         "imageAlt": "Image of the sky from within a forest near Raleigh, NC USA.",
         "buttons": [
             {
                 "id": "gradEduDegree",
                 "caption": "M.S. Computer Science",
-                "icon": "./assets/about--education.png",
+                "icon": "about--education.png",
                 "altText": "Degree icon",
                 "title": "M.S. Computer Science",
-                "description": "Began pursuing a Master of Science in Computer Science from Clemson University in the Spring 2025 semester. Current GPA of 3.5 with an expected graduation of Spring 2027.",
-                "takeaways": "Completed coursework includes Design and Analysis of Algorithms and AI-Receptive Software Development. Currently taking Applied Data Science and Database Management Systems."
+                "description": "Pursuing a Master of Science in Computer Science from Clemson University with a focus on human-computer interaction (HCI) and artificial intelligence (AI). Current GPA of 3.75 with an expected graduation of Spring 2027.",
+                "takeaways": "Completed coursework includes Design and Analysis of Algorithms, AI-Receptive Software Development, Applied Data Science, Database Management Systems, Human-Computer Interaction, and Human-Centered AI."
             },
             {
                 "id": "gradSkills",
                 "caption": "Skills",
-                "icon": "./assets/about--skills.png",
+                "icon": "about--skills.png",
                 "altText": "Skills icon",
                 "title": "Skills",
-                "description": "From completed coursework, I gained in-depth knowledge of data structures and algorithm design. I also created a fullstack movie recommender system as a course project where I strengthened my front-end design and development skills, gained experience creating and using APIs, and learned how to implement machine learning algorithms.",
-                "takeaways": "In my current courses, I am developing my data analysis and visualization skills, gaining more experience with Java, and learning SQL."
+                "description": "From completed coursework and academic projects, I have learned how to design efficient algorithms, use machine learning to answer interesting questions, and build user-centered fullstack applications.",
+                "takeaways": "Additional skills gained include performing data analysis and visualization, building and integrating relational databases with embedded SQL in Java, and engineering prompts for interacting with large language models (LLMs)."
             }
         ]
     }

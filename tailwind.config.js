@@ -15,6 +15,14 @@ export default {
         "n-light-grey": "#d9e2f1",
         "n-dark-grey": "#36444b",
         "n-very-dark-blue": "#010d13",
+        "cc-grad-dark-grey": "#C8CFD5",
+        "cc-grad-light-grey": "#D7DCE2",
+        "cc-slate": "#405e6b",
+        "cc-slate-new": "#5b8699",
+        "cc-dark-grey": "#2e3a41",
+        "cc-light-grey": "#ecf1f8",
+        "cc-purple": "#44486b",
+        "cc-dark-purple": "#25273A"
       },
       boxShadow: {
         "card": "0px 0px 65px 20px rgba(24,127,179,0.5), 0px 20px 22px 0px rgba(24,127,179,0.16)",
@@ -55,6 +63,8 @@ export default {
         'load-images': 'slideUpFadeIn 0.3s ease-out forwards',
         'hero-load': 'fadeIn 0.5s ease-out forwards',
         'view-details': 'slideInFromLeft .2s ease-out forwards',
+        'proj-from-left': 'slideInFromLeft .3s ease-out forwards',
+        'proj-from-right': 'slideInFromRight .3s ease-out forwards'
       },
     },
   },
